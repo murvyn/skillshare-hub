@@ -1,178 +1,174 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-// import Image from 'next/image'
-import Link from 'next/link'
-import { useRouter } from 'next/navigation'
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { EyeIcon, EyeOffIcon } from 'lucide-react'
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import PasswordValidator from "@/components/PasswordValidator";
+import { SubmitHandler, useForm } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+
+interface DataProps {
+  firstName: string;
+  lastName: string;
+  email: string;
+  password: string;
+  confirmPassword: string;
+}
+
+const signUpScheme = z
+  .object({
+    firstName: z.string().min(3, {message: "First name mut contain 3 or more characters"}),
+    lastName: z.string().min(3, {message: "Last name mut contain 3 or more characters"}),
+    email: z.string().email(),
+    password: z
+      .string()
+      .min(8)
+      .regex(
+        /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
+        { message: "" }
+      ),
+    confirmPassword: z.string(),
+  })
+  .refine((data) => data.password === data.confirmPassword, {
+    message: "Passwords must match",
+    path: ["confirmPassword"],
+  });
 
 export default function SignUp() {
-  const [showPassword, setShowPassword] = useState(false)
-  const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    password: '',
-    confirmPassword: '',
-  })
-  const [errors, setErrors] = useState({
-    fullName: '',
-    email: '',
-    password: '',
-    confirmPassword: '',
-  })
-  const router = useRouter()
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: zodResolver(signUpScheme),
+    defaultValues: {
+      firstName: "",
+      lastName: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+    },
+  });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target
-    setFormData(prev => ({ ...prev, [name]: value }))
-    setErrors(prev => ({ ...prev, [name]: '' }))
-  }
-
-  const validateForm = () => {
-    let isValid = true
-    const newErrors = { ...errors }
-
-    if (!formData.fullName.trim()) {
-      newErrors.fullName = 'Full name is required'
-      isValid = false
-    }
-
-    if (!formData.email.trim()) {
-      newErrors.email = 'Email is required'
-      isValid = false
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = 'Email is invalid'
-      isValid = false
-    }
-
-    if (!formData.password) {
-      newErrors.password = 'Password is required'
-      isValid = false
-    } else if (formData.password.length < 8) {
-      newErrors.password = 'Password must be at least 8 characters'
-      isValid = false
-    }
-
-    if (formData.password !== formData.confirmPassword) {
-      newErrors.confirmPassword = 'Passwords do not match'
-      isValid = false
-    }
-
-    setErrors(newErrors)
-    return isValid
-  }
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    if (validateForm()) {
-      // Here you would typically send the form data to your backend
-      console.log('Form submitted:', formData)
-      // Redirect to dashboard or show success message
-      router.push('/dashboard')
-    }
-  }
+  const submit: SubmitHandler<DataProps> = (data) => {
+    console.log(data);
+  };
 
   return (
     <div className="min-h-screen bg-[#F5F5F5] flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       <Card className="w-full max-w-md">
         <CardHeader className="space-y-1">
           <div className="flex justify-center mb-4">
-            <Link href="/" className="text-2xl font-bold text-[#1E90FF]">SkillShare Hub</Link>
+            <Link href="/" className="text-2xl font-bold text-[#1E90FF]">
+              SkillShare Hub
+            </Link>
           </div>
-          <CardTitle className="text-2xl font-bold text-center">Create an account</CardTitle>
+          <CardTitle className="text-2xl font-bold text-center">
+            Create an account
+          </CardTitle>
           <CardDescription className="text-center">
             Enter your information to get started
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form onSubmit={handleSubmit(submit)} className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="fullName">Full Name</Label>
+              <Label htmlFor="fullName">First Name</Label>
               <Input
-                id="fullName"
-                name="fullName"
+                {...register("firstName")}
+                id="firstName"
                 type="text"
-                placeholder="John Doe"
-                value={formData.fullName}
-                onChange={handleInputChange}
-                className={errors.fullName ? 'border-red-500' : ''}
+                placeholder="John"
+                className={errors.firstName ? "border-red-500" : ""}
               />
-              {errors.fullName && <p className="text-red-500 text-sm">{errors.fullName}</p>}
+              {errors.firstName && (
+                <p className="text-red-500 text-xs">
+                  {errors.firstName?.message}
+                </p>
+              )}
+              
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="fullName">Last Name</Label>
+              <Input
+                {...register("lastName")}
+                id="lastName"
+                type="text"
+                placeholder="Doe"
+                className={errors.lastName ? "border-red-500" : ""}
+              />
+              {errors.lastName && (
+                <p className="text-red-500 text-xs">
+                  {errors.lastName?.message}
+                </p>
+              )}
             </div>
             <div className="space-y-2">
               <Label htmlFor="email">Email</Label>
               <Input
+                {...register("email")}
                 id="email"
-                name="email"
                 type="email"
                 placeholder="john@example.com"
-                value={formData.email}
-                onChange={handleInputChange}
-                className={errors.email ? 'border-red-500' : ''}
+                className={errors.email ? "border-red-500" : ""}
               />
-              {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
+              {errors.email && (
+                <p className="text-red-500 text-xs">{errors.email.message}</p>
+              )}
             </div>
             <div className="space-y-2">
               <Label htmlFor="password">Password</Label>
               <div className="relative">
-                <Input
-                  id="password"
-                  name="password"
-                  type={showPassword ? 'text' : 'password'}
-                  placeholder="••••••••"
-                  value={formData.password}
-                  onChange={handleInputChange}
-                  className={errors.password ? 'border-red-500' : ''}
-                />
-                <button
-                  type="button"
-                  onClick={() => setShowPassword(!showPassword)}
-                  className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 cursor-pointer"
-                >
-                  {showPassword ? (
-                    <EyeOffIcon className="h-5 w-5" />
-                  ) : (
-                    <EyeIcon className="h-5 w-5" />
-                  )}
-                </button>
+                <PasswordValidator register={register} />
               </div>
-              {errors.password && <p className="text-red-500 text-sm">{errors.password}</p>}
+              
             </div>
             <div className="space-y-2">
               <Label htmlFor="confirmPassword">Confirm Password</Label>
               <Input
+                {...register("confirmPassword")}
                 id="confirmPassword"
-                name="confirmPassword"
                 type="password"
                 placeholder="••••••••"
-                value={formData.confirmPassword}
-                onChange={handleInputChange}
-                className={errors.confirmPassword ? 'border-red-500' : ''}
+                className={errors.confirmPassword ? "border-red-500" : ""}
               />
-              {errors.confirmPassword && <p className="text-red-500 text-sm">{errors.confirmPassword}</p>}
+              {errors.confirmPassword && (
+                <p className="text-red-500 text-xs">
+                  {errors.confirmPassword.message}
+                </p>
+              )}
             </div>
-            <Button type="submit" className="w-full bg-[#1E90FF] hover:bg-blue-600">
+            <Button
+              type="submit"
+              className="w-full bg-[#1E90FF] hover:bg-blue-600"
+            >
               Sign Up
             </Button>
           </form>
         </CardContent>
         <CardFooter className="flex flex-col items-center">
           <p className="text-sm text-gray-600">
-            Already have an account?{' '}
+            Already have an account?{" "}
             <Link href="/auth/login" className="text-[#1E90FF] hover:underline">
               Log in
             </Link>
           </p>
           <p className="mt-4 text-xs text-gray-500">
-            By signing up, you agree to our{' '}
+            By signing up, you agree to our{" "}
             <Link href="/terms" className="text-[#1E90FF] hover:underline">
               Terms of Service
-            </Link>{' '}
-            and{' '}
+            </Link>{" "}
+            and{" "}
             <Link href="/privacy" className="text-[#1E90FF] hover:underline">
               Privacy Policy
             </Link>
@@ -180,6 +176,5 @@ export default function SignUp() {
         </CardFooter>
       </Card>
     </div>
-  )
+  );
 }
-

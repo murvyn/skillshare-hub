@@ -94,7 +94,7 @@ export default function ForgotPassword() {
                   placeholder="john@example.com"
                   className={errors.email ? 'border-red-500' : ''}
                 />
-                {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
+                {errors.email && <p className="text-red-500 text-xs">{errors.email.message}</p>}
               </div>
               <Button
                 type="submit"

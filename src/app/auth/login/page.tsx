@@ -1,50 +1,66 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Checkbox } from "@/components/ui/checkbox"
-import { EyeIcon, EyeOffIcon } from 'lucide-react'
-import { z } from 'zod'
-import { SubmitHandler, useForm } from 'react-hook-form'
-import { zodResolver } from '@hookform/resolvers/zod'
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Checkbox } from "@/components/ui/checkbox";
+import { z } from "zod";
+import { SubmitHandler, useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 
-interface DataProps{
-    email: string,
-    password: string,
-    rememberMe?: boolean,
+interface DataProps {
+  email: string;
+  password: string;
+  rememberMe?: boolean;
 }
 
 const loginScheme = z.object({
-    email: z.string().email(),
-    password: z.string().min(8),
-    rememberMe: z.boolean().optional(),
-})
+  email: z.string().email(),
+  password: z
+    .string()
+    .min(8, { message: "Password must contain at least 8 character(s)" }),
+  rememberMe: z.boolean().optional(),
+});
 
 export default function Login() {
-    const {register, handleSubmit, formState : {errors}} = useForm({
-        resolver: zodResolver(loginScheme),
-        defaultValues: {
-            email: '',
-            password: '',
-            rememberMe: false,
-        },
-    })
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: zodResolver(loginScheme),
+    defaultValues: {
+      email: "",
+      password: "",
+      rememberMe: false,
+    },
+  });
 
-  const submit : SubmitHandler<DataProps> = (data) => {
-    console.log(data)
-    }
+  const submit: SubmitHandler<DataProps> = (data) => {
+    console.log(data);
+  };
 
   return (
     <div className="min-h-screen bg-[#F5F5F5] flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       <Card className="w-full max-w-md">
         <CardHeader className="space-y-1">
           <div className="flex justify-center mb-4">
-            <Link href="/" className="text-2xl font-bold text-[#1E90FF]">SkillShare Hub</Link>
+            <Link href="/" className="text-2xl font-bold text-[#1E90FF]">
+              SkillShare Hub
+            </Link>
           </div>
-          <CardTitle className="text-2xl font-bold text-center">Log in to your account</CardTitle>
+          <CardTitle className="text-2xl font-bold text-center">
+            Log in to your account
+          </CardTitle>
           <CardDescription className="text-center">
             Enter your email and password to access your account
           </CardDescription>
@@ -57,39 +73,51 @@ export default function Login() {
                 id="email"
                 type="email"
                 placeholder="john@example.com"
-                className={errors.email ? 'border-red-500' : ''}
+                className={errors.email ? "border-red-500" : ""}
                 {...register("email")}
               />
-              {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
+              {errors.email && (
+                <p className="text-red-500 text-xs">{errors.email.message}</p>
+              )}
             </div>
             <div className="space-y-2">
               <Label htmlFor="password">Password</Label>
               <div className="relative">
                 <Input
                   id="password"
-                  type='password'
+                  type="password"
                   placeholder="••••••••"
                   {...register("password")}
-                  className={errors.password ? 'border-red-500' : ''}
+                  className={errors.password ? "border-red-500" : ""}
                 />
               </div>
-              {errors.password && <p className="text-red-500 text-sm">{errors.password.message}</p>}
+              {errors.password && (
+                <p className="text-red-500 text-xs">
+                  {errors.password.message}
+                </p>
+              )}
             </div>
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-2">
-                <Checkbox
-                  id="rememberMe"
-                  {...register("rememberMe")}
-                />
-                <Label htmlFor="rememberMe" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                <Checkbox id="rememberMe" {...register("rememberMe")} />
+                <Label
+                  htmlFor="rememberMe"
+                  className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                >
                   Remember me
                 </Label>
               </div>
-              <Link href="/auth/forgot-password" className="text-sm text-[#1E90FF] hover:underline">
+              <Link
+                href="/auth/forgot-password"
+                className="text-sm text-[#1E90FF] hover:underline"
+              >
                 Forgot password?
               </Link>
             </div>
-            <Button type="submit" className="w-full bg-[#1E90FF] hover:bg-blue-600">
+            <Button
+              type="submit"
+              className="w-full bg-[#1E90FF] hover:bg-blue-600"
+            >
               Log In
             </Button>
             <Button type="submit" className="w-full">
@@ -100,13 +128,15 @@ export default function Login() {
         <CardFooter className="flex justify-center">
           <p className="text-sm text-gray-600">
             {"Don't have an account?"}
-            <Link href="/auth/signup" className="text-[#1E90FF] hover:underline">
+            <Link
+              href="/auth/signup"
+              className="text-[#1E90FF] hover:underline"
+            >
               Sign up
             </Link>
           </p>
         </CardFooter>
       </Card>
     </div>
-  )
+  );
 }
-
