@@ -1,8 +1,9 @@
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient, User } from "@prisma/client";
 import passport from "passport";
 import { Strategy as GoogleStrategy } from "passport-google-oauth20";
 import jwt from "jsonwebtoken"
 import "dotenv";
+import { generateAuthToken } from "./helper";
 
 const prisma = new PrismaClient();
 
@@ -16,6 +17,9 @@ passport.use(
     },
     async (request, accessToken, refreshToken, profile, done) =>  {
       try {
+        if (!profile.emails || profile.emails.length === 0 ) {
+          return done(new Error("Email is not available in the Google profile."));
+        }
         let user = await prisma.user.findUnique({
           where: {
             email: profile.emails[0].value,
@@ -28,24 +32,12 @@ passport.use(
               firstName: profile.name?.givenName as string,
               lastName: profile.name?.familyName as string,
               email: profile.emails[0].value,
-              photo: profile.photos[0].value,
+              photoUrl: profile.photos ? profile.photos[0].value : null,
               googleId: profile.id,
             },
           });
         }
-        const token = jwt.sign(
-          {
-            id: user.id,
-            firstName: user.firstName,
-            lastName: user.lastName,
-            email: user.email,
-            photoUrl: user.photoUrl,
-          },
-          process.env.JWT_PRIVATE_KEY,
-          { expiresIn: "1h" }
-        );
-
-        return done(null, { token });
+        return done(null, user);
       } catch (error) {
         console.error(error);
         return done(error);
@@ -58,7 +50,7 @@ passport.serializeUser((user, done) => {
   done(null, user.id);
 });
 
-passport.deserializeUser(async (id, done) => {
+passport.deserializeUser(async (id: string, done) => {
   try {
     const user = await prisma.user.findUnique({
       where: { id },
