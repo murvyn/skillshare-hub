@@ -10,16 +10,35 @@ datasource db {
 model User {
   id        String   @id @default(uuid())
   firstName String   @db.VarChar(60)
-  lastName  String   @db.VarChar(60)  
+  lastName  String   @db.VarChar(60)
   email     String   @unique
-  password  String?   @db.VarChar(255)
+  password  String?  @db.VarChar(255)
   roles     Role[]   @default([STUDENT])
   photoUrl  String?  @db.VarChar(255)
-  googleId  String? @db.VarChar(255)
+  googleId  String?  @db.VarChar(255)
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt @map("updated_at")
+  interests UserInterest[]
 
   @@map("users")
+}
+
+model Interest {
+  id    String         @id @default(uuid())
+  name  String         @unique @db.VarChar(255)
+  users UserInterest[]
+}
+
+model UserInterest {
+  id         String   @id @default(uuid())
+  userId     String
+  interestId String
+  user       User     @relation(fields: [userId], references: [id])
+  interest   Interest @relation(fields: [interestId], references: [id])
+
+  @@unique([userId, interestId])
+
+  @@map("user_interests")
 }
 
 enum Role {

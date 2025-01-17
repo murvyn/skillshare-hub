@@ -10,7 +10,9 @@ export const login = async (req: Request, res: Response): Promise<any> => {
   try {
     const { email, password, rememberMe } = req.body;
     const user = await prisma.user.findUnique({ where: { email } });
-    if (!user) return res.status(404).json({ message: "User not found" });
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
 
     if (!user.password) {
       return res
@@ -18,8 +20,9 @@ export const login = async (req: Request, res: Response): Promise<any> => {
         .json({ message: "User does not have a password set" });
     }
     const isValidPassword = await bcrypt.compare(password, user.password);
-    if (!isValidPassword)
+    if (!isValidPassword) {
       return res.status(401).json({ message: "Invalid credentials" });
+    }
     const token = generateAuthToken(user);
     res.cookie("token", token, {
       httpOnly: true,
