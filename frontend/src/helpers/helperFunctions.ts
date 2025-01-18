@@ -68,15 +68,9 @@ export const validateStep = (
       newErrors.confirmPassword = "Passwords do not match";
       isValid = false;
     }
-  } else if (step === 3) {
-    if (!formData.role) {
-      newErrors.role = "Please select a role";
-      isValid = false;
-    }
-    if (formData.interests.length === 0) {
-      newErrors.interests = "Please select at least one interest";
-      isValid = false;
-    }
+  } else if (step === 3 && formData.interests.length === 0) {
+    newErrors.interests = "Please select at least one interest";
+    isValid = false;
   }
 
   setErrors(newErrors);

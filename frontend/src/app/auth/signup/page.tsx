@@ -23,9 +23,9 @@ import {
 } from "@/lib/features/interest/interestSlice";
 import { useSelector } from "react-redux";
 import { Checkbox } from "@/components/ui/checkbox";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { validateStep } from "@/helpers/helperFunctions";
 import { RootState } from "@/store/store";
+import { Spinner } from "@/components/Spinner";
 
 export default function SignUp() {
   const dispatch = useDispatch();
@@ -41,33 +41,40 @@ export default function SignUp() {
   });
   const [formData, setFormData] = useState({
     firstName: "",
-      lastName: "",
-      email: "",
-      password: "",
-      confirmPassword: "",
-      role: "",
-      interests: [] as string[],
-    });
-    const [errors, setErrors] = useState({
-      firstName: "",
-      lastName: "",
-      email: "",
-      password: "",
-      confirmPassword: "",
-      role: "",
-      interests: "",
-    });
+    lastName: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+    role: "",
+    interests: [] as string[],
+  });
+  const [errors, setErrors] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+    role: "",
+    interests: "",
+  });
 
-    const {mutateAsync, data} = useMutation({
-      mutationFn: async () => {
-        const response = await client.post("/auth/register", JSON.stringify(formData));
-        return response.data;
-      }
-    })
+  const {
+    mutateAsync,
+    data,
+    isPending: signUpLoading,
+  } = useMutation({
+    mutationFn: async () => {
+      const response = await client.post(
+        "/auth/register",
+        JSON.stringify(formData)
+      );
+      return response.data;
+    },
+  });
 
-    console.log(data)
+  console.log(data);
 
-    const validator = (value: string) => {
+  const validator = (value: string) => {
     setContdition({
       hasUpperCase: /[A-Z]/.test(value),
       hasLowerCase: /[a-z]/.test(value),
@@ -106,11 +113,6 @@ export default function SignUp() {
     setErrors((prev) => ({ ...prev, [name]: "" }));
   };
 
-  const handleRoleChange = (value: string) => {
-    setFormData((prev) => ({ ...prev, role: value }));
-    setErrors((prev) => ({ ...prev, role: "" }));
-  };
-
   const handleInterestChange = (interest: string) => {
     setFormData((prev) => ({
       ...prev,
@@ -136,7 +138,7 @@ export default function SignUp() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (validateStep(currentStep, formData, setErrors)) {
-      await mutateAsync()
+      await mutateAsync();
       console.log("Form submitted:", formData);
     }
   };
@@ -276,7 +278,6 @@ export default function SignUp() {
                       </li>
                     </ul>
                   </div>
-
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="confirmPassword">Confirm Password</Label>
@@ -299,29 +300,6 @@ export default function SignUp() {
             )}
             {currentStep === 3 && (
               <>
-                <div className="space-y-2">
-                  <Label>I want to...</Label>
-                  <RadioGroup
-                    value={formData.role}
-                    onValueChange={handleRoleChange}
-                  >
-                    <div className="flex items-center space-x-2">
-                      <RadioGroupItem value="learn" id="learn" />
-                      <Label htmlFor="learn">Learn new skills</Label>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <RadioGroupItem value="teach" id="teach" />
-                      <Label htmlFor="teach">Teach and share knowledge</Label>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <RadioGroupItem value="both" id="both" />
-                      <Label htmlFor="both">Both learn and teach</Label>
-                    </div>
-                  </RadioGroup>
-                  {errors.role && (
-                    <p className="text-red-500 text-sm">{errors.role}</p>
-                  )}
-                </div>
                 <div className="space-y-2">
                   <Label>Interests (select at least one)</Label>
                   <div className="grid grid-cols-2 gap-2 ">
@@ -367,8 +345,8 @@ export default function SignUp() {
                   Next
                 </Button>
               ) : (
-                <Button type="submit" className="ml-auto">
-                  Create Account
+                <Button type="submit" className="ml-auto min-w-[7rem]">
+                  {signUpLoading ? <Spinner size={"medium"} className="text-white" /> : "Create Account"}
                 </Button>
               )}
             </div>

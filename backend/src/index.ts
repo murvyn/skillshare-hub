@@ -8,6 +8,7 @@ import "dotenv/config"
 import { PrismaClient } from "@prisma/client";
 import { getInterest } from "./controllers/interestsController";
 import cors, {CorsOptions} from "cors"
+import { getUser } from "./controllers/authController";
 const prisma = new PrismaClient();
 
 const app = express();
@@ -33,6 +34,7 @@ app.use(passport.session());
 
 app.use("/api/auth", auth);
 app.get("/api/interests", getInterest)
+app.get("/api/user", getUser)
 
 const port = 5000;
 app.listen(port, () => {

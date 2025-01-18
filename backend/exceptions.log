@@ -1,0 +1,38 @@
+2025-01-18T20:36:56.369Z [error]: uncaughtException: Cannot find module 'cors'
+Require stack:
+- C:\Users\marvi\Documents\skillshare-hub\backend\src\index.ts
+Error: Cannot find module 'cors'
+Require stack:
+- C:\Users\marvi\Documents\skillshare-hub\backend\src\index.ts
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1244:15)
+    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue [as _resolveFilename] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@cspotcode\source-map-support\source-map-support.js:811:30)
+    at Function._load (node:internal/modules/cjs/loader:1070:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:217:24)
+    at Module.require (node:internal/modules/cjs/loader:1335:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (C:\Users\marvi\Documents\skillshare-hub\backend\src\index.ts:10:1)
+    at Module._compile (node:internal/modules/cjs/loader:1562:14)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1618:23)
+2025-01-18T20:47:07.698Z [error]: unhandledRejection: 
+Invalid `prisma.user.delete()` invocation in
+C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\authController.ts:42:40
+
+  39 
+  40 export const getUser = async (  req: Request,
+  41   res: Response) => {
+→ 42   const user = await prisma.user.delete(
+Foreign key constraint violated: `user_interests_userId_fkey (index)`
+PrismaClientKnownRequestError: 
+Invalid `prisma.user.delete()` invocation in
+C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\authController.ts:42:40
+
+  39 
+  40 export const getUser = async (  req: Request,
+  41   res: Response) => {
+→ 42   const user = await prisma.user.delete(
+Foreign key constraint violated: `user_interests_userId_fkey (index)`
+    at Vn.handleRequestError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@prisma\client\runtime\library.js:121:7339)
+    at Vn.handleAndLogRequestError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@prisma\client\runtime\library.js:121:6663)
+    at Vn.request (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@prisma\client\runtime\library.js:121:6370)
+    at async l (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@prisma\client\runtime\library.js:130:9617)

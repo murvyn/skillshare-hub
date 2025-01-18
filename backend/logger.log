@@ -1,0 +1,31 @@
+2025-01-18T20:47:07.698Z [error]: unhandledRejection: 
+Invalid `prisma.user.delete()` invocation in
+C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\authController.ts:42:40
+
+  39 
+  40 export const getUser = async (  req: Request,
+  41   res: Response) => {
+→ 42   const user = await prisma.user.delete(
+Foreign key constraint violated: `user_interests_userId_fkey (index)`
+PrismaClientKnownRequestError: 
+Invalid `prisma.user.delete()` invocation in
+C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\authController.ts:42:40
+
+  39 
+  40 export const getUser = async (  req: Request,
+  41   res: Response) => {
+→ 42   const user = await prisma.user.delete(
+Foreign key constraint violated: `user_interests_userId_fkey (index)`
+    at Vn.handleRequestError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@prisma\client\runtime\library.js:121:7339)
+    at Vn.handleAndLogRequestError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@prisma\client\runtime\library.js:121:6663)
+    at Vn.request (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@prisma\client\runtime\library.js:121:6370)
+    at async l (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@prisma\client\runtime\library.js:130:9617)
+2025-01-18T20:47:07.706Z [error]: Unhandled Rejection: PrismaClientKnownRequestError: 
+Invalid `prisma.user.delete()` invocation in
+C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\authController.ts:42:40
+
+  39 
+  40 export const getUser = async (  req: Request,
+  41   res: Response) => {
+→ 42   const user = await prisma.user.delete(
+Foreign key constraint violated: `user_interests_userId_fkey (index)`
