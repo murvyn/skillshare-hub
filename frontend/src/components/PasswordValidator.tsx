@@ -1,20 +1,17 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, Dispatch } from "react";
 import { Input } from "./ui/input";
-import { UseFormRegister } from "react-hook-form";
 
 const PasswordValidator = ({
-  register,
+  handleInputChange,
+  setPassword,
+  password
 }: {
-  register: UseFormRegister<{
-    firstName: string;
-    lastName: string;
-    email: string;
-    password: string;
-    confirmPassword: string;
-  }>;
+  handleInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  setPassword: Dispatch<React.SetStateAction<string>>;
+  password: string;
 }) => {
-  const [password, setPassword] = useState("");
+
   const [conditions, setContdition] = useState({
     hasUpperCase: false,
     hasLowerCase: false,
@@ -36,14 +33,18 @@ const PasswordValidator = ({
   return (
     <div>
       <Input
-        {...register("password")}
         type="password"
         value={password}
-        onChange={(e) => validator(e.target.value)}
+        onChange={(e) => {
+          handleInputChange(e)
+          validator(e.target.value)}}
         placeholder="••••••••"
         style={{ padding: "10px", width: "100%", marginBottom: "10px" }}
       />
-      <ul style={{ listStyleType: "none", padding: 0 }} className="text-xs ms-3">
+      <ul
+        style={{ listStyleType: "none", padding: 0 }}
+        className="text-xs ms-3"
+      >
         <li style={{ color: conditions.hasUpperCase ? "green" : "red" }}>
           {conditions.hasUpperCase ? "✔" : "✖"} At least one uppercase letter
         </li>

@@ -7,12 +7,18 @@ import auth from "./routes/authRoutes";
 import "dotenv/config"
 import { PrismaClient } from "@prisma/client";
 import { getInterest } from "./controllers/interestsController";
+import cors, {CorsOptions} from "cors"
 const prisma = new PrismaClient();
 
 const app = express();
+const corsOptions: CorsOptions = {
+  origin: process.env.FRONTEND_URL,
+  credentials: true,
+}
 
 app.use(helmet());
 app.use(compression());
+app.use(cors(corsOptions))
 app.use(express.json());
 app.use(
   session({
@@ -26,7 +32,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use("/api/auth", auth);
-app.get("/api/interest", getInterest)
+app.get("/api/interests", getInterest)
 
 const port = 5000;
 app.listen(port, () => {

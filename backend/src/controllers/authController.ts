@@ -37,11 +37,18 @@ export const login = async (req: Request, res: Response): Promise<any> => {
   }
 };
 
-export const registerUser = async (req: Request, res: Response) => {
+export const registerUser = async (
+  req: Request,
+  res: Response
+): Promise<any> => {
   try {
     const { firstName, lastName, email, password, interests } = req.body;
+    const user = await prisma.user.findUnique({ where: { email } });
+    if (user) {
+      return res.status(409).json({ message: "Email already in use" });
+    }
     const hashedPassword = await bcrypt.hash(password, 10);
-    const user = await prisma.user.create({
+    const newUser = await prisma.user.create({
       data: {
         firstName,
         lastName,
@@ -56,7 +63,9 @@ export const registerUser = async (req: Request, res: Response) => {
         },
       },
     });
-    res.status(201).json({ message: "User registered successfully", user });
+    res
+      .status(201)
+      .json({ message: "User registered successfully", user: newUser });
   } catch (error) {
     logger.error(`Error in user registration: ${(error as Error).message}`);
     res.status(500).json({ message: "Internal server error" });
