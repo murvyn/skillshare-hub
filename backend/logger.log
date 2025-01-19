@@ -29,3 +29,5 @@ C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\authController.t
   41   res: Response) => {
 → 42   const user = await prisma.user.delete(
 Foreign key constraint violated: `user_interests_userId_fkey (index)`
+2025-01-19T20:37:50.463Z [error]: Error in login: JWTPrivateKey environment variable not set
+2025-01-19T20:37:59.955Z [error]: Error in login: JWTPrivateKey environment variable not set

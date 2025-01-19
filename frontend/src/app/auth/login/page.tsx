@@ -16,6 +16,12 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { z } from "zod";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useMutation } from "@tanstack/react-query";
+import client from "@/api/client";
+import { getCookie } from "@/helpers/helperFunctions";
+import { useDispatch } from "react-redux";
+import { setUser } from "@/lib/features/user/userSlice";
+import  {jwtDecode} from 'jwt-decode'
 
 interface DataProps {
   email: string;
@@ -32,6 +38,7 @@ const loginScheme = z.object({
 });
 
 export default function Login() {
+  const dispatch = useDispatch()
   const {
     register,
     handleSubmit,
@@ -45,8 +52,25 @@ export default function Login() {
     },
   });
 
-  const submit: SubmitHandler<DataProps> = (data) => {
-    console.log(data);
+  const { mutateAsync } = useMutation({
+    mutationFn: async (data: DataProps) => {
+      const response = await client.post("/auth/login", JSON.stringify(data));
+      return response.data;
+    },
+    onSuccess: () => {
+      const token = getCookie("auth-x-token")
+      const decoded = jwtDecode(token as string);
+      dispatch(setUser(decoded))
+    }
+  });
+
+  const submit: SubmitHandler<DataProps> = async (data) => {
+    try {
+      await mutateAsync(data);
+
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (

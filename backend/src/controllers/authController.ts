@@ -9,7 +9,7 @@ const prisma = new PrismaClient();
 export const login = async (req: Request, res: Response): Promise<any> => {
   try {
     const { email, password, rememberMe } = req.body;
-    const user = await prisma.user.findUnique({ where: { email } });
+    const user = await prisma.user.findUnique({ where: { email } , include: { interests: { include: { interest: true } } }, });
     if (!user) {
       return res.status(404).json({ message: "User not found" });
     }
@@ -23,9 +23,10 @@ export const login = async (req: Request, res: Response): Promise<any> => {
     if (!isValidPassword) {
       return res.status(401).json({ message: "Invalid credentials" });
     }
+    console.log(user)
     const token = generateAuthToken(user);
-    res.cookie("token", token, {
-      httpOnly: true,
+    res.cookie("auth-x-token", token, {
+      httpOnly: false,
       secure: true,
       sameSite: "none",
       maxAge: rememberMe ? 30 * 24 * 60 * 60 * 1000 : 24 * 60 * 60 * 1000,
@@ -78,6 +79,12 @@ export const registerUser = async (
           })),
         },
       },
+    });
+    const token = generateAuthToken(newUser)
+    res.cookie("auth-x-token", token, {
+      httpOnly: false,
+      secure: true,
+      sameSite: "none",
     });
     res
       .status(201)

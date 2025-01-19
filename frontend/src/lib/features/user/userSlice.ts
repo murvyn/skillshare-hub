@@ -4,16 +4,13 @@ const userSlice = createSlice({
   name: "user",
   initialState: {
     currentUser: null,
-    token: null,
   },
   reducers: {
     setUser(state, action) {
-      state.currentUser = action.payload.user;
-      state.token = action.payload.token;
+      state.currentUser = action.payload;
     },
     logout(state) {
       state.currentUser = null;
-      state.token = null;
     },
   },
 });

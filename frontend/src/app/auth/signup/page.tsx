@@ -23,9 +23,11 @@ import {
 } from "@/lib/features/interest/interestSlice";
 import { useSelector } from "react-redux";
 import { Checkbox } from "@/components/ui/checkbox";
-import { validateStep } from "@/helpers/helperFunctions";
+import { getCookie, validateStep } from "@/helpers/helperFunctions";
 import { RootState } from "@/store/store";
 import { Spinner } from "@/components/Spinner";
+import { jwtDecode } from "jwt-decode";
+import { setUser } from "@/lib/features/user/userSlice";
 
 export default function SignUp() {
   const dispatch = useDispatch();
@@ -69,6 +71,13 @@ export default function SignUp() {
         JSON.stringify(formData)
       );
       return response.data;
+    },
+    onSuccess: () => {
+      const token = getCookie("auth-x-token");
+      if (token) {
+        const decoded = jwtDecode(token);
+        dispatch(setUser(decoded));
+      }
     },
   });
 
@@ -139,7 +148,6 @@ export default function SignUp() {
     e.preventDefault();
     if (validateStep(currentStep, formData, setErrors)) {
       await mutateAsync();
-      console.log("Form submitted:", formData);
     }
   };
 
@@ -346,7 +354,11 @@ export default function SignUp() {
                 </Button>
               ) : (
                 <Button type="submit" className="ml-auto min-w-[7rem]">
-                  {signUpLoading ? <Spinner size={"medium"} className="text-white" /> : "Create Account"}
+                  {signUpLoading ? (
+                    <Spinner size={"medium"} className="text-white" />
+                  ) : (
+                    "Create Account"
+                  )}
                 </Button>
               )}
             </div>
