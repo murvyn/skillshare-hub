@@ -31,3 +31,82 @@ C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\authController.t
 Foreign key constraint violated: `user_interests_userId_fkey (index)`
 2025-01-19T20:37:50.463Z [error]: Error in login: JWTPrivateKey environment variable not set
 2025-01-19T20:37:59.955Z [error]: Error in login: JWTPrivateKey environment variable not set
+2025-01-20T23:04:16.813Z [error]: Error in forgot password: 
+Invalid `prisma.user.findUnique()` invocation in
+C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\authController.ts:105:36
+
+  102 export const forgotPassword = async (req: Request, res: Response): Promise<any> => {
+  103   try {
+  104     const { email } = req.body;
+→ 105     const user = await prisma.user.findUnique({
+            where: {
+              email: undefined,
+          ?   id?: String,
+          ?   AND?: UserWhereInput | UserWhereInput[],
+          ?   OR?: UserWhereInput[],
+          ?   NOT?: UserWhereInput | UserWhereInput[],
+          ?   firstName?: StringFilter | String,
+          ?   lastName?: StringFilter | String,
+          ?   password?: StringNullableFilter | String | Null,
+          ?   photoUrl?: StringNullableFilter | String | Null,
+          ?   googleId?: StringNullableFilter | String | Null,
+          ?   createdAt?: DateTimeFilter | DateTime,
+          ?   updatedAt?: DateTimeFilter | DateTime,
+          ?   interests?: UserInterestListRelationFilter
+            }
+          })
+
+Argument `where` of type UserWhereUniqueInput needs at least one of `id` or `email` arguments. Available options are marked with ?.
+2025-01-20T23:04:21.745Z [error]: Error in forgot password: 
+Invalid `prisma.user.findUnique()` invocation in
+C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\authController.ts:105:36
+
+  102 export const forgotPassword = async (req: Request, res: Response): Promise<any> => {
+  103   try {
+  104     const { email } = req.body;
+→ 105     const user = await prisma.user.findUnique({
+            where: {
+              email: undefined,
+          ?   id?: String,
+          ?   AND?: UserWhereInput | UserWhereInput[],
+          ?   OR?: UserWhereInput[],
+          ?   NOT?: UserWhereInput | UserWhereInput[],
+          ?   firstName?: StringFilter | String,
+          ?   lastName?: StringFilter | String,
+          ?   password?: StringNullableFilter | String | Null,
+          ?   photoUrl?: StringNullableFilter | String | Null,
+          ?   googleId?: StringNullableFilter | String | Null,
+          ?   createdAt?: DateTimeFilter | DateTime,
+          ?   updatedAt?: DateTimeFilter | DateTime,
+          ?   interests?: UserInterestListRelationFilter
+            }
+          })
+
+Argument `where` of type UserWhereUniqueInput needs at least one of `id` or `email` arguments. Available options are marked with ?.
+2025-01-20T23:05:02.567Z [error]: Error in forgot password: 
+Invalid `prisma.user.findUnique()` invocation in
+C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\authController.ts:105:36
+
+  102 export const forgotPassword = async (req: Request, res: Response): Promise<any> => {
+  103   try {
+  104     const { email } = req.body;
+→ 105     const user = await prisma.user.findUnique({
+            where: {
+              email: undefined,
+          ?   id?: String,
+          ?   AND?: UserWhereInput | UserWhereInput[],
+          ?   OR?: UserWhereInput[],
+          ?   NOT?: UserWhereInput | UserWhereInput[],
+          ?   firstName?: StringFilter | String,
+          ?   lastName?: StringFilter | String,
+          ?   password?: StringNullableFilter | String | Null,
+          ?   photoUrl?: StringNullableFilter | String | Null,
+          ?   googleId?: StringNullableFilter | String | Null,
+          ?   createdAt?: DateTimeFilter | DateTime,
+          ?   updatedAt?: DateTimeFilter | DateTime,
+          ?   interests?: UserInterestListRelationFilter
+            }
+          })
+
+Argument `where` of type UserWhereUniqueInput needs at least one of `id` or `email` arguments. Available options are marked with ?.
+2025-01-20T23:12:15.569Z [error]: Error in forgot password: Missing credentials for "PLAIN"

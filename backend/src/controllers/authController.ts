@@ -99,7 +99,7 @@ export const registerUser = async (
   }
 };
 
-const forgotPassword = async (req: Request, res: Response) => {
+export const forgotPassword = async (req: Request, res: Response): Promise<any> => {
   try {
     const { email } = req.body;
     const user = await prisma.user.findUnique({ where: { email } });

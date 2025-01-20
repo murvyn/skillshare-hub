@@ -18,31 +18,49 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
+import { useMutation } from "@tanstack/react-query";
+import client from "@/api/client";
+import { AxiosError } from "axios";
 
-interface DataProps{
-  email: string
+interface DataProps {
+  email: string;
 }
 
 const forgotPasswordSchema = z.object({
-  email: z.string().email()
+  email: z.string().email(),
 });
 
 export default function ForgotPassword() {
   const [success, setSuccess] = useState(false);
-  const { register, handleSubmit, formState: {errors} } = useForm({
+  const [error, setError] = useState("");
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
     resolver: zodResolver(forgotPasswordSchema),
-    defaultValues: { email: "" }
-  })
+    defaultValues: { email: "" },
+  });
 
-  const submit : SubmitHandler<DataProps> = async (data) => {
-    setSuccess(false);
-    try {
-      console.log(data)
+  const {mutateAsync} = useMutation({
+    mutationKey: ["forgot-password"],
+    mutationFn: async (data: DataProps) => {
+      const response = await client.post("/auth/forgot-password", JSON.stringify(data));
+      return response.data;
+    },
+    onSuccess: () => {
       setSuccess(true);
-    } catch (err) {
-      console.error(err);
-      setSuccess(false);
+    },
+    onError: (e) => {
+      const error = e as AxiosError
+      console.error(error);
+      setError(error.response.data.message);
     }
+  });
+
+  const submit: SubmitHandler<DataProps> = async (data) => {
+    setSuccess(false);
+      await mutateAsync(data);
   };
 
   return (
@@ -63,18 +81,18 @@ export default function ForgotPassword() {
               </Link>
             </div>
             <CardDescription>
-              Enter your email address and we&apos;ll send you a link to reset your
-              password.
+              Enter your email address and we&apos;ll send you a link to reset
+              your password.
             </CardDescription>
           </CardHeader>
           <CardContent>
-            {/* {error && (
+            {error && (
               <Alert variant="destructive" className="mb-4">
                 <AlertCircle className="h-4 w-4" />
                 <AlertTitle>Error</AlertTitle>
                 <AlertDescription>{error}</AlertDescription>
               </Alert>
-            )} */}
+            )}
             {success && (
               <Alert variant={"default"} className="mb-4">
                 <AlertCircle className="h-4 w-4" />
@@ -88,13 +106,15 @@ export default function ForgotPassword() {
               <div className="space-y-2">
                 <Label htmlFor="email">Email</Label>
                 <Input
-                {...register("email")}
+                  {...register("email")}
                   id="email"
                   type="email"
                   placeholder="john@example.com"
-                  className={errors.email ? 'border-red-500' : ''}
+                  className={errors.email ? "border-red-500" : ""}
                 />
-                {errors.email && <p className="text-red-500 text-xs">{errors.email.message}</p>}
+                {errors.email && (
+                  <p className="text-red-500 text-xs">{errors.email.message}</p>
+                )}
               </div>
               <Button
                 type="submit"
@@ -107,7 +127,10 @@ export default function ForgotPassword() {
           <CardFooter>
             <p className="text-sm text-center w-full">
               Remember your password?
-              <Link href="/auth/login" className="text-[#1E90FF] hover:underline">
+              <Link
+                href="/auth/login"
+                className="text-[#1E90FF] hover:underline"
+              >
                 Log in
               </Link>
             </p>
