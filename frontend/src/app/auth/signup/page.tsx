@@ -62,7 +62,6 @@ export default function SignUp() {
 
   const {
     mutateAsync,
-    data,
     isPending: signUpLoading,
   } = useMutation({
     mutationFn: async () => {
@@ -80,8 +79,6 @@ export default function SignUp() {
       }
     },
   });
-
-  console.log(data);
 
   const validator = (value: string) => {
     setContdition({
