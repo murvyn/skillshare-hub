@@ -110,3 +110,21 @@ C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\authController.t
 
 Argument `where` of type UserWhereUniqueInput needs at least one of `id` or `email` arguments. Available options are marked with ?.
 2025-01-20T23:12:15.569Z [error]: Error in forgot password: Missing credentials for "PLAIN"
+2025-01-21T23:26:33.096Z [error]: Error in user registration: 
+Invalid `prisma.user.findUnique()` invocation in
+C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\authController.ts:66:36
+
+  63 ): Promise<any> => {
+  64   try {
+  65     const { firstName, lastName, email, password, interests, role } = req.body;
+→ 66     const user = await prisma.user.findUnique(
+The table `public.users` does not exist in the current database.
+2025-01-21T23:27:46.851Z [error]: Error in user registration: 
+Invalid `prisma.user.create()` invocation in
+C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\authController.ts:72:39
+
+  69 }
+  70 const hashedPassword = await bcrypt.hash(password, 10);
+  71 
+→ 72 const newUser = await prisma.user.create(
+An operation failed because it depends on one or more records that were required but not found. No 'Interest' record(s) (needed to inline the relation on 'UserInterest' record(s)) was found for a nested connect on one-to-many relation 'InterestToUserInterest'.

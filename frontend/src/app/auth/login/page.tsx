@@ -57,7 +57,8 @@ export default function Login() {
       const response = await client.post("/auth/login", JSON.stringify(data));
       return response.data;
     },
-    onSuccess: () => {
+    onSuccess: (data) => {
+      console.log(data)
       const token = getCookie("auth-x-token")
       const decoded = jwtDecode(token as string);
       dispatch(setUser(decoded))

@@ -5,10 +5,8 @@ import SimpleWebAuthnServer, {
 } from "@simplewebauthn/server";
 import { PrismaClient } from "@prisma/client";
 
-let users = {};
-let challenges = {};
 const rpId = "localhost";
-const expectedOrigin = ["http://localhost:3000"];
+const expectedOrigin = ["http://localhost:5000"];
 const prisma = new PrismaClient();
 
 export const registerStart = async (req: Request, res: Response): Promise<any> => {
@@ -35,7 +33,7 @@ export const registerStart = async (req: Request, res: Response): Promise<any> =
   res.json(pubKey);
 };
 export const registerFinish = async (req: Request, res: Response): Promise<any> => {
-  const { email } = req.body;
+  const { email, data } = req.body;
   const user = await prisma.user.findUnique({ where: { email } });
   if (!user) {
     return res.status(404).json({ message: "User not found" });
@@ -48,7 +46,7 @@ export const registerFinish = async (req: Request, res: Response): Promise<any> 
   let verification;
   try {
     verification = await SimpleWebAuthnServer.verifyRegistrationResponse({
-      response: req.body.data,
+      response: data,
       expectedChallenge,
       expectedOrigin,
     });

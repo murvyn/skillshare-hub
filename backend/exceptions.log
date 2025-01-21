@@ -36,3 +36,33 @@ Foreign key constraint violated: `user_interests_userId_fkey (index)`
     at Vn.handleAndLogRequestError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@prisma\client\runtime\library.js:121:6663)
     at Vn.request (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@prisma\client\runtime\library.js:121:6370)
     at async l (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@prisma\client\runtime\library.js:130:9617)
+2025-01-21T23:06:28.710Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m23[0m:[93m13[0m - [91merror[0m[90m TS2322: [0mType 'string' is not assignable to type 'BufferSource'.
+
+[7m23[0m     user: { id: user.id, name: email, displayName: email },
+[7m  [0m [91m            ~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m23[0m:[93m17[0m - [91merror[0m[90m TS18047: [0m'user' is possibly 'null'.
+
+[7m23[0m     user: { id: user.id, name: email, displayName: email },
+[7m  [0m [91m                ~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m23[0m:[93m13[0m - [91merror[0m[90m TS2322: [0mType 'string' is not assignable to type 'BufferSource'.
+
+[7m23[0m     user: { id: user.id, name: email, displayName: email },
+[7m  [0m [91m            ~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m23[0m:[93m17[0m - [91merror[0m[90m TS18047: [0m'user' is possibly 'null'.
+
+[7m23[0m     user: { id: user.id, name: email, displayName: email },
+[7m  [0m [91m                ~~~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
