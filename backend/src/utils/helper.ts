@@ -1,5 +1,6 @@
 import jwt from "jsonwebtoken";
 import { User } from "@prisma/client";
+import crypto from "crypto";
 
 export const generateAuthToken = (user: User) => {
   const jwtPrivateKey = process.env.JWTPrivateKey;
@@ -9,3 +10,9 @@ export const generateAuthToken = (user: User) => {
   }
   return jwt.sign(user, jwtPrivateKey);
 };
+export const getNewChallenge = () => {
+  return crypto.randomBytes(32).toString("base64url");
+}
+// export const convertChallenge = (challenge: string) => {
+//   return btoa(challenge).replaceAll('=', '');
+// }
