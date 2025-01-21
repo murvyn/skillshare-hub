@@ -11,7 +11,7 @@ const rpId = "localhost";
 const expectedOrigin = ["http://localhost:3000"];
 const prisma = new PrismaClient();
 
-export const registerStart = async (req: Request, res: Response) => {
+export const registerStart = async (req: Request, res: Response): Promise<any> => {
   const { email } = req.body;
   const user = await prisma.user.findUnique({ where: { email } });
   const challenge = getNewChallenge();
@@ -34,7 +34,7 @@ export const registerStart = async (req: Request, res: Response) => {
   };
   res.json(pubKey);
 };
-export const registerFinish = async (req: Request, res: Response) => {
+export const registerFinish = async (req: Request, res: Response): Promise<any> => {
   const { email } = req.body;
   const user = await prisma.user.findUnique({ where: { email } });
   if (!user) {
@@ -72,7 +72,7 @@ export const registerFinish = async (req: Request, res: Response) => {
   res.status(500).send(false);
 };
 
-export const loginStart = async (req: Request, res: Response) => {
+export const loginStart = async (req: Request, res: Response): Promise<any> => {
   const { email } = req.body;
   const user = await prisma.user.findUnique({ where: { email } });
   if (!user || !user.passkeyID) {
@@ -98,7 +98,7 @@ export const loginStart = async (req: Request, res: Response) => {
   });
 };
 
-export const loginFinish = async (req: Request, res: Response) => {
+export const loginFinish = async (req: Request, res: Response): Promise<any> => {
   const { email, data } = req.body;
   const user = await prisma.user.findUnique({ where: { email } });
   if (!user || !user.publicKey || !user.passkeyID) {

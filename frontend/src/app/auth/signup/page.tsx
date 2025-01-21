@@ -28,12 +28,16 @@ import { RootState } from "@/store/store";
 import { Spinner } from "@/components/Spinner";
 import { jwtDecode } from "jwt-decode";
 import { setUser } from "@/lib/features/user/userSlice";
+import { KeyRound } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function SignUp() {
   const dispatch = useDispatch();
   const { interests } = useSelector((state: RootState) => state.interests);
   const [currentStep, setCurrentStep] = useState(1);
   const [page, setPage] = useState(0);
+  const [isCreatingPasskey, setIsCreatingPasskey] = useState(false);
+  const [passkeyProgress, setPasskeyProgress] = useState(0);
   const [conditions, setContdition] = useState({
     hasUpperCase: false,
     hasLowerCase: false,
@@ -60,10 +64,25 @@ export default function SignUp() {
     interests: "",
   });
 
-  const {
-    mutateAsync,
-    isPending: signUpLoading,
-  } = useMutation({
+
+  useEffect(() => {
+    if (isCreatingPasskey) {
+      const interval = setInterval(() => {
+        setPasskeyProgress((prevProgress) => {
+          if (prevProgress >= 100) {
+            clearInterval(interval);
+            setIsCreatingPasskey(false);
+            return 100;
+          }
+          return prevProgress + 10;
+        });
+      }, 200);
+
+      return () => clearInterval(interval);
+    }
+  }, [isCreatingPasskey]);
+
+  const { mutateAsync, isPending: signUpLoading } = useMutation({
     mutationFn: async () => {
       const response = await client.post(
         "/auth/register",
@@ -137,6 +156,9 @@ export default function SignUp() {
   };
 
   const handlePrevStep = () => {
+    if (currentStep === 3) {
+      setIsCreatingPasskey(true);
+    }
     setPage(page - 1);
     setCurrentStep((prev) => prev - 1);
   };
@@ -167,8 +189,9 @@ export default function SignUp() {
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="text-sm font-medium text-gray-500 mb-4">
-              Step {currentStep} of 3
+              Step {currentStep} of 4
             </div>
+
             {currentStep === 1 && (
               <>
                 <div className="space-y-2">
@@ -330,9 +353,41 @@ export default function SignUp() {
                 </div>
               </>
             )}
-
+            {currentStep === 4 && (
+              <div className="flex flex-col items-center justify-center space-y-4">
+                <AnimatePresence>
+                  <motion.div
+                    className="w-24 h-24 rounded-full border-4 border-[#1E90FF] flex items-center justify-center"
+                    animate={{
+                      rotate: isCreatingPasskey ? 360 : 0,
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Number.POSITIVE_INFINITY,
+                      ease: "linear",
+                    }}
+                  >
+                    <KeyRound className="w-12 h-12 text-[#1E90FF]" />
+                  </motion.div>
+                  <p className="text-lg font-semibold">
+                    Creating your passkey...
+                  </p>
+                  <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                    <motion.div
+                      className="bg-[#1E90FF] h-2.5 rounded-full"
+                      initial={{ width: 0 }}
+                      animate={{ width: `${passkeyProgress}%` }}
+                      transition={{ duration: 0.5 }}
+                    />
+                  </div>
+                  <p className="text-sm text-gray-500">
+                    This may take a few moments
+                  </p>
+                </AnimatePresence>
+              </div>
+            )}
             <div className="flex justify-between pt-4">
-              {currentStep > 1 && (
+              {currentStep > 1 && currentStep < 4 && (
                 <Button
                   type="button"
                   variant="outline"
@@ -349,25 +404,38 @@ export default function SignUp() {
                 >
                   Next
                 </Button>
+              ) : currentStep === 3 ? (
+                <Button
+                  type="button"
+                  onClick={handleNextStep}
+                  className="ml-auto"
+                >
+                  Create Account
+                </Button>
               ) : (
-                <Button type="submit" className="ml-auto min-w-[7rem]">
-                  {signUpLoading ? (
-                    <Spinner size={"medium"} className="text-white" />
-                  ) : (
-                    "Create Account"
-                  )}
+                <Button
+                  type="submit"
+                  className="ml-auto"
+                  disabled={isCreatingPasskey || passkeyProgress < 100}
+                >
+                  {passkeyProgress < 100 ? "Creating Passkey..." : "Complete"}
                 </Button>
               )}
             </div>
           </form>
         </CardContent>
         <CardFooter className="flex flex-col items-center">
-          <p className="text-sm text-gray-600">
-            Already have an account?{" "}
-            <Link href="/auth/login" className="text-[#1E90FF] hover:underline">
-              Log in
-            </Link>
-          </p>
+          {currentStep <= 3 && (
+            <p className="text-sm text-gray-600">
+              Already have an account?{" "}
+              <Link
+                href="/auth/login"
+                className="text-[#1E90FF] hover:underline"
+              >
+                Log in
+              </Link>
+            </p>
+          )}
           <p className="mt-4 text-xs text-gray-500">
             By signing up, you agree to our{" "}
             <Link href="/terms" className="text-[#1E90FF] hover:underline">
