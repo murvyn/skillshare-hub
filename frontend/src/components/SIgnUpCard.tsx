@@ -11,7 +11,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { useEffect, useState } from "react";
-import { useMutation, useQuery } from "@tanstack/react-query";
+import { useMutation } from "@tanstack/react-query";
 import client from "@/api/client";
 import { useDispatch } from "react-redux";
 import { setInterests } from "@/lib/features/interest/interestSlice";
@@ -22,12 +22,11 @@ import { RootState } from "@/store/store";
 import { Spinner } from "@/components/Spinner";
 import { jwtDecode } from "jwt-decode";
 import { setUser } from "@/lib/features/user/userSlice";
-import { AlertCircle, CircleCheck, KeyRound } from "lucide-react";
+import { AlertCircle, KeyRound } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { AxiosError } from "axios";
 import {
-  fido2Get,
   fido2Create,
   IWebAuthnRegisterRequest,
 } from "@ownid/webauthn";
@@ -110,14 +109,14 @@ const SIgnUpCard = ({router}: {router: AppRouterInstance}) => {
     useMutation({
       mutationFn: async ({
         email,
-        data,
+        pubKey,
       }: {
         email: string;
-        data: IWebAuthnRegisterRequest;
+        pubKey: IWebAuthnRegisterRequest;
       }) => {
         const response = await client.post(
           "/auth/passkey-register/finish",
-          JSON.stringify({ email, data })
+          JSON.stringify({ email, pubKey })
         );
         console.log(response)
         return response.data;
@@ -143,24 +142,26 @@ const SIgnUpCard = ({router}: {router: AppRouterInstance}) => {
         "/auth/passkey-register/start",
         JSON.stringify({ email })
       );
-      console.log(response)
+      console.log("passkey sart",response)
       return response.data;
     },
     onSuccess: async (data) => {
-      setProgress(33); // Progress after starting the passkey creation
+      setProgress(33); 
       try {
         const fidoData = await fido2Create(data, formData.email);
-        setProgress(66); // Progress after FIDO creation
-        await passkeyFinish({ email: formData.email, data: fidoData });
+        console.log('fido',fidoData)
+        setProgress(66); 
+        await passkeyFinish({ email: formData.email, pubKey: fidoData });
       } catch (error) {
         setProgress(0);
-        console.log(error);
+        console.log("fido data error", error);
         setIsCreatingPasskey(false);
         setPasskeyStatus("error");
         setErrorMessage("Failed to create FIDO data.");
       }
     },
     onError: (e) => {
+      console.log(e)
       setProgress(0);
       setIsCreatingPasskey(false);
       setPasskeyStatus("error");
@@ -233,11 +234,7 @@ const SIgnUpCard = ({router}: {router: AppRouterInstance}) => {
     if (validateStep(currentStep, formData, setErrors)) {
       await mutateAsync();
     }
-    // if (isSuccess) {
-    //   setIsCreatingPasskey(true);
-    //   setProgress(10);
-    //   await passkeyStart(formData.email);
-    // }
+
   };
   return (
     <Card className="w-full max-w-md">

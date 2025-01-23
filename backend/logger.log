@@ -128,3 +128,34 @@ C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\authController.t
   71 
 → 72 const newUser = await prisma.user.create(
 An operation failed because it depends on one or more records that were required but not found. No 'Interest' record(s) (needed to inline the relation on 'UserInterest' record(s)) was found for a nested connect on one-to-many relation 'InterestToUserInterest'.
+2025-01-22T20:07:45.593Z [error]: unhandledRejection: Cannot read properties of undefined (reading 'verifyRegistrationResponse')
+TypeError: Cannot read properties of undefined (reading 'verifyRegistrationResponse')
+    at C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\passkeyController.ts:58:53
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\passkeyController.ts:5:58)
+2025-01-22T20:07:45.602Z [error]: Unhandled Rejection: TypeError: Cannot read properties of undefined (reading 'verifyRegistrationResponse')
+2025-01-22T20:09:54.460Z [error]: unhandledRejection: Cannot read properties of undefined (reading 'verifyRegistrationResponse')
+TypeError: Cannot read properties of undefined (reading 'verifyRegistrationResponse')
+    at C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\passkeyController.ts:62:53
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\passkeyController.ts:5:58)
+2025-01-22T20:09:54.490Z [error]: Unhandled Rejection: TypeError: Cannot read properties of undefined (reading 'verifyRegistrationResponse')
+2025-01-22T20:15:55.335Z [error]: unhandledRejection: Cannot destructure property 'id' of 'response' as it is undefined.
+TypeError: Cannot destructure property 'id' of 'response' as it is undefined.
+    at verifyRegistrationResponse (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\registration\verifyRegistrationResponse.js:38:13)
+    at C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\passkeyController.ts:62:58
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\passkeyController.ts:5:58)
+2025-01-22T20:15:55.361Z [error]: Unhandled Rejection: TypeError: Cannot destructure property 'id' of 'response' as it is undefined.
+2025-01-23T01:50:48.393Z [error]: unhandledRejection: Cannot read properties of undefined (reading 'verifyRegistrationResponse')
+TypeError: Cannot read properties of undefined (reading 'verifyRegistrationResponse')
+    at registerFinish (C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\passkeyController.ts:66:42)
+2025-01-23T01:50:48.417Z [error]: Unhandled Rejection: TypeError: Cannot read properties of undefined (reading 'verifyRegistrationResponse')
+2025-01-23T17:45:48.045Z [error]: unhandledRejection: Cannot read properties of undefined (reading 'verifyRegistrationResponse')
+TypeError: Cannot read properties of undefined (reading 'verifyRegistrationResponse')
+    at registerFinish (C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\passkeyController.ts:71:47)
+2025-01-23T17:45:48.050Z [error]: Unhandled Rejection: TypeError: Cannot read properties of undefined (reading 'verifyRegistrationResponse')
+2025-01-23T18:11:03.163Z [error]: unhandledRejection: Cannot read properties of undefined (reading 'verifyRegistrationResponse')
+TypeError: Cannot read properties of undefined (reading 'verifyRegistrationResponse')
+    at registerFinish (C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\passkeyController.ts:71:47)
+2025-01-23T18:11:03.171Z [error]: Unhandled Rejection: TypeError: Cannot read properties of undefined (reading 'verifyRegistrationResponse')

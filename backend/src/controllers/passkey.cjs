@@ -1,21 +1,12 @@
-import { Request, Response } from "express";
-import { convertChallenge, getNewChallenge } from "../utils/helper";
-import SimpleWebAuthnServer, {
-  AuthenticationResponseJSON,
-  generateRegistrationOptions,
-  RegistrationResponseJSON,
-  verifyRegistrationResponse,VerifiedRegistrationResponse
-} from "@simplewebauthn/server";
-import { PrismaClient } from "@prisma/client";
+const { convertChallenge, getNewChallenge } = require("../utils/helper");
+const SimpleWebAuthnServer = require("@simplewebauthn/server");
+const { PrismaClient } = require("@prisma/client");
 
 const rpID = "localhost";
 const prisma = new PrismaClient();
 const expectedOrigin = "http://localhost:3000";
 
-export const registerStart = async (
-  req: Request,
-  res: Response
-): Promise<any> => {
+exports.registerStart = async (req, res) => {
   const { email } = req.body;
   const user = await prisma.user.findUnique({ where: { email } });
   const challenge = getNewChallenge();
@@ -26,8 +17,8 @@ export const registerStart = async (
     return;
   }
 
-  const pubKey: PublicKeyCredentialCreationOptions = {
-    challenge: challenge as unknown as BufferSource,
+  const pubKey = {
+    challenge: challenge,
     rp: { id: rpID, name: "webauthn-app" },
     user: { id: email, name: email, displayName: email },
     pubKeyCredParams: [
@@ -44,13 +35,10 @@ export const registerStart = async (
   res.json(pubKey);
 };
 
-export const registerFinish = async (
-  req: Request,
-  res: Response
-): Promise<any> => {
+exports.registerFinish = async (req, res) => {
   const { email, pubKey } = req.body;
-  const data = pubKey.data as RegistrationResponseJSON;
-  console.log("data", data)
+  const data = pubKey.data;
+  console.log("data", data);
   const user = await prisma.user.findUnique({ where: { email } });
   if (!user) {
     return res.status(404).json({ message: "User not found" });
@@ -65,19 +53,18 @@ export const registerFinish = async (
     return res.status(400).json({ message: "Invalid registration data" });
   }
 
-
   let verification;
-  // try {
-    verification = await SimpleWebAuthnServer.verifyRegistrationResponse({
-      response: pubKey.data,
-      expectedChallenge: convertChallenge(expectedChallenge),
-      expectedOrigin,
-      expectedRPID: rpID,
-    });
-  // } catch (error) {
-  //   console.error(error);
-  //   return res.status(400).send({ error: (error as Error).message });
-  // }
+try {
+  verification = await SimpleWebAuthnServer.verifyRegistrationResponse({
+    response: pubKey.data,
+    expectedChallenge: convertChallenge(expectedChallenge),
+    expectedOrigin,
+    expectedRPID: rpID,
+  });
+} catch (error) {
+  console.error(error);
+  return res.status(400).send({ error: (error).message });
+}
   const { verified, registrationInfo } = verification;
   if (verified && registrationInfo) {
     await prisma.user.update({
@@ -92,12 +79,10 @@ export const registerFinish = async (
     return res.status(200).json({ success: true });
   }
 
-  return res
-    .status(500)
-    .json({ success: false, message: "Verification failed" });
+  return res.status(500).json({ success: false, message: "Verification failed" });
 };
 
-export const loginStart = async (req: Request, res: Response): Promise<any> => {
+exports.loginStart = async (req, res) => {
   const { email } = req.body;
   const user = await prisma.user.findUnique({ where: { email } });
   if (!user || !user.passkeyID) {
@@ -123,12 +108,8 @@ export const loginStart = async (req: Request, res: Response): Promise<any> => {
   });
 };
 
-export const loginFinish = async (
-  req: Request,
-  res: Response
-): Promise<any> => {
-  const { email, pubKey } = req.body;
-  const data = pubKey.data as AuthenticationResponseJSON;
+exports.loginFinish = async (req, res) => {
+  const { email, data } = req.body;
   const user = await prisma.user.findUnique({ where: { email } });
   if (!user || !user.publicKey || !user.passkeyID) {
     return res.status(404).json({ message: "Passkey not registered" });
@@ -143,7 +124,6 @@ export const loginFinish = async (
     verification = await SimpleWebAuthnServer.verifyAuthenticationResponse({
       response: data,
       expectedChallenge: user.challenge,
-
       credential: {
         id: Buffer.from(user.passkeyID, "base64").toString("base64"),
         publicKey: Buffer.from(user.publicKey, "base64"),
@@ -155,7 +135,7 @@ export const loginFinish = async (
     });
   } catch (error) {
     console.error(error);
-    return res.status(400).send({ error: (error as Error).message });
+    return res.status(400).send({ error: error.message });
   }
   const { verified, authenticationInfo } = verification;
   if (verified) {

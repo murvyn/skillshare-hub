@@ -11,8 +11,8 @@ export const generateAuthToken = (user: User) => {
   return jwt.sign(user, jwtPrivateKey);
 };
 export const getNewChallenge = () => {
-  return crypto.randomBytes(32).toString("base64url");
+  return Math.random().toString(36).substring(2);
 }
-// export const convertChallenge = (challenge: string) => {
-//   return btoa(challenge).replaceAll('=', '');
-// }
+export const convertChallenge = (challenge: string) => {
+  return btoa(challenge).replaceAll('=', '');
+}

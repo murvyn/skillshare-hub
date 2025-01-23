@@ -21,7 +21,10 @@ import client from "@/api/client";
 import { getCookie } from "@/helpers/helperFunctions";
 import { useDispatch } from "react-redux";
 import { setUser } from "@/lib/features/user/userSlice";
-import  {jwtDecode} from 'jwt-decode'
+import { jwtDecode } from "jwt-decode";
+import { useState } from "react";
+import LoginWithPasswordForm from "@/components/LoginWithPasswordForm";
+import LoginWithPasskeyForm from "@/components/LoginWithPasskeyForm";
 
 interface DataProps {
   email: string;
@@ -38,41 +41,8 @@ const loginScheme = z.object({
 });
 
 export default function Login() {
-  const dispatch = useDispatch()
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm({
-    resolver: zodResolver(loginScheme),
-    defaultValues: {
-      email: "",
-      password: "",
-      rememberMe: false,
-    },
-  });
-
-  const { mutateAsync } = useMutation({
-    mutationFn: async (data: DataProps) => {
-      const response = await client.post("/auth/login", JSON.stringify(data));
-      return response.data;
-    },
-    onSuccess: (data) => {
-      console.log(data)
-      const token = getCookie("auth-x-token")
-      const decoded = jwtDecode(token as string);
-      dispatch(setUser(decoded))
-    }
-  });
-
-  const submit: SubmitHandler<DataProps> = async (data) => {
-    try {
-      await mutateAsync(data);
-
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  const [loginWithPasskey, setLoginWIthPasskey] = useState(false);
+  const dispatch = useDispatch();
 
   return (
     <div className="min-h-screen bg-[#F5F5F5] flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
@@ -86,69 +56,22 @@ export default function Login() {
           <CardTitle className="text-2xl font-bold text-center">
             Log in to your account
           </CardTitle>
-          <CardDescription className="text-center">
-            Enter your email and password to access your account
-          </CardDescription>
+          {!loginWithPasskey ? (
+            <CardDescription className="text-center">
+              Enter your email and password to access your account
+            </CardDescription>
+          ) : (
+            <CardDescription className="text-center">
+              Enter your email to access your account
+            </CardDescription>
+          )}
         </CardHeader>
         <CardContent>
-          <form onSubmit={handleSubmit(submit)} className="space-y-4">
-            <div className="space-y-2">
-              <Label htmlFor="email">Email</Label>
-              <Input
-                id="email"
-                type="email"
-                placeholder="john@example.com"
-                className={errors.email ? "border-red-500" : ""}
-                {...register("email")}
-              />
-              {errors.email && (
-                <p className="text-red-500 text-xs">{errors.email.message}</p>
-              )}
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="password">Password</Label>
-              <div className="relative">
-                <Input
-                  id="password"
-                  type="password"
-                  placeholder="••••••••"
-                  {...register("password")}
-                  className={errors.password ? "border-red-500" : ""}
-                />
-              </div>
-              {errors.password && (
-                <p className="text-red-500 text-xs">
-                  {errors.password.message}
-                </p>
-              )}
-            </div>
-            <div className="flex items-center justify-between">
-              <div className="flex items-center space-x-2">
-                <Checkbox id="rememberMe" {...register("rememberMe")} />
-                <Label
-                  htmlFor="rememberMe"
-                  className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                >
-                  Remember me
-                </Label>
-              </div>
-              <Link
-                href="/auth/forgot-password"
-                className="text-sm text-[#1E90FF] hover:underline"
-              >
-                Forgot password?
-              </Link>
-            </div>
-            <Button
-              type="submit"
-              className="w-full bg-[#1E90FF] hover:bg-blue-600"
-            >
-              Log In
-            </Button>
-            <Button type="submit" className="w-full">
-              Use Passkey
-            </Button>
-          </form>
+          {!loginWithPasskey ? (
+            <LoginWithPasswordForm />
+          ) : (
+            <LoginWithPasskeyForm />
+          )}
         </CardContent>
         <CardFooter className="flex justify-center">
           <p className="text-sm text-gray-600">

@@ -66,3 +66,2182 @@ TSError: ⨯ Unable to compile TypeScript:
     at Module.load (node:internal/modules/cjs/loader:1313:32)
     at Function._load (node:internal/modules/cjs/loader:1123:12)
     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-22T19:14:06.891Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m127[0m:[93m7[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'expectedOrigin'. Either declare one or provide an initializer.
+
+[7m127[0m       expectedOrigin,
+[7m   [0m [91m      ~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m127[0m:[93m7[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'expectedOrigin'. Either declare one or provide an initializer.
+
+[7m127[0m       expectedOrigin,
+[7m   [0m [91m      ~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-22T19:15:15.486Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m135[0m:[93m7[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'expectedOrigin'. Either declare one or provide an initializer.
+
+[7m135[0m       expectedOrigin,
+[7m   [0m [91m      ~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m135[0m:[93m7[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'expectedOrigin'. Either declare one or provide an initializer.
+
+[7m135[0m       expectedOrigin,
+[7m   [0m [91m      ~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-22T20:05:18.140Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m80[0m:[93m12[0m - [91merror[0m[90m TS2304: [0mCannot find name 'res'.
+
+[7m80[0m     return res.status(400).send({ error: (error as Error).message });
+[7m  [0m [91m           ~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m77[0m:[93m5[0m - [91merror[0m[90m TS1472: [0m'catch' or 'finally' expected.
+
+[7m77[0m     res.status(500).send(false);
+[7m  [0m [91m    ~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m78[0m:[93m5[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m78[0m   } catch (error) {
+[7m  [0m [91m    ~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m82[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m82[0m };
+[7m  [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m80[0m:[93m12[0m - [91merror[0m[90m TS2304: [0mCannot find name 'res'.
+
+[7m80[0m     return res.status(400).send({ error: (error as Error).message });
+[7m  [0m [91m           ~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m77[0m:[93m5[0m - [91merror[0m[90m TS1472: [0m'catch' or 'finally' expected.
+
+[7m77[0m     res.status(500).send(false);
+[7m  [0m [91m    ~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m78[0m:[93m5[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m78[0m   } catch (error) {
+[7m  [0m [91m    ~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m82[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m82[0m };
+[7m  [0m [91m~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-22T20:05:29.432Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m81[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m81[0m   }
+[7m  [0m [91m  ~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m82[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m82[0m };
+[7m  [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m81[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m81[0m   }
+[7m  [0m [91m  ~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m82[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m82[0m };
+[7m  [0m [91m~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-22T20:05:36.624Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m82[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m82[0m };
+[7m  [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m82[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m82[0m };
+[7m  [0m [91m~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-22T20:07:45.593Z [error]: unhandledRejection: Cannot read properties of undefined (reading 'verifyRegistrationResponse')
+TypeError: Cannot read properties of undefined (reading 'verifyRegistrationResponse')
+    at C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\passkeyController.ts:58:53
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\passkeyController.ts:5:58)
+2025-01-22T20:09:54.460Z [error]: unhandledRejection: Cannot read properties of undefined (reading 'verifyRegistrationResponse')
+TypeError: Cannot read properties of undefined (reading 'verifyRegistrationResponse')
+    at C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\passkeyController.ts:62:53
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\passkeyController.ts:5:58)
+2025-01-22T20:12:29.946Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m4[0m:[93m31[0m - [91merror[0m[90m TS2305: [0mModule '"@simplewebauthn/server"' has no exported member 'verify'.
+
+[7m4[0m   AuthenticationResponseJSON, verify
+[7m [0m [91m                              ~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m4[0m:[93m31[0m - [91merror[0m[90m TS2305: [0mModule '"@simplewebauthn/server"' has no exported member 'verify'.
+
+[7m4[0m   AuthenticationResponseJSON, verify
+[7m [0m [91m                              ~~~~~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-22T20:13:07.027Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m130[0m:[93m26[0m - [91merror[0m[90m TS2304: [0mCannot find name 'SimpleWebAuthnServer'.
+
+[7m130[0m     verification = await SimpleWebAuthnServer.verifyAuthenticationResponse({
+[7m   [0m [91m                         ~~~~~~~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m130[0m:[93m26[0m - [91merror[0m[90m TS2304: [0mCannot find name 'SimpleWebAuthnServer'.
+
+[7m130[0m     verification = await SimpleWebAuthnServer.verifyAuthenticationResponse({
+[7m   [0m [91m                         ~~~~~~~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-22T20:14:00.657Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m62[0m:[93m65[0m - [91merror[0m[90m TS2304: [0mCannot find name 'data'.
+
+[7m62[0m     const verification = await await verifyRegistrationResponse(data)
+[7m  [0m [91m                                                                ~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m126[0m:[93m26[0m - [91merror[0m[90m TS2304: [0mCannot find name 'SimpleWebAuthnServer'.
+
+[7m126[0m     verification = await SimpleWebAuthnServer.verifyAuthenticationResponse({
+[7m   [0m [91m                         ~~~~~~~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m62[0m:[93m65[0m - [91merror[0m[90m TS2304: [0mCannot find name 'data'.
+
+[7m62[0m     const verification = await await verifyRegistrationResponse(data)
+[7m  [0m [91m                                                                ~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m126[0m:[93m26[0m - [91merror[0m[90m TS2304: [0mCannot find name 'SimpleWebAuthnServer'.
+
+[7m126[0m     verification = await SimpleWebAuthnServer.verifyAuthenticationResponse({
+[7m   [0m [91m                         ~~~~~~~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-22T20:14:15.843Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m126[0m:[93m26[0m - [91merror[0m[90m TS2304: [0mCannot find name 'SimpleWebAuthnServer'.
+
+[7m126[0m     verification = await SimpleWebAuthnServer.verifyAuthenticationResponse({
+[7m   [0m [91m                         ~~~~~~~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m126[0m:[93m26[0m - [91merror[0m[90m TS2304: [0mCannot find name 'SimpleWebAuthnServer'.
+
+[7m126[0m     verification = await SimpleWebAuthnServer.verifyAuthenticationResponse({
+[7m   [0m [91m                         ~~~~~~~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-22T20:15:55.335Z [error]: unhandledRejection: Cannot destructure property 'id' of 'response' as it is undefined.
+TypeError: Cannot destructure property 'id' of 'response' as it is undefined.
+    at verifyRegistrationResponse (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\registration\verifyRegistrationResponse.js:38:13)
+    at C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\passkeyController.ts:62:58
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\passkeyController.ts:5:58)
+2025-01-23T00:34:42.315Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m16[0m:[93m11[0m - [91merror[0m[90m TS2451: [0mCannot redeclare block-scoped variable 'email'.
+
+[7m16[0m   const { email } = req.body;
+[7m  [0m [91m          ~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m18[0m:[93m9[0m - [91merror[0m[90m TS2451: [0mCannot redeclare block-scoped variable 'challenge'.
+
+[7m18[0m   const challenge = getNewChallenge();
+[7m  [0m [91m        ~~~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m28[0m:[93m60[0m - [91merror[0m[90m TS2304: [0mCannot find name 'generateRe'.
+
+[7m28[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRe{
+[7m  [0m [91m                                                           ~~~~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m29[0m:[93m16[0m - [91merror[0m[90m TS2451: [0mCannot redeclare block-scoped variable 'challenge'.
+
+[7m29[0m     challenge: challenge as unknown as BufferSource,
+[7m  [0m [91m               ~~~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m29[0m:[93m16[0m - [91merror[0m[90m TS7031: [0mBinding element 'challenge' implicitly has an 'any' type.
+
+[7m29[0m     challenge: challenge as unknown as BufferSource,
+[7m  [0m [91m               ~~~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m29[0m:[93m26[0m - [91merror[0m[90m TS2451: [0mCannot redeclare block-scoped variable 'as'.
+
+[7m29[0m     challenge: challenge as unknown as BufferSource,
+[7m  [0m [91m                         ~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m29[0m:[93m26[0m - [91merror[0m[90m TS7031: [0mBinding element 'as' implicitly has an 'any' type.
+
+[7m29[0m     challenge: challenge as unknown as BufferSource,
+[7m  [0m [91m                         ~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m29[0m:[93m29[0m - [91merror[0m[90m TS7031: [0mBinding element 'unknown' implicitly has an 'any' type.
+
+[7m29[0m     challenge: challenge as unknown as BufferSource,
+[7m  [0m [91m                            ~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m29[0m:[93m37[0m - [91merror[0m[90m TS2451: [0mCannot redeclare block-scoped variable 'as'.
+
+[7m29[0m     challenge: challenge as unknown as BufferSource,
+[7m  [0m [91m                                    ~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m29[0m:[93m37[0m - [91merror[0m[90m TS7031: [0mBinding element 'as' implicitly has an 'any' type.
+
+[7m29[0m     challenge: challenge as unknown as BufferSource,
+[7m  [0m [91m                                    ~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m29[0m:[93m40[0m - [91merror[0m[90m TS7031: [0mBinding element 'BufferSource' implicitly has an 'any' type.
+
+[7m29[0m     challenge: challenge as unknown as BufferSource,
+[7m  [0m [91m                                       ~~~~~~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m15[0m - [91merror[0m[90m TS7031: [0mBinding element 'rpId' implicitly has an 'any' type.
+
+[7m30[0m     rp: { id: rpId, name: "webauthn-app" },
+[7m  [0m [91m              ~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m26[0m - [91merror[0m[90m TS2451: [0mCannot redeclare block-scoped variable '(Missing)'.
+
+[7m30[0m     rp: { id: rpId, name: "webauthn-app" },
+[7m  [0m [91m                         [0m
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m26[0m - [91merror[0m[90m TS7031: [0mBinding element '(Missing)' implicitly has an 'any' type.
+
+[7m30[0m     rp: { id: rpId, name: "webauthn-app" },
+[7m  [0m [91m                         [0m
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m41[0m - [91merror[0m[90m TS2451: [0mCannot redeclare block-scoped variable '(Missing)'.
+
+[7m30[0m     rp: { id: rpId, name: "webauthn-app" },
+[7m  [0m [91m                                        [0m
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m41[0m - [91merror[0m[90m TS7031: [0mBinding element '(Missing)' implicitly has an 'any' type.
+
+[7m30[0m     rp: { id: rpId, name: "webauthn-app" },
+[7m  [0m [91m                                        [0m
+[96msrc/controllers/passkeyController.ts[0m:[93m31[0m:[93m17[0m - [91merror[0m[90m TS2451: [0mCannot redeclare block-scoped variable 'email'.
+
+[7m31[0m     user: { id: email, name: email, displayName: email },
+[7m  [0m [91m                ~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m31[0m:[93m17[0m - [91merror[0m[90m TS7031: [0mBinding element 'email' implicitly has an 'any' type.
+
+[7m31[0m     user: { id: email, name: email, displayName: email },
+[7m  [0m [91m                ~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m31[0m:[93m30[0m - [91merror[0m[90m TS2451: [0mCannot redeclare block-scoped variable 'email'.
+
+[7m31[0m     user: { id: email, name: email, displayName: email },
+[7m  [0m [91m                             ~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m31[0m:[93m30[0m - [91merror[0m[90m TS7031: [0mBinding element 'email' implicitly has an 'any' type.
+
+[7m31[0m     user: { id: email, name: email, displayName: email },
+[7m  [0m [91m                             ~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m31[0m:[93m50[0m - [91merror[0m[90m TS2451: [0mCannot redeclare block-scoped variable 'email'.
+
+[7m31[0m     user: { id: email, name: email, displayName: email },
+[7m  [0m [91m                                                 ~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m31[0m:[93m50[0m - [91merror[0m[90m TS7031: [0mBinding element 'email' implicitly has an 'any' type.
+
+[7m31[0m     user: { id: email, name: email, displayName: email },
+[7m  [0m [91m                                                 ~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m33[0m:[93m14[0m - [91merror[0m[90m TS2451: [0mCannot redeclare block-scoped variable '(Missing)'.
+
+[7m33[0m       { type: "public-key", alg: -7 },
+[7m  [0m [91m             [0m
+[96msrc/controllers/passkeyController.ts[0m:[93m33[0m:[93m14[0m - [91merror[0m[90m TS7031: [0mBinding element '(Missing)' implicitly has an 'any' type.
+
+[7m33[0m       { type: "public-key", alg: -7 },
+[7m  [0m [91m             [0m
+[96msrc/controllers/passkeyController.ts[0m:[93m33[0m:[93m27[0m - [91merror[0m[90m TS2451: [0mCannot redeclare block-scoped variable '(Missing)'.
+
+[7m33[0m       { type: "public-key", alg: -7 },
+[7m  [0m [91m                          [0m
+[96msrc/controllers/passkeyController.ts[0m:[93m33[0m:[93m27[0m - [91merror[0m[90m TS7031: [0mBinding element '(Missing)' implicitly has an 'any' type.
+
+[7m33[0m       { type: "public-key", alg: -7 },
+[7m  [0m [91m                          [0m
+[96msrc/controllers/passkeyController.ts[0m:[93m33[0m:[93m33[0m - [91merror[0m[90m TS2451: [0mCannot redeclare block-scoped variable '(Missing)'.
+
+[7m33[0m       { type: "public-key", alg: -7 },
+[7m  [0m [91m                                [0m
+[96msrc/controllers/passkeyController.ts[0m:[93m33[0m:[93m33[0m - [91merror[0m[90m TS7031: [0mBinding element '(Missing)' implicitly has an 'any' type.
+
+[7m33[0m       { type: "public-key", alg: -7 },
+[7m  [0m [91m                                [0m
+[96msrc/controllers/passkeyController.ts[0m:[93m34[0m:[93m14[0m - [91merror[0m[90m TS2451: [0mCannot redeclare block-scoped variable '(Missing)'.
+
+[7m34[0m       { type: "public-key", alg: -257 },
+[7m  [0m [91m             [0m
+[96msrc/controllers/passkeyController.ts[0m:[93m34[0m:[93m14[0m - [91merror[0m[90m TS7031: [0mBinding element '(Missing)' implicitly has an 'any' type.
+
+[7m34[0m       { type: "public-key", alg: -257 },
+[7m  [0m [91m             [0m
+[96msrc/controllers/passkeyController.ts[0m:[93m34[0m:[93m27[0m - [91merror[0m[90m TS2451: [0mCannot redeclare block-scoped variable '(Missing)'.
+
+[7m34[0m       { type: "public-key", alg: -257 },
+[7m  [0m [91m                          [0m
+[96msrc/controllers/passkeyController.ts[0m:[93m34[0m:[93m27[0m - [91merror[0m[90m TS7031: [0mBinding element '(Missing)' implicitly has an 'any' type.
+
+[7m34[0m       { type: "public-key", alg: -257 },
+[7m  [0m [91m                          [0m
+[96msrc/controllers/passkeyController.ts[0m:[93m34[0m:[93m33[0m - [91merror[0m[90m TS2451: [0mCannot redeclare block-scoped variable '(Missing)'.
+
+[7m34[0m       { type: "public-key", alg: -257 },
+[7m  [0m [91m                                [0m
+[96msrc/controllers/passkeyController.ts[0m:[93m34[0m:[93m33[0m - [91merror[0m[90m TS7031: [0mBinding element '(Missing)' implicitly has an 'any' type.
+
+[7m34[0m       { type: "public-key", alg: -257 },
+[7m  [0m [91m                                [0m
+[96msrc/controllers/passkeyController.ts[0m:[93m37[0m:[93m32[0m - [91merror[0m[90m TS2695: [0mLeft side of comma operator is unused and has no side effects.
+
+[7m37[0m       authenticatorAttachment: "platform",
+[7m  [0m [91m                               ~~~~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m38[0m:[93m7[0m - [91merror[0m[90m TS2304: [0mCannot find name 'userVerification'.
+
+[7m38[0m       userVerification: "required",
+[7m  [0m [91m      ~~~~~~~~~~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m38[0m:[93m25[0m - [91merror[0m[90m TS2695: [0mLeft side of comma operator is unused and has no side effects.
+
+[7m38[0m       userVerification: "required",
+[7m  [0m [91m                        ~~~~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m39[0m:[93m7[0m - [91merror[0m[90m TS2304: [0mCannot find name 'residentKey'.
+
+[7m39[0m       residentKey: "preferred",
+[7m  [0m [91m      ~~~~~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m39[0m:[93m20[0m - [91merror[0m[90m TS2695: [0mLeft side of comma operator is unused and has no side effects.
+
+[7m39[0m       residentKey: "preferred",
+[7m  [0m [91m                   ~~~~~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m40[0m:[93m7[0m - [91merror[0m[90m TS2304: [0mCannot find name 'requireResidentKey'.
+
+[7m40[0m       requireResidentKey: false,
+[7m  [0m [91m      ~~~~~~~~~~~~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m40[0m:[93m27[0m - [91merror[0m[90m TS2695: [0mLeft side of comma operator is unused and has no side effects.
+
+[7m40[0m       requireResidentKey: false,
+[7m  [0m [91m                          ~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m43[0m:[93m3[0m - [91merror[0m[90m TS2304: [0mCannot find name 'res'.
+
+[7m43[0m   res.json(pubKey);
+[7m  [0m [91m  ~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m43[0m:[93m12[0m - [91merror[0m[90m TS2304: [0mCannot find name 'pubKey'.
+
+[7m43[0m   res.json(pubKey);
+[7m  [0m [91m           ~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m28[0m:[93m70[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m28[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRe{
+[7m  [0m [91m                                                                     ~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m29[0m:[93m26[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m29[0m     challenge: challenge as unknown as BufferSource,
+[7m  [0m [91m                         ~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m29[0m:[93m29[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m29[0m     challenge: challenge as unknown as BufferSource,
+[7m  [0m [91m                            ~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m29[0m:[93m37[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m29[0m     challenge: challenge as unknown as BufferSource,
+[7m  [0m [91m                                    ~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m29[0m:[93m40[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m29[0m     challenge: challenge as unknown as BufferSource,
+[7m  [0m [91m                                       ~~~~~~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m27[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m30[0m     rp: { id: rpId, name: "webauthn-app" },
+[7m  [0m [91m                          ~~~~~~~~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m42[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m30[0m     rp: { id: rpId, name: "webauthn-app" },
+[7m  [0m [91m                                         ~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m33[0m:[93m15[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m33[0m       { type: "public-key", alg: -7 },
+[7m  [0m [91m              ~~~~~~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m33[0m:[93m27[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m33[0m       { type: "public-key", alg: -7 },
+[7m  [0m [91m                          ~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m33[0m:[93m34[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m33[0m       { type: "public-key", alg: -7 },
+[7m  [0m [91m                                 ~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m34[0m:[93m15[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m34[0m       { type: "public-key", alg: -257 },
+[7m  [0m [91m              ~~~~~~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m34[0m:[93m27[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m34[0m       { type: "public-key", alg: -257 },
+[7m  [0m [91m                          ~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m34[0m:[93m34[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m34[0m       { type: "public-key", alg: -257 },
+[7m  [0m [91m                                 ~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m34[0m:[93m39[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m34[0m       { type: "public-key", alg: -257 },
+[7m  [0m [91m                                      ~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m34[0m:[93m40[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m34[0m       { type: "public-key", alg: -257 },
+[7m  [0m [91m                                       ~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m35[0m:[93m5[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m35[0m     ],
+[7m  [0m [91m    ~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m35[0m:[93m6[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m35[0m     ],
+[7m  [0m [91m     ~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m38[0m:[93m23[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m38[0m       userVerification: "required",
+[7m  [0m [91m                      ~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m39[0m:[93m18[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m39[0m       residentKey: "preferred",
+[7m  [0m [91m                 ~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m40[0m:[93m25[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m40[0m       requireResidentKey: false,
+[7m  [0m [91m                        ~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m41[0m:[93m5[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m41[0m     },
+[7m  [0m [91m    ~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m41[0m:[93m6[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m41[0m     },
+[7m  [0m [91m     ~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m42[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m42[0m   };
+[7m  [0m [91m  ~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m44[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m44[0m };
+[7m  [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m16[0m:[93m11[0m - [91merror[0m[90m TS2451: [0mCannot redeclare block-scoped variable 'email'.
+
+[7m16[0m   const { email } = req.body;
+[7m  [0m [91m          ~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m18[0m:[93m9[0m - [91merror[0m[90m TS2451: [0mCannot redeclare block-scoped variable 'challenge'.
+
+[7m18[0m   const challenge = getNewChallenge();
+[7m  [0m [91m        ~~~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m28[0m:[93m60[0m - [91merror[0m[90m TS2304: [0mCannot find name 'generateRe'.
+
+[7m28[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRe{
+[7m  [0m [91m                                                           ~~~~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m29[0m:[93m16[0m - [91merror[0m[90m TS2451: [0mCannot redeclare block-scoped variable 'challenge'.
+
+[7m29[0m     challenge: challenge as unknown as BufferSource,
+[7m  [0m [91m               ~~~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m29[0m:[93m16[0m - [91merror[0m[90m TS7031: [0mBinding element 'challenge' implicitly has an 'any' type.
+
+[7m29[0m     challenge: challenge as unknown as BufferSource,
+[7m  [0m [91m               ~~~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m29[0m:[93m26[0m - [91merror[0m[90m TS2451: [0mCannot redeclare block-scoped variable 'as'.
+
+[7m29[0m     challenge: challenge as unknown as BufferSource,
+[7m  [0m [91m                         ~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m29[0m:[93m26[0m - [91merror[0m[90m TS7031: [0mBinding element 'as' implicitly has an 'any' type.
+
+[7m29[0m     challenge: challenge as unknown as BufferSource,
+[7m  [0m [91m                         ~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m29[0m:[93m29[0m - [91merror[0m[90m TS7031: [0mBinding element 'unknown' implicitly has an 'any' type.
+
+[7m29[0m     challenge: challenge as unknown as BufferSource,
+[7m  [0m [91m                            ~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m29[0m:[93m37[0m - [91merror[0m[90m TS2451: [0mCannot redeclare block-scoped variable 'as'.
+
+[7m29[0m     challenge: challenge as unknown as BufferSource,
+[7m  [0m [91m                                    ~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m29[0m:[93m37[0m - [91merror[0m[90m TS7031: [0mBinding element 'as' implicitly has an 'any' type.
+
+[7m29[0m     challenge: challenge as unknown as BufferSource,
+[7m  [0m [91m                                    ~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m29[0m:[93m40[0m - [91merror[0m[90m TS7031: [0mBinding element 'BufferSource' implicitly has an 'any' type.
+
+[7m29[0m     challenge: challenge as unknown as BufferSource,
+[7m  [0m [91m                                       ~~~~~~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m15[0m - [91merror[0m[90m TS7031: [0mBinding element 'rpId' implicitly has an 'any' type.
+
+[7m30[0m     rp: { id: rpId, name: "webauthn-app" },
+[7m  [0m [91m              ~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m26[0m - [91merror[0m[90m TS2451: [0mCannot redeclare block-scoped variable '(Missing)'.
+
+[7m30[0m     rp: { id: rpId, name: "webauthn-app" },
+[7m  [0m [91m                         [0m
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m26[0m - [91merror[0m[90m TS7031: [0mBinding element '(Missing)' implicitly has an 'any' type.
+
+[7m30[0m     rp: { id: rpId, name: "webauthn-app" },
+[7m  [0m [91m                         [0m
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m41[0m - [91merror[0m[90m TS2451: [0mCannot redeclare block-scoped variable '(Missing)'.
+
+[7m30[0m     rp: { id: rpId, name: "webauthn-app" },
+[7m  [0m [91m                                        [0m
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m41[0m - [91merror[0m[90m TS7031: [0mBinding element '(Missing)' implicitly has an 'any' type.
+
+[7m30[0m     rp: { id: rpId, name: "webauthn-app" },
+[7m  [0m [91m                                        [0m
+[96msrc/controllers/passkeyController.ts[0m:[93m31[0m:[93m17[0m - [91merror[0m[90m TS2451: [0mCannot redeclare block-scoped variable 'email'.
+
+[7m31[0m     user: { id: email, name: email, displayName: email },
+[7m  [0m [91m                ~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m31[0m:[93m17[0m - [91merror[0m[90m TS7031: [0mBinding element 'email' implicitly has an 'any' type.
+
+[7m31[0m     user: { id: email, name: email, displayName: email },
+[7m  [0m [91m                ~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m31[0m:[93m30[0m - [91merror[0m[90m TS2451: [0mCannot redeclare block-scoped variable 'email'.
+
+[7m31[0m     user: { id: email, name: email, displayName: email },
+[7m  [0m [91m                             ~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m31[0m:[93m30[0m - [91merror[0m[90m TS7031: [0mBinding element 'email' implicitly has an 'any' type.
+
+[7m31[0m     user: { id: email, name: email, displayName: email },
+[7m  [0m [91m                             ~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m31[0m:[93m50[0m - [91merror[0m[90m TS2451: [0mCannot redeclare block-scoped variable 'email'.
+
+[7m31[0m     user: { id: email, name: email, displayName: email },
+[7m  [0m [91m                                                 ~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m31[0m:[93m50[0m - [91merror[0m[90m TS7031: [0mBinding element 'email' implicitly has an 'any' type.
+
+[7m31[0m     user: { id: email, name: email, displayName: email },
+[7m  [0m [91m                                                 ~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m33[0m:[93m14[0m - [91merror[0m[90m TS2451: [0mCannot redeclare block-scoped variable '(Missing)'.
+
+[7m33[0m       { type: "public-key", alg: -7 },
+[7m  [0m [91m             [0m
+[96msrc/controllers/passkeyController.ts[0m:[93m33[0m:[93m14[0m - [91merror[0m[90m TS7031: [0mBinding element '(Missing)' implicitly has an 'any' type.
+
+[7m33[0m       { type: "public-key", alg: -7 },
+[7m  [0m [91m             [0m
+[96msrc/controllers/passkeyController.ts[0m:[93m33[0m:[93m27[0m - [91merror[0m[90m TS2451: [0mCannot redeclare block-scoped variable '(Missing)'.
+
+[7m33[0m       { type: "public-key", alg: -7 },
+[7m  [0m [91m                          [0m
+[96msrc/controllers/passkeyController.ts[0m:[93m33[0m:[93m27[0m - [91merror[0m[90m TS7031: [0mBinding element '(Missing)' implicitly has an 'any' type.
+
+[7m33[0m       { type: "public-key", alg: -7 },
+[7m  [0m [91m                          [0m
+[96msrc/controllers/passkeyController.ts[0m:[93m33[0m:[93m33[0m - [91merror[0m[90m TS2451: [0mCannot redeclare block-scoped variable '(Missing)'.
+
+[7m33[0m       { type: "public-key", alg: -7 },
+[7m  [0m [91m                                [0m
+[96msrc/controllers/passkeyController.ts[0m:[93m33[0m:[93m33[0m - [91merror[0m[90m TS7031: [0mBinding element '(Missing)' implicitly has an 'any' type.
+
+[7m33[0m       { type: "public-key", alg: -7 },
+[7m  [0m [91m                                [0m
+[96msrc/controllers/passkeyController.ts[0m:[93m34[0m:[93m14[0m - [91merror[0m[90m TS2451: [0mCannot redeclare block-scoped variable '(Missing)'.
+
+[7m34[0m       { type: "public-key", alg: -257 },
+[7m  [0m [91m             [0m
+[96msrc/controllers/passkeyController.ts[0m:[93m34[0m:[93m14[0m - [91merror[0m[90m TS7031: [0mBinding element '(Missing)' implicitly has an 'any' type.
+
+[7m34[0m       { type: "public-key", alg: -257 },
+[7m  [0m [91m             [0m
+[96msrc/controllers/passkeyController.ts[0m:[93m34[0m:[93m27[0m - [91merror[0m[90m TS2451: [0mCannot redeclare block-scoped variable '(Missing)'.
+
+[7m34[0m       { type: "public-key", alg: -257 },
+[7m  [0m [91m                          [0m
+[96msrc/controllers/passkeyController.ts[0m:[93m34[0m:[93m27[0m - [91merror[0m[90m TS7031: [0mBinding element '(Missing)' implicitly has an 'any' type.
+
+[7m34[0m       { type: "public-key", alg: -257 },
+[7m  [0m [91m                          [0m
+[96msrc/controllers/passkeyController.ts[0m:[93m34[0m:[93m33[0m - [91merror[0m[90m TS2451: [0mCannot redeclare block-scoped variable '(Missing)'.
+
+[7m34[0m       { type: "public-key", alg: -257 },
+[7m  [0m [91m                                [0m
+[96msrc/controllers/passkeyController.ts[0m:[93m34[0m:[93m33[0m - [91merror[0m[90m TS7031: [0mBinding element '(Missing)' implicitly has an 'any' type.
+
+[7m34[0m       { type: "public-key", alg: -257 },
+[7m  [0m [91m                                [0m
+[96msrc/controllers/passkeyController.ts[0m:[93m37[0m:[93m32[0m - [91merror[0m[90m TS2695: [0mLeft side of comma operator is unused and has no side effects.
+
+[7m37[0m       authenticatorAttachment: "platform",
+[7m  [0m [91m                               ~~~~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m38[0m:[93m7[0m - [91merror[0m[90m TS2304: [0mCannot find name 'userVerification'.
+
+[7m38[0m       userVerification: "required",
+[7m  [0m [91m      ~~~~~~~~~~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m38[0m:[93m25[0m - [91merror[0m[90m TS2695: [0mLeft side of comma operator is unused and has no side effects.
+
+[7m38[0m       userVerification: "required",
+[7m  [0m [91m                        ~~~~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m39[0m:[93m7[0m - [91merror[0m[90m TS2304: [0mCannot find name 'residentKey'.
+
+[7m39[0m       residentKey: "preferred",
+[7m  [0m [91m      ~~~~~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m39[0m:[93m20[0m - [91merror[0m[90m TS2695: [0mLeft side of comma operator is unused and has no side effects.
+
+[7m39[0m       residentKey: "preferred",
+[7m  [0m [91m                   ~~~~~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m40[0m:[93m7[0m - [91merror[0m[90m TS2304: [0mCannot find name 'requireResidentKey'.
+
+[7m40[0m       requireResidentKey: false,
+[7m  [0m [91m      ~~~~~~~~~~~~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m40[0m:[93m27[0m - [91merror[0m[90m TS2695: [0mLeft side of comma operator is unused and has no side effects.
+
+[7m40[0m       requireResidentKey: false,
+[7m  [0m [91m                          ~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m43[0m:[93m3[0m - [91merror[0m[90m TS2304: [0mCannot find name 'res'.
+
+[7m43[0m   res.json(pubKey);
+[7m  [0m [91m  ~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m43[0m:[93m12[0m - [91merror[0m[90m TS2304: [0mCannot find name 'pubKey'.
+
+[7m43[0m   res.json(pubKey);
+[7m  [0m [91m           ~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m28[0m:[93m70[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m28[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRe{
+[7m  [0m [91m                                                                     ~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m29[0m:[93m26[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m29[0m     challenge: challenge as unknown as BufferSource,
+[7m  [0m [91m                         ~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m29[0m:[93m29[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m29[0m     challenge: challenge as unknown as BufferSource,
+[7m  [0m [91m                            ~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m29[0m:[93m37[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m29[0m     challenge: challenge as unknown as BufferSource,
+[7m  [0m [91m                                    ~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m29[0m:[93m40[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m29[0m     challenge: challenge as unknown as BufferSource,
+[7m  [0m [91m                                       ~~~~~~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m27[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m30[0m     rp: { id: rpId, name: "webauthn-app" },
+[7m  [0m [91m                          ~~~~~~~~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m42[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m30[0m     rp: { id: rpId, name: "webauthn-app" },
+[7m  [0m [91m                                         ~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m33[0m:[93m15[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m33[0m       { type: "public-key", alg: -7 },
+[7m  [0m [91m              ~~~~~~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m33[0m:[93m27[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m33[0m       { type: "public-key", alg: -7 },
+[7m  [0m [91m                          ~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m33[0m:[93m34[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m33[0m       { type: "public-key", alg: -7 },
+[7m  [0m [91m                                 ~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m34[0m:[93m15[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m34[0m       { type: "public-key", alg: -257 },
+[7m  [0m [91m              ~~~~~~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m34[0m:[93m27[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m34[0m       { type: "public-key", alg: -257 },
+[7m  [0m [91m                          ~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m34[0m:[93m34[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m34[0m       { type: "public-key", alg: -257 },
+[7m  [0m [91m                                 ~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m34[0m:[93m39[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m34[0m       { type: "public-key", alg: -257 },
+[7m  [0m [91m                                      ~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m34[0m:[93m40[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m34[0m       { type: "public-key", alg: -257 },
+[7m  [0m [91m                                       ~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m35[0m:[93m5[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m35[0m     ],
+[7m  [0m [91m    ~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m35[0m:[93m6[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m35[0m     ],
+[7m  [0m [91m     ~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m38[0m:[93m23[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m38[0m       userVerification: "required",
+[7m  [0m [91m                      ~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m39[0m:[93m18[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m39[0m       residentKey: "preferred",
+[7m  [0m [91m                 ~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m40[0m:[93m25[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m40[0m       requireResidentKey: false,
+[7m  [0m [91m                        ~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m41[0m:[93m5[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m41[0m     },
+[7m  [0m [91m    ~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m41[0m:[93m6[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m41[0m     },
+[7m  [0m [91m     ~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m42[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m42[0m   };
+[7m  [0m [91m  ~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m44[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m44[0m };
+[7m  [0m [91m~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-23T00:34:56.372Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m28[0m:[93m9[0m - [91merror[0m[90m TS2322: [0mType 'PublicKeyCredentialCreationOptionsJSON' is not assignable to type 'PublicKeyCredentialCreationOptions'.
+  Types of property 'challenge' are incompatible.
+    Type 'string' is not assignable to type 'BufferSource'.
+
+[7m28[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m        ~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m29[0m:[93m5[0m - [91merror[0m[90m TS2322: [0mType 'BufferSource' is not assignable to type 'string | Uint8Array<ArrayBufferLike> | undefined'.
+  Type 'ArrayBuffer' is not assignable to type 'string | Uint8Array<ArrayBufferLike> | undefined'.
+    Type 'ArrayBuffer' is missing the following properties from type 'Uint8Array<ArrayBufferLike>': BYTES_PER_ELEMENT, buffer, byteOffset, copyWithin, and 24 more.
+
+[7m29[0m     challenge: challenge as unknown as BufferSource,
+[7m  [0m [91m    ~~~~~~~~~[0m
+
+  [96mnode_modules/@simplewebauthn/server/script/registration/generateRegistrationOptions.d.ts[0m:[93m33[0m:[93m5[0m
+    [7m33[0m     challenge?: string | Uint8Array;
+    [7m  [0m [96m    ~~~~~~~~~[0m
+    The expected type comes from property 'challenge' which is declared here on type '{ rpName: string; rpID: string; userName: string; userID?: Uint8Array<ArrayBufferLike> | undefined; challenge?: string | Uint8Array<ArrayBufferLike> | undefined; ... 7 more ...; preferredAuthenticatorType?: "securityKey" | ... 2 more ... | undefined; }'
+[96msrc/controllers/passkeyController.ts[0m:[93m42[0m:[93m4[0m - [91merror[0m[90m TS1005: [0m')' expected.
+
+[7m42[0m   };
+[7m  [0m [91m   ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m28[0m:[93m9[0m - [91merror[0m[90m TS2322: [0mType 'PublicKeyCredentialCreationOptionsJSON' is not assignable to type 'PublicKeyCredentialCreationOptions'.
+  Types of property 'challenge' are incompatible.
+    Type 'string' is not assignable to type 'BufferSource'.
+
+[7m28[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m        ~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m29[0m:[93m5[0m - [91merror[0m[90m TS2322: [0mType 'BufferSource' is not assignable to type 'string | Uint8Array<ArrayBufferLike> | undefined'.
+  Type 'ArrayBuffer' is not assignable to type 'string | Uint8Array<ArrayBufferLike> | undefined'.
+    Type 'ArrayBuffer' is missing the following properties from type 'Uint8Array<ArrayBufferLike>': BYTES_PER_ELEMENT, buffer, byteOffset, copyWithin, and 24 more.
+
+[7m29[0m     challenge: challenge as unknown as BufferSource,
+[7m  [0m [91m    ~~~~~~~~~[0m
+
+  [96mnode_modules/@simplewebauthn/server/script/registration/generateRegistrationOptions.d.ts[0m:[93m33[0m:[93m5[0m
+    [7m33[0m     challenge?: string | Uint8Array;
+    [7m  [0m [96m    ~~~~~~~~~[0m
+    The expected type comes from property 'challenge' which is declared here on type '{ rpName: string; rpID: string; userName: string; userID?: Uint8Array<ArrayBufferLike> | undefined; challenge?: string | Uint8Array<ArrayBufferLike> | undefined; ... 7 more ...; preferredAuthenticatorType?: "securityKey" | ... 2 more ... | undefined; }'
+[96msrc/controllers/passkeyController.ts[0m:[93m42[0m:[93m4[0m - [91merror[0m[90m TS1005: [0m')' expected.
+
+[7m42[0m   };
+[7m  [0m [91m   ~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-23T00:35:17.800Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m28[0m:[93m9[0m - [91merror[0m[90m TS2322: [0mType 'PublicKeyCredentialCreationOptionsJSON' is not assignable to type 'PublicKeyCredentialCreationOptions'.
+  Types of property 'challenge' are incompatible.
+    Type 'string' is not assignable to type 'BufferSource'.
+
+[7m28[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m        ~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m29[0m:[93m5[0m - [91merror[0m[90m TS2322: [0mType 'BufferSource' is not assignable to type 'string | Uint8Array<ArrayBufferLike> | undefined'.
+  Type 'ArrayBuffer' is not assignable to type 'string | Uint8Array<ArrayBufferLike> | undefined'.
+    Type 'ArrayBuffer' is missing the following properties from type 'Uint8Array<ArrayBufferLike>': BYTES_PER_ELEMENT, buffer, byteOffset, copyWithin, and 24 more.
+
+[7m29[0m     challenge: challenge as unknown as BufferSource,
+[7m  [0m [91m    ~~~~~~~~~[0m
+
+  [96mnode_modules/@simplewebauthn/server/script/registration/generateRegistrationOptions.d.ts[0m:[93m33[0m:[93m5[0m
+    [7m33[0m     challenge?: string | Uint8Array;
+    [7m  [0m [96m    ~~~~~~~~~[0m
+    The expected type comes from property 'challenge' which is declared here on type '{ rpName: string; rpID: string; userName: string; userID?: Uint8Array<ArrayBufferLike> | undefined; challenge?: string | Uint8Array<ArrayBufferLike> | undefined; ... 7 more ...; preferredAuthenticatorType?: "securityKey" | ... 2 more ... | undefined; }'
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m28[0m:[93m9[0m - [91merror[0m[90m TS2322: [0mType 'PublicKeyCredentialCreationOptionsJSON' is not assignable to type 'PublicKeyCredentialCreationOptions'.
+  Types of property 'challenge' are incompatible.
+    Type 'string' is not assignable to type 'BufferSource'.
+
+[7m28[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m        ~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m29[0m:[93m5[0m - [91merror[0m[90m TS2322: [0mType 'BufferSource' is not assignable to type 'string | Uint8Array<ArrayBufferLike> | undefined'.
+  Type 'ArrayBuffer' is not assignable to type 'string | Uint8Array<ArrayBufferLike> | undefined'.
+    Type 'ArrayBuffer' is missing the following properties from type 'Uint8Array<ArrayBufferLike>': BYTES_PER_ELEMENT, buffer, byteOffset, copyWithin, and 24 more.
+
+[7m29[0m     challenge: challenge as unknown as BufferSource,
+[7m  [0m [91m    ~~~~~~~~~[0m
+
+  [96mnode_modules/@simplewebauthn/server/script/registration/generateRegistrationOptions.d.ts[0m:[93m33[0m:[93m5[0m
+    [7m33[0m     challenge?: string | Uint8Array;
+    [7m  [0m [96m    ~~~~~~~~~[0m
+    The expected type comes from property 'challenge' which is declared here on type '{ rpName: string; rpID: string; userName: string; userID?: Uint8Array<ArrayBufferLike> | undefined; challenge?: string | Uint8Array<ArrayBufferLike> | undefined; ... 7 more ...; preferredAuthenticatorType?: "securityKey" | ... 2 more ... | undefined; }'
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-23T00:35:50.184Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m28[0m:[93m9[0m - [91merror[0m[90m TS2322: [0mType 'PublicKeyCredentialCreationOptionsJSON' is not assignable to type 'PublicKeyCredentialCreationOptions'.
+  Types of property 'challenge' are incompatible.
+    Type 'string' is not assignable to type 'BufferSource'.
+
+[7m28[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m        ~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m29[0m:[93m5[0m - [91merror[0m[90m TS2552: [0mCannot find name 'rpID'. Did you mean 'rpId'?
+
+[7m29[0m     rpID,
+[7m  [0m [91m    ~~~~[0m
+
+  [96msrc/controllers/passkeyController.ts[0m:[93m8[0m:[93m7[0m
+    [7m8[0m const rpId = "localhost";
+    [7m [0m [96m      ~~~~[0m
+    'rpId' is declared here.
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m5[0m - [91merror[0m[90m TS2322: [0mType 'BufferSource' is not assignable to type 'string | Uint8Array<ArrayBufferLike> | undefined'.
+  Type 'ArrayBuffer' is not assignable to type 'string | Uint8Array<ArrayBufferLike> | undefined'.
+    Type 'ArrayBuffer' is missing the following properties from type 'Uint8Array<ArrayBufferLike>': BYTES_PER_ELEMENT, buffer, byteOffset, copyWithin, and 24 more.
+
+[7m30[0m     challenge: challenge as unknown as BufferSource,
+[7m  [0m [91m    ~~~~~~~~~[0m
+
+  [96mnode_modules/@simplewebauthn/server/script/registration/generateRegistrationOptions.d.ts[0m:[93m33[0m:[93m5[0m
+    [7m33[0m     challenge?: string | Uint8Array;
+    [7m  [0m [96m    ~~~~~~~~~[0m
+    The expected type comes from property 'challenge' which is declared here on type '{ rpName: string; rpID: string; userName: string; userID?: Uint8Array<ArrayBufferLike> | undefined; challenge?: string | Uint8Array<ArrayBufferLike> | undefined; ... 7 more ...; preferredAuthenticatorType?: "securityKey" | ... 2 more ... | undefined; }'
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m28[0m:[93m9[0m - [91merror[0m[90m TS2322: [0mType 'PublicKeyCredentialCreationOptionsJSON' is not assignable to type 'PublicKeyCredentialCreationOptions'.
+  Types of property 'challenge' are incompatible.
+    Type 'string' is not assignable to type 'BufferSource'.
+
+[7m28[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m        ~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m29[0m:[93m5[0m - [91merror[0m[90m TS2552: [0mCannot find name 'rpID'. Did you mean 'rpId'?
+
+[7m29[0m     rpID,
+[7m  [0m [91m    ~~~~[0m
+
+  [96msrc/controllers/passkeyController.ts[0m:[93m8[0m:[93m7[0m
+    [7m8[0m const rpId = "localhost";
+    [7m [0m [96m      ~~~~[0m
+    'rpId' is declared here.
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m5[0m - [91merror[0m[90m TS2322: [0mType 'BufferSource' is not assignable to type 'string | Uint8Array<ArrayBufferLike> | undefined'.
+  Type 'ArrayBuffer' is not assignable to type 'string | Uint8Array<ArrayBufferLike> | undefined'.
+    Type 'ArrayBuffer' is missing the following properties from type 'Uint8Array<ArrayBufferLike>': BYTES_PER_ELEMENT, buffer, byteOffset, copyWithin, and 24 more.
+
+[7m30[0m     challenge: challenge as unknown as BufferSource,
+[7m  [0m [91m    ~~~~~~~~~[0m
+
+  [96mnode_modules/@simplewebauthn/server/script/registration/generateRegistrationOptions.d.ts[0m:[93m33[0m:[93m5[0m
+    [7m33[0m     challenge?: string | Uint8Array;
+    [7m  [0m [96m    ~~~~~~~~~[0m
+    The expected type comes from property 'challenge' which is declared here on type '{ rpName: string; rpID: string; userName: string; userID?: Uint8Array<ArrayBufferLike> | undefined; challenge?: string | Uint8Array<ArrayBufferLike> | undefined; ... 7 more ...; preferredAuthenticatorType?: "securityKey" | ... 2 more ... | undefined; }'
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-23T00:36:04.195Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m28[0m:[93m9[0m - [91merror[0m[90m TS2322: [0mType 'PublicKeyCredentialCreationOptionsJSON' is not assignable to type 'PublicKeyCredentialCreationOptions'.
+  Types of property 'challenge' are incompatible.
+    Type 'string' is not assignable to type 'BufferSource'.
+
+[7m28[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m        ~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m5[0m - [91merror[0m[90m TS2322: [0mType 'BufferSource' is not assignable to type 'string | Uint8Array<ArrayBufferLike> | undefined'.
+  Type 'ArrayBuffer' is not assignable to type 'string | Uint8Array<ArrayBufferLike> | undefined'.
+    Type 'ArrayBuffer' is missing the following properties from type 'Uint8Array<ArrayBufferLike>': BYTES_PER_ELEMENT, buffer, byteOffset, copyWithin, and 24 more.
+
+[7m30[0m     challenge: challenge as unknown as BufferSource,
+[7m  [0m [91m    ~~~~~~~~~[0m
+
+  [96mnode_modules/@simplewebauthn/server/script/registration/generateRegistrationOptions.d.ts[0m:[93m33[0m:[93m5[0m
+    [7m33[0m     challenge?: string | Uint8Array;
+    [7m  [0m [96m    ~~~~~~~~~[0m
+    The expected type comes from property 'challenge' which is declared here on type '{ rpName: string; rpID: string; userName: string; userID?: Uint8Array<ArrayBufferLike> | undefined; challenge?: string | Uint8Array<ArrayBufferLike> | undefined; ... 7 more ...; preferredAuthenticatorType?: "securityKey" | ... 2 more ... | undefined; }'
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m28[0m:[93m9[0m - [91merror[0m[90m TS2322: [0mType 'PublicKeyCredentialCreationOptionsJSON' is not assignable to type 'PublicKeyCredentialCreationOptions'.
+  Types of property 'challenge' are incompatible.
+    Type 'string' is not assignable to type 'BufferSource'.
+
+[7m28[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m        ~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m5[0m - [91merror[0m[90m TS2322: [0mType 'BufferSource' is not assignable to type 'string | Uint8Array<ArrayBufferLike> | undefined'.
+  Type 'ArrayBuffer' is not assignable to type 'string | Uint8Array<ArrayBufferLike> | undefined'.
+    Type 'ArrayBuffer' is missing the following properties from type 'Uint8Array<ArrayBufferLike>': BYTES_PER_ELEMENT, buffer, byteOffset, copyWithin, and 24 more.
+
+[7m30[0m     challenge: challenge as unknown as BufferSource,
+[7m  [0m [91m    ~~~~~~~~~[0m
+
+  [96mnode_modules/@simplewebauthn/server/script/registration/generateRegistrationOptions.d.ts[0m:[93m33[0m:[93m5[0m
+    [7m33[0m     challenge?: string | Uint8Array;
+    [7m  [0m [96m    ~~~~~~~~~[0m
+    The expected type comes from property 'challenge' which is declared here on type '{ rpName: string; rpID: string; userName: string; userID?: Uint8Array<ArrayBufferLike> | undefined; challenge?: string | Uint8Array<ArrayBufferLike> | undefined; ... 7 more ...; preferredAuthenticatorType?: "securityKey" | ... 2 more ... | undefined; }'
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-23T00:38:14.170Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m28[0m:[93m9[0m - [91merror[0m[90m TS2322: [0mType 'PublicKeyCredentialCreationOptionsJSON' is not assignable to type 'PublicKeyCredentialCreationOptions'.
+  Types of property 'challenge' are incompatible.
+    Type 'string' is not assignable to type 'BufferSource'.
+
+[7m28[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m        ~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m28[0m:[93m60[0m - [91merror[0m[90m TS1361: [0m'generateRegistrationOptions' cannot be used as a value because it was imported using 'import type'.
+
+[7m28[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  [96msrc/controllers/passkeyController.ts[0m:[93m4[0m:[93m31[0m
+    [7m4[0m   AuthenticationResponseJSON, generateRegistrationOptions, RegistrationResponseJSON
+    [7m [0m [96m                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    'generateRegistrationOptions' was imported here.
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m5[0m - [91merror[0m[90m TS2322: [0mType 'BufferSource' is not assignable to type 'string | Uint8Array<ArrayBufferLike> | undefined'.
+  Type 'ArrayBuffer' is not assignable to type 'string | Uint8Array<ArrayBufferLike> | undefined'.
+    Type 'ArrayBuffer' is missing the following properties from type 'Uint8Array<ArrayBufferLike>': BYTES_PER_ELEMENT, buffer, byteOffset, copyWithin, and 24 more.
+
+[7m30[0m     challenge: challenge as unknown as BufferSource,
+[7m  [0m [91m    ~~~~~~~~~[0m
+
+  [96mnode_modules/@simplewebauthn/server/script/registration/generateRegistrationOptions.d.ts[0m:[93m33[0m:[93m5[0m
+    [7m33[0m     challenge?: string | Uint8Array;
+    [7m  [0m [96m    ~~~~~~~~~[0m
+    The expected type comes from property 'challenge' which is declared here on type '{ rpName: string; rpID: string; userName: string; userID?: Uint8Array<ArrayBufferLike> | undefined; challenge?: string | Uint8Array<ArrayBufferLike> | undefined; ... 7 more ...; preferredAuthenticatorType?: "securityKey" | ... 2 more ... | undefined; }'
+[96msrc/controllers/passkeyController.ts[0m:[93m67[0m:[93m32[0m - [91merror[0m[90m TS2304: [0mCannot find name 'SimpleWebAuthnServer'.
+
+[7m67[0m     const verification = await SimpleWebAuthnServer.verifyRegistrationResponse({
+[7m  [0m [91m                               ~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m136[0m:[93m26[0m - [91merror[0m[90m TS2304: [0mCannot find name 'SimpleWebAuthnServer'.
+
+[7m136[0m     verification = await SimpleWebAuthnServer.verifyAuthenticationResponse({
+[7m   [0m [91m                         ~~~~~~~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m28[0m:[93m9[0m - [91merror[0m[90m TS2322: [0mType 'PublicKeyCredentialCreationOptionsJSON' is not assignable to type 'PublicKeyCredentialCreationOptions'.
+  Types of property 'challenge' are incompatible.
+    Type 'string' is not assignable to type 'BufferSource'.
+
+[7m28[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m        ~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m28[0m:[93m60[0m - [91merror[0m[90m TS1361: [0m'generateRegistrationOptions' cannot be used as a value because it was imported using 'import type'.
+
+[7m28[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  [96msrc/controllers/passkeyController.ts[0m:[93m4[0m:[93m31[0m
+    [7m4[0m   AuthenticationResponseJSON, generateRegistrationOptions, RegistrationResponseJSON
+    [7m [0m [96m                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    'generateRegistrationOptions' was imported here.
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m5[0m - [91merror[0m[90m TS2322: [0mType 'BufferSource' is not assignable to type 'string | Uint8Array<ArrayBufferLike> | undefined'.
+  Type 'ArrayBuffer' is not assignable to type 'string | Uint8Array<ArrayBufferLike> | undefined'.
+    Type 'ArrayBuffer' is missing the following properties from type 'Uint8Array<ArrayBufferLike>': BYTES_PER_ELEMENT, buffer, byteOffset, copyWithin, and 24 more.
+
+[7m30[0m     challenge: challenge as unknown as BufferSource,
+[7m  [0m [91m    ~~~~~~~~~[0m
+
+  [96mnode_modules/@simplewebauthn/server/script/registration/generateRegistrationOptions.d.ts[0m:[93m33[0m:[93m5[0m
+    [7m33[0m     challenge?: string | Uint8Array;
+    [7m  [0m [96m    ~~~~~~~~~[0m
+    The expected type comes from property 'challenge' which is declared here on type '{ rpName: string; rpID: string; userName: string; userID?: Uint8Array<ArrayBufferLike> | undefined; challenge?: string | Uint8Array<ArrayBufferLike> | undefined; ... 7 more ...; preferredAuthenticatorType?: "securityKey" | ... 2 more ... | undefined; }'
+[96msrc/controllers/passkeyController.ts[0m:[93m67[0m:[93m32[0m - [91merror[0m[90m TS2304: [0mCannot find name 'SimpleWebAuthnServer'.
+
+[7m67[0m     const verification = await SimpleWebAuthnServer.verifyRegistrationResponse({
+[7m  [0m [91m                               ~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m136[0m:[93m26[0m - [91merror[0m[90m TS2304: [0mCannot find name 'SimpleWebAuthnServer'.
+
+[7m136[0m     verification = await SimpleWebAuthnServer.verifyAuthenticationResponse({
+[7m   [0m [91m                         ~~~~~~~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-23T00:38:31.258Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m29[0m:[93m9[0m - [91merror[0m[90m TS2322: [0mType 'PublicKeyCredentialCreationOptionsJSON' is not assignable to type 'PublicKeyCredentialCreationOptions'.
+  Types of property 'challenge' are incompatible.
+    Type 'string' is not assignable to type 'BufferSource'.
+
+[7m29[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m        ~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m29[0m:[93m60[0m - [91merror[0m[90m TS1361: [0m'generateRegistrationOptions' cannot be used as a value because it was imported using 'import type'.
+
+[7m29[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  [96msrc/controllers/passkeyController.ts[0m:[93m5[0m:[93m36[0m
+    [7m5[0m   type AuthenticationResponseJSON, type generateRegistrationOptions, type RegistrationResponseJSON
+    [7m [0m [96m                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    'generateRegistrationOptions' was imported here.
+[96msrc/controllers/passkeyController.ts[0m:[93m31[0m:[93m5[0m - [91merror[0m[90m TS2322: [0mType 'BufferSource' is not assignable to type 'string | Uint8Array<ArrayBufferLike> | undefined'.
+  Type 'ArrayBuffer' is not assignable to type 'string | Uint8Array<ArrayBufferLike> | undefined'.
+    Type 'ArrayBuffer' is missing the following properties from type 'Uint8Array<ArrayBufferLike>': BYTES_PER_ELEMENT, buffer, byteOffset, copyWithin, and 24 more.
+
+[7m31[0m     challenge: challenge as unknown as BufferSource,
+[7m  [0m [91m    ~~~~~~~~~[0m
+
+  [96mnode_modules/@simplewebauthn/server/script/registration/generateRegistrationOptions.d.ts[0m:[93m33[0m:[93m5[0m
+    [7m33[0m     challenge?: string | Uint8Array;
+    [7m  [0m [96m    ~~~~~~~~~[0m
+    The expected type comes from property 'challenge' which is declared here on type '{ rpName: string; rpID: string; userName: string; userID?: Uint8Array<ArrayBufferLike> | undefined; challenge?: string | Uint8Array<ArrayBufferLike> | undefined; ... 7 more ...; preferredAuthenticatorType?: "securityKey" | ... 2 more ... | undefined; }'
+[96msrc/controllers/passkeyController.ts[0m:[93m68[0m:[93m32[0m - [91merror[0m[90m TS2304: [0mCannot find name 'SimpleWebAuthnServer'.
+
+[7m68[0m     const verification = await SimpleWebAuthnServer.verifyRegistrationResponse({
+[7m  [0m [91m                               ~~~~~~~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m29[0m:[93m9[0m - [91merror[0m[90m TS2322: [0mType 'PublicKeyCredentialCreationOptionsJSON' is not assignable to type 'PublicKeyCredentialCreationOptions'.
+  Types of property 'challenge' are incompatible.
+    Type 'string' is not assignable to type 'BufferSource'.
+
+[7m29[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m        ~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m29[0m:[93m60[0m - [91merror[0m[90m TS1361: [0m'generateRegistrationOptions' cannot be used as a value because it was imported using 'import type'.
+
+[7m29[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  [96msrc/controllers/passkeyController.ts[0m:[93m5[0m:[93m36[0m
+    [7m5[0m   type AuthenticationResponseJSON, type generateRegistrationOptions, type RegistrationResponseJSON
+    [7m [0m [96m                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    'generateRegistrationOptions' was imported here.
+[96msrc/controllers/passkeyController.ts[0m:[93m31[0m:[93m5[0m - [91merror[0m[90m TS2322: [0mType 'BufferSource' is not assignable to type 'string | Uint8Array<ArrayBufferLike> | undefined'.
+  Type 'ArrayBuffer' is not assignable to type 'string | Uint8Array<ArrayBufferLike> | undefined'.
+    Type 'ArrayBuffer' is missing the following properties from type 'Uint8Array<ArrayBufferLike>': BYTES_PER_ELEMENT, buffer, byteOffset, copyWithin, and 24 more.
+
+[7m31[0m     challenge: challenge as unknown as BufferSource,
+[7m  [0m [91m    ~~~~~~~~~[0m
+
+  [96mnode_modules/@simplewebauthn/server/script/registration/generateRegistrationOptions.d.ts[0m:[93m33[0m:[93m5[0m
+    [7m33[0m     challenge?: string | Uint8Array;
+    [7m  [0m [96m    ~~~~~~~~~[0m
+    The expected type comes from property 'challenge' which is declared here on type '{ rpName: string; rpID: string; userName: string; userID?: Uint8Array<ArrayBufferLike> | undefined; challenge?: string | Uint8Array<ArrayBufferLike> | undefined; ... 7 more ...; preferredAuthenticatorType?: "securityKey" | ... 2 more ... | undefined; }'
+[96msrc/controllers/passkeyController.ts[0m:[93m68[0m:[93m32[0m - [91merror[0m[90m TS2304: [0mCannot find name 'SimpleWebAuthnServer'.
+
+[7m68[0m     const verification = await SimpleWebAuthnServer.verifyRegistrationResponse({
+[7m  [0m [91m                               ~~~~~~~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-23T00:38:45.361Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m9[0m - [91merror[0m[90m TS2322: [0mType 'PublicKeyCredentialCreationOptionsJSON' is not assignable to type 'PublicKeyCredentialCreationOptions'.
+  Types of property 'challenge' are incompatible.
+    Type 'string' is not assignable to type 'BufferSource'.
+
+[7m30[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m        ~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m60[0m - [91merror[0m[90m TS1361: [0m'generateRegistrationOptions' cannot be used as a value because it was imported using 'import type'.
+
+[7m30[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  [96msrc/controllers/passkeyController.ts[0m:[93m6[0m:[93m36[0m
+    [7m6[0m   type AuthenticationResponseJSON, type generateRegistrationOptions, type RegistrationResponseJSON
+    [7m [0m [96m                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    'generateRegistrationOptions' was imported here.
+[96msrc/controllers/passkeyController.ts[0m:[93m32[0m:[93m5[0m - [91merror[0m[90m TS2322: [0mType 'BufferSource' is not assignable to type 'string | Uint8Array<ArrayBufferLike> | undefined'.
+  Type 'ArrayBuffer' is not assignable to type 'string | Uint8Array<ArrayBufferLike> | undefined'.
+    Type 'ArrayBuffer' is missing the following properties from type 'Uint8Array<ArrayBufferLike>': BYTES_PER_ELEMENT, buffer, byteOffset, copyWithin, and 24 more.
+
+[7m32[0m     challenge: challenge as unknown as BufferSource,
+[7m  [0m [91m    ~~~~~~~~~[0m
+
+  [96mnode_modules/@simplewebauthn/server/script/registration/generateRegistrationOptions.d.ts[0m:[93m33[0m:[93m5[0m
+    [7m33[0m     challenge?: string | Uint8Array;
+    [7m  [0m [96m    ~~~~~~~~~[0m
+    The expected type comes from property 'challenge' which is declared here on type '{ rpName: string; rpID: string; userName: string; userID?: Uint8Array<ArrayBufferLike> | undefined; challenge?: string | Uint8Array<ArrayBufferLike> | undefined; ... 7 more ...; preferredAuthenticatorType?: "securityKey" | ... 2 more ... | undefined; }'
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m9[0m - [91merror[0m[90m TS2322: [0mType 'PublicKeyCredentialCreationOptionsJSON' is not assignable to type 'PublicKeyCredentialCreationOptions'.
+  Types of property 'challenge' are incompatible.
+    Type 'string' is not assignable to type 'BufferSource'.
+
+[7m30[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m        ~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m60[0m - [91merror[0m[90m TS1361: [0m'generateRegistrationOptions' cannot be used as a value because it was imported using 'import type'.
+
+[7m30[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  [96msrc/controllers/passkeyController.ts[0m:[93m6[0m:[93m36[0m
+    [7m6[0m   type AuthenticationResponseJSON, type generateRegistrationOptions, type RegistrationResponseJSON
+    [7m [0m [96m                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    'generateRegistrationOptions' was imported here.
+[96msrc/controllers/passkeyController.ts[0m:[93m32[0m:[93m5[0m - [91merror[0m[90m TS2322: [0mType 'BufferSource' is not assignable to type 'string | Uint8Array<ArrayBufferLike> | undefined'.
+  Type 'ArrayBuffer' is not assignable to type 'string | Uint8Array<ArrayBufferLike> | undefined'.
+    Type 'ArrayBuffer' is missing the following properties from type 'Uint8Array<ArrayBufferLike>': BYTES_PER_ELEMENT, buffer, byteOffset, copyWithin, and 24 more.
+
+[7m32[0m     challenge: challenge as unknown as BufferSource,
+[7m  [0m [91m    ~~~~~~~~~[0m
+
+  [96mnode_modules/@simplewebauthn/server/script/registration/generateRegistrationOptions.d.ts[0m:[93m33[0m:[93m5[0m
+    [7m33[0m     challenge?: string | Uint8Array;
+    [7m  [0m [96m    ~~~~~~~~~[0m
+    The expected type comes from property 'challenge' which is declared here on type '{ rpName: string; rpID: string; userName: string; userID?: Uint8Array<ArrayBufferLike> | undefined; challenge?: string | Uint8Array<ArrayBufferLike> | undefined; ... 7 more ...; preferredAuthenticatorType?: "securityKey" | ... 2 more ... | undefined; }'
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-23T00:39:04.264Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m9[0m - [91merror[0m[90m TS2322: [0mType 'PublicKeyCredentialCreationOptionsJSON' is not assignable to type 'PublicKeyCredentialCreationOptions'.
+  Types of property 'challenge' are incompatible.
+    Type 'string' is not assignable to type 'BufferSource'.
+
+[7m30[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m        ~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m60[0m - [91merror[0m[90m TS1361: [0m'generateRegistrationOptions' cannot be used as a value because it was imported using 'import type'.
+
+[7m30[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  [96msrc/controllers/passkeyController.ts[0m:[93m6[0m:[93m36[0m
+    [7m6[0m   type AuthenticationResponseJSON, type generateRegistrationOptions, type RegistrationResponseJSON
+    [7m [0m [96m                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    'generateRegistrationOptions' was imported here.
+[96msrc/controllers/passkeyController.ts[0m:[93m33[0m:[93m5[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'rp' does not exist in type '{ rpName: string; rpID: string; userName: string; userID?: Uint8Array<ArrayBufferLike> | undefined; challenge?: string | Uint8Array<ArrayBufferLike> | undefined; ... 7 more ...; preferredAuthenticatorType?: "securityKey" | ... 2 more ... | undefined; }'.
+
+[7m33[0m     rp: { id: rpID, name: "webauthn-app" },
+[7m  [0m [91m    ~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m9[0m - [91merror[0m[90m TS2322: [0mType 'PublicKeyCredentialCreationOptionsJSON' is not assignable to type 'PublicKeyCredentialCreationOptions'.
+  Types of property 'challenge' are incompatible.
+    Type 'string' is not assignable to type 'BufferSource'.
+
+[7m30[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m        ~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m60[0m - [91merror[0m[90m TS1361: [0m'generateRegistrationOptions' cannot be used as a value because it was imported using 'import type'.
+
+[7m30[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  [96msrc/controllers/passkeyController.ts[0m:[93m6[0m:[93m36[0m
+    [7m6[0m   type AuthenticationResponseJSON, type generateRegistrationOptions, type RegistrationResponseJSON
+    [7m [0m [96m                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    'generateRegistrationOptions' was imported here.
+[96msrc/controllers/passkeyController.ts[0m:[93m33[0m:[93m5[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'rp' does not exist in type '{ rpName: string; rpID: string; userName: string; userID?: Uint8Array<ArrayBufferLike> | undefined; challenge?: string | Uint8Array<ArrayBufferLike> | undefined; ... 7 more ...; preferredAuthenticatorType?: "securityKey" | ... 2 more ... | undefined; }'.
+
+[7m33[0m     rp: { id: rpID, name: "webauthn-app" },
+[7m  [0m [91m    ~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-23T00:39:51.078Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m9[0m - [91merror[0m[90m TS2322: [0mType 'PublicKeyCredentialCreationOptionsJSON' is not assignable to type 'PublicKeyCredentialCreationOptions'.
+  Types of property 'challenge' are incompatible.
+    Type 'string' is not assignable to type 'BufferSource'.
+
+[7m30[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m        ~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m60[0m - [91merror[0m[90m TS1361: [0m'generateRegistrationOptions' cannot be used as a value because it was imported using 'import type'.
+
+[7m30[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  [96msrc/controllers/passkeyController.ts[0m:[93m6[0m:[93m36[0m
+    [7m6[0m   type AuthenticationResponseJSON, type generateRegistrationOptions, type RegistrationResponseJSON
+    [7m [0m [96m                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    'generateRegistrationOptions' was imported here.
+[96msrc/controllers/passkeyController.ts[0m:[93m33[0m:[93m5[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'ame' does not exist in type '{ rpName: string; rpID: string; userName: string; userID?: Uint8Array<ArrayBufferLike> | undefined; challenge?: string | Uint8Array<ArrayBufferLike> | undefined; ... 7 more ...; preferredAuthenticatorType?: "securityKey" | ... 2 more ... | undefined; }'.
+
+[7m33[0m     ame: "webauthn-app"
+[7m  [0m [91m    ~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m34[0m:[93m5[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m34[0m     rp: { id: rpID, name: "webauthn-app" },
+[7m  [0m [91m    ~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m9[0m - [91merror[0m[90m TS2322: [0mType 'PublicKeyCredentialCreationOptionsJSON' is not assignable to type 'PublicKeyCredentialCreationOptions'.
+  Types of property 'challenge' are incompatible.
+    Type 'string' is not assignable to type 'BufferSource'.
+
+[7m30[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m        ~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m60[0m - [91merror[0m[90m TS1361: [0m'generateRegistrationOptions' cannot be used as a value because it was imported using 'import type'.
+
+[7m30[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  [96msrc/controllers/passkeyController.ts[0m:[93m6[0m:[93m36[0m
+    [7m6[0m   type AuthenticationResponseJSON, type generateRegistrationOptions, type RegistrationResponseJSON
+    [7m [0m [96m                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    'generateRegistrationOptions' was imported here.
+[96msrc/controllers/passkeyController.ts[0m:[93m33[0m:[93m5[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'ame' does not exist in type '{ rpName: string; rpID: string; userName: string; userID?: Uint8Array<ArrayBufferLike> | undefined; challenge?: string | Uint8Array<ArrayBufferLike> | undefined; ... 7 more ...; preferredAuthenticatorType?: "securityKey" | ... 2 more ... | undefined; }'.
+
+[7m33[0m     ame: "webauthn-app"
+[7m  [0m [91m    ~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m34[0m:[93m5[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m34[0m     rp: { id: rpID, name: "webauthn-app" },
+[7m  [0m [91m    ~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-23T00:40:04.433Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m9[0m - [91merror[0m[90m TS2322: [0mType 'PublicKeyCredentialCreationOptionsJSON' is not assignable to type 'PublicKeyCredentialCreationOptions'.
+  Types of property 'challenge' are incompatible.
+    Type 'string' is not assignable to type 'BufferSource'.
+
+[7m30[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m        ~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m60[0m - [91merror[0m[90m TS1361: [0m'generateRegistrationOptions' cannot be used as a value because it was imported using 'import type'.
+
+[7m30[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  [96msrc/controllers/passkeyController.ts[0m:[93m6[0m:[93m36[0m
+    [7m6[0m   type AuthenticationResponseJSON, type generateRegistrationOptions, type RegistrationResponseJSON
+    [7m [0m [96m                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    'generateRegistrationOptions' was imported here.
+[96msrc/controllers/passkeyController.ts[0m:[93m34[0m:[93m5[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'rp' does not exist in type '{ rpName: string; rpID: string; userName: string; userID?: Uint8Array<ArrayBufferLike> | undefined; challenge?: string | Uint8Array<ArrayBufferLike> | undefined; ... 7 more ...; preferredAuthenticatorType?: "securityKey" | ... 2 more ... | undefined; }'.
+
+[7m34[0m     rp: { id: rpID, name: "webauthn-app" },
+[7m  [0m [91m    ~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m9[0m - [91merror[0m[90m TS2322: [0mType 'PublicKeyCredentialCreationOptionsJSON' is not assignable to type 'PublicKeyCredentialCreationOptions'.
+  Types of property 'challenge' are incompatible.
+    Type 'string' is not assignable to type 'BufferSource'.
+
+[7m30[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m        ~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m60[0m - [91merror[0m[90m TS1361: [0m'generateRegistrationOptions' cannot be used as a value because it was imported using 'import type'.
+
+[7m30[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  [96msrc/controllers/passkeyController.ts[0m:[93m6[0m:[93m36[0m
+    [7m6[0m   type AuthenticationResponseJSON, type generateRegistrationOptions, type RegistrationResponseJSON
+    [7m [0m [96m                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    'generateRegistrationOptions' was imported here.
+[96msrc/controllers/passkeyController.ts[0m:[93m34[0m:[93m5[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'rp' does not exist in type '{ rpName: string; rpID: string; userName: string; userID?: Uint8Array<ArrayBufferLike> | undefined; challenge?: string | Uint8Array<ArrayBufferLike> | undefined; ... 7 more ...; preferredAuthenticatorType?: "securityKey" | ... 2 more ... | undefined; }'.
+
+[7m34[0m     rp: { id: rpID, name: "webauthn-app" },
+[7m  [0m [91m    ~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-23T00:40:16.892Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m9[0m - [91merror[0m[90m TS2322: [0mType 'PublicKeyCredentialCreationOptionsJSON' is not assignable to type 'PublicKeyCredentialCreationOptions'.
+  Types of property 'challenge' are incompatible.
+    Type 'string' is not assignable to type 'BufferSource'.
+
+[7m30[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m        ~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m60[0m - [91merror[0m[90m TS1361: [0m'generateRegistrationOptions' cannot be used as a value because it was imported using 'import type'.
+
+[7m30[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  [96msrc/controllers/passkeyController.ts[0m:[93m6[0m:[93m36[0m
+    [7m6[0m   type AuthenticationResponseJSON, type generateRegistrationOptions, type RegistrationResponseJSON
+    [7m [0m [96m                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    'generateRegistrationOptions' was imported here.
+[96msrc/controllers/passkeyController.ts[0m:[93m35[0m:[93m5[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'user' does not exist in type '{ rpName: string; rpID: string; userName: string; userID?: Uint8Array<ArrayBufferLike> | undefined; challenge?: string | Uint8Array<ArrayBufferLike> | undefined; ... 7 more ...; preferredAuthenticatorType?: "securityKey" | ... 2 more ... | undefined; }'.
+
+[7m35[0m     user: { id: email, name: email, displayName: email },
+[7m  [0m [91m    ~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m9[0m - [91merror[0m[90m TS2322: [0mType 'PublicKeyCredentialCreationOptionsJSON' is not assignable to type 'PublicKeyCredentialCreationOptions'.
+  Types of property 'challenge' are incompatible.
+    Type 'string' is not assignable to type 'BufferSource'.
+
+[7m30[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m        ~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m60[0m - [91merror[0m[90m TS1361: [0m'generateRegistrationOptions' cannot be used as a value because it was imported using 'import type'.
+
+[7m30[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  [96msrc/controllers/passkeyController.ts[0m:[93m6[0m:[93m36[0m
+    [7m6[0m   type AuthenticationResponseJSON, type generateRegistrationOptions, type RegistrationResponseJSON
+    [7m [0m [96m                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    'generateRegistrationOptions' was imported here.
+[96msrc/controllers/passkeyController.ts[0m:[93m35[0m:[93m5[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'user' does not exist in type '{ rpName: string; rpID: string; userName: string; userID?: Uint8Array<ArrayBufferLike> | undefined; challenge?: string | Uint8Array<ArrayBufferLike> | undefined; ... 7 more ...; preferredAuthenticatorType?: "securityKey" | ... 2 more ... | undefined; }'.
+
+[7m35[0m     user: { id: email, name: email, displayName: email },
+[7m  [0m [91m    ~~~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-23T00:40:54.811Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m9[0m - [91merror[0m[90m TS2322: [0mType 'PublicKeyCredentialCreationOptionsJSON' is not assignable to type 'PublicKeyCredentialCreationOptions'.
+  Types of property 'challenge' are incompatible.
+    Type 'string' is not assignable to type 'BufferSource'.
+
+[7m30[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m        ~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m60[0m - [91merror[0m[90m TS1361: [0m'generateRegistrationOptions' cannot be used as a value because it was imported using 'import type'.
+
+[7m30[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  [96msrc/controllers/passkeyController.ts[0m:[93m6[0m:[93m36[0m
+    [7m6[0m   type AuthenticationResponseJSON, type generateRegistrationOptions, type RegistrationResponseJSON
+    [7m [0m [96m                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    'generateRegistrationOptions' was imported here.
+[96msrc/controllers/passkeyController.ts[0m:[93m37[0m:[93m5[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'pubKeyCredParams' does not exist in type '{ rpName: string; rpID: string; userName: string; userID?: Uint8Array<ArrayBufferLike> | undefined; challenge?: string | Uint8Array<ArrayBufferLike> | undefined; ... 7 more ...; preferredAuthenticatorType?: "securityKey" | ... 2 more ... | undefined; }'.
+
+[7m37[0m     pubKeyCredParams: [
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m9[0m - [91merror[0m[90m TS2322: [0mType 'PublicKeyCredentialCreationOptionsJSON' is not assignable to type 'PublicKeyCredentialCreationOptions'.
+  Types of property 'challenge' are incompatible.
+    Type 'string' is not assignable to type 'BufferSource'.
+
+[7m30[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m        ~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m60[0m - [91merror[0m[90m TS1361: [0m'generateRegistrationOptions' cannot be used as a value because it was imported using 'import type'.
+
+[7m30[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  [96msrc/controllers/passkeyController.ts[0m:[93m6[0m:[93m36[0m
+    [7m6[0m   type AuthenticationResponseJSON, type generateRegistrationOptions, type RegistrationResponseJSON
+    [7m [0m [96m                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    'generateRegistrationOptions' was imported here.
+[96msrc/controllers/passkeyController.ts[0m:[93m37[0m:[93m5[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'pubKeyCredParams' does not exist in type '{ rpName: string; rpID: string; userName: string; userID?: Uint8Array<ArrayBufferLike> | undefined; challenge?: string | Uint8Array<ArrayBufferLike> | undefined; ... 7 more ...; preferredAuthenticatorType?: "securityKey" | ... 2 more ... | undefined; }'.
+
+[7m37[0m     pubKeyCredParams: [
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-23T00:41:36.457Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m9[0m - [91merror[0m[90m TS2322: [0mType 'PublicKeyCredentialCreationOptionsJSON' is not assignable to type 'PublicKeyCredentialCreationOptions'.
+  Types of property 'challenge' are incompatible.
+    Type 'string' is not assignable to type 'BufferSource'.
+
+[7m30[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m        ~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m60[0m - [91merror[0m[90m TS1361: [0m'generateRegistrationOptions' cannot be used as a value because it was imported using 'import type'.
+
+[7m30[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  [96msrc/controllers/passkeyController.ts[0m:[93m6[0m:[93m36[0m
+    [7m6[0m   type AuthenticationResponseJSON, type generateRegistrationOptions, type RegistrationResponseJSON
+    [7m [0m [96m                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    'generateRegistrationOptions' was imported here.
+[96msrc/controllers/passkeyController.ts[0m:[93m37[0m:[93m5[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'pubKeyCredParams' does not exist in type '{ rpName: string; rpID: string; userName: string; userID?: Uint8Array<ArrayBufferLike> | undefined; challenge?: string | Uint8Array<ArrayBufferLike> | undefined; ... 7 more ...; preferredAuthenticatorType?: "securityKey" | ... 2 more ... | undefined; }'.
+
+[7m37[0m     pubKeyCredParams: [
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m9[0m - [91merror[0m[90m TS2322: [0mType 'PublicKeyCredentialCreationOptionsJSON' is not assignable to type 'PublicKeyCredentialCreationOptions'.
+  Types of property 'challenge' are incompatible.
+    Type 'string' is not assignable to type 'BufferSource'.
+
+[7m30[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m        ~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m60[0m - [91merror[0m[90m TS1361: [0m'generateRegistrationOptions' cannot be used as a value because it was imported using 'import type'.
+
+[7m30[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  [96msrc/controllers/passkeyController.ts[0m:[93m6[0m:[93m36[0m
+    [7m6[0m   type AuthenticationResponseJSON, type generateRegistrationOptions, type RegistrationResponseJSON
+    [7m [0m [96m                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    'generateRegistrationOptions' was imported here.
+[96msrc/controllers/passkeyController.ts[0m:[93m37[0m:[93m5[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'pubKeyCredParams' does not exist in type '{ rpName: string; rpID: string; userName: string; userID?: Uint8Array<ArrayBufferLike> | undefined; challenge?: string | Uint8Array<ArrayBufferLike> | undefined; ... 7 more ...; preferredAuthenticatorType?: "securityKey" | ... 2 more ... | undefined; }'.
+
+[7m37[0m     pubKeyCredParams: [
+[7m  [0m [91m    ~~~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-23T00:41:55.739Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m9[0m - [91merror[0m[90m TS2322: [0mType 'PublicKeyCredentialCreationOptionsJSON' is not assignable to type 'PublicKeyCredentialCreationOptions'.
+  Types of property 'challenge' are incompatible.
+    Type 'string' is not assignable to type 'BufferSource'.
+
+[7m30[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m        ~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m60[0m - [91merror[0m[90m TS1361: [0m'generateRegistrationOptions' cannot be used as a value because it was imported using 'import type'.
+
+[7m30[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  [96msrc/controllers/passkeyController.ts[0m:[93m6[0m:[93m36[0m
+    [7m6[0m   type AuthenticationResponseJSON, type generateRegistrationOptions, type RegistrationResponseJSON
+    [7m [0m [96m                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    'generateRegistrationOptions' was imported here.
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m9[0m - [91merror[0m[90m TS2322: [0mType 'PublicKeyCredentialCreationOptionsJSON' is not assignable to type 'PublicKeyCredentialCreationOptions'.
+  Types of property 'challenge' are incompatible.
+    Type 'string' is not assignable to type 'BufferSource'.
+
+[7m30[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m        ~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m60[0m - [91merror[0m[90m TS1361: [0m'generateRegistrationOptions' cannot be used as a value because it was imported using 'import type'.
+
+[7m30[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  [96msrc/controllers/passkeyController.ts[0m:[93m6[0m:[93m36[0m
+    [7m6[0m   type AuthenticationResponseJSON, type generateRegistrationOptions, type RegistrationResponseJSON
+    [7m [0m [96m                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    'generateRegistrationOptions' was imported here.
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-23T00:42:17.508Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m64[0m - [91merror[0m[90m TS1361: [0m'generateRegistrationOptions' cannot be used as a value because it was imported using 'import type'.
+
+[7m30[0m   const pubKey: PublicKeyCredentialCreationOptionsJSON = await generateRegistrationOptions({
+[7m  [0m [91m                                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  [96msrc/controllers/passkeyController.ts[0m:[93m6[0m:[93m36[0m
+    [7m6[0m   type AuthenticationResponseJSON, type generateRegistrationOptions, type RegistrationResponseJSON
+    [7m [0m [96m                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    'generateRegistrationOptions' was imported here.
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m64[0m - [91merror[0m[90m TS1361: [0m'generateRegistrationOptions' cannot be used as a value because it was imported using 'import type'.
+
+[7m30[0m   const pubKey: PublicKeyCredentialCreationOptionsJSON = await generateRegistrationOptions({
+[7m  [0m [91m                                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  [96msrc/controllers/passkeyController.ts[0m:[93m6[0m:[93m36[0m
+    [7m6[0m   type AuthenticationResponseJSON, type generateRegistrationOptions, type RegistrationResponseJSON
+    [7m [0m [96m                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    'generateRegistrationOptions' was imported here.
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-23T00:53:42.652Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m28[0m:[93m9[0m - [91merror[0m[90m TS2322: [0mType 'PublicKeyCredentialCreationOptionsJSON' is not assignable to type 'PublicKeyCredentialCreationOptions'.
+  Types of property 'challenge' are incompatible.
+    Type 'string' is not assignable to type 'BufferSource'.
+
+[7m28[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m        ~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m5[0m - [91merror[0m[90m TS2322: [0mType 'BufferSource' is not assignable to type 'string | Uint8Array<ArrayBufferLike> | undefined'.
+  Type 'ArrayBuffer' is not assignable to type 'string | Uint8Array<ArrayBufferLike> | undefined'.
+    Type 'ArrayBuffer' is missing the following properties from type 'Uint8Array<ArrayBufferLike>': BYTES_PER_ELEMENT, buffer, byteOffset, copyWithin, and 24 more.
+
+[7m30[0m     challenge: challenge as unknown as BufferSource,
+[7m  [0m [91m    ~~~~~~~~~[0m
+
+  [96mnode_modules/@simplewebauthn/server/script/registration/generateRegistrationOptions.d.ts[0m:[93m33[0m:[93m5[0m
+    [7m33[0m     challenge?: string | Uint8Array;
+    [7m  [0m [96m    ~~~~~~~~~[0m
+    The expected type comes from property 'challenge' which is declared here on type '{ rpName: string; rpID: string; userName: string; userID?: Uint8Array<ArrayBufferLike> | undefined; challenge?: string | Uint8Array<ArrayBufferLike> | undefined; ... 7 more ...; preferredAuthenticatorType?: "securityKey" | ... 2 more ... | undefined; }'
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m28[0m:[93m9[0m - [91merror[0m[90m TS2322: [0mType 'PublicKeyCredentialCreationOptionsJSON' is not assignable to type 'PublicKeyCredentialCreationOptions'.
+  Types of property 'challenge' are incompatible.
+    Type 'string' is not assignable to type 'BufferSource'.
+
+[7m28[0m   const pubKey: PublicKeyCredentialCreationOptions = await generateRegistrationOptions({
+[7m  [0m [91m        ~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m5[0m - [91merror[0m[90m TS2322: [0mType 'BufferSource' is not assignable to type 'string | Uint8Array<ArrayBufferLike> | undefined'.
+  Type 'ArrayBuffer' is not assignable to type 'string | Uint8Array<ArrayBufferLike> | undefined'.
+    Type 'ArrayBuffer' is missing the following properties from type 'Uint8Array<ArrayBufferLike>': BYTES_PER_ELEMENT, buffer, byteOffset, copyWithin, and 24 more.
+
+[7m30[0m     challenge: challenge as unknown as BufferSource,
+[7m  [0m [91m    ~~~~~~~~~[0m
+
+  [96mnode_modules/@simplewebauthn/server/script/registration/generateRegistrationOptions.d.ts[0m:[93m33[0m:[93m5[0m
+    [7m33[0m     challenge?: string | Uint8Array;
+    [7m  [0m [96m    ~~~~~~~~~[0m
+    The expected type comes from property 'challenge' which is declared here on type '{ rpName: string; rpID: string; userName: string; userID?: Uint8Array<ArrayBufferLike> | undefined; challenge?: string | Uint8Array<ArrayBufferLike> | undefined; ... 7 more ...; preferredAuthenticatorType?: "securityKey" | ... 2 more ... | undefined; }'
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-23T00:54:01.067Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m29[0m:[93m5[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'rpID' does not exist in type 'PublicKeyCredentialCreationOptions'.
+
+[7m29[0m     rpID,
+[7m  [0m [91m    ~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m29[0m:[93m5[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'rpID' does not exist in type 'PublicKeyCredentialCreationOptions'.
+
+[7m29[0m     rpID,
+[7m  [0m [91m    ~~~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-23T00:54:57.378Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m66[0m:[93m17[0m - [91merror[0m[90m TS2304: [0mCannot find name 'body'.
+
+[7m66[0m       response: body,
+[7m  [0m [91m                ~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m66[0m:[93m17[0m - [91merror[0m[90m TS2304: [0mCannot find name 'body'.
+
+[7m66[0m       response: body,
+[7m  [0m [91m                ~~~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-23T01:11:13.015Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m50[0m:[93m24[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m50[0m   const { email, pubKey.data: data as RegistrationResponseJSON } = req.body;
+[7m  [0m [91m                       ~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m50[0m:[93m36[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m50[0m   const { email, pubKey.data: data as RegistrationResponseJSON } = req.body;
+[7m  [0m [91m                                   ~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m50[0m:[93m39[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m50[0m   const { email, pubKey.data: data as RegistrationResponseJSON } = req.body;
+[7m  [0m [91m                                      ~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m50[0m:[93m24[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m50[0m   const { email, pubKey.data: data as RegistrationResponseJSON } = req.body;
+[7m  [0m [91m                       ~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m50[0m:[93m36[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m50[0m   const { email, pubKey.data: data as RegistrationResponseJSON } = req.body;
+[7m  [0m [91m                                   ~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m50[0m:[93m39[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m50[0m   const { email, pubKey.data: data as RegistrationResponseJSON } = req.body;
+[7m  [0m [91m                                      ~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-23T01:30:38.544Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m28[0m:[93m15[0m - [91merror[0m[90m TS2304: [0mCannot find name 'GenerateRegistrationOptionsOpts'.
+
+[7m28[0m   const opts: GenerateRegistrationOptionsOpts = {
+[7m  [0m [91m              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m31[0m:[93m15[0m - [91merror[0m[90m TS2304: [0mCannot find name 'username'.
+
+[7m31[0m     userName: username,
+[7m  [0m [91m              ~~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m40[0m:[93m25[0m - [91merror[0m[90m TS2552: [0mCannot find name 'credentials'. Did you mean 'Credential'?
+
+[7m40[0m     excludeCredentials: credentials.map((cred) => ({
+[7m  [0m [91m                        ~~~~~~~~~~~[0m
+
+  [96mnode_modules/typescript/lib/lib.dom.d.ts[0m:[93m6285[0m:[93m13[0m
+    [7m6285[0m declare var Credential: {
+    [7m    [0m [96m            ~~~~~~~~~~[0m
+    'Credential' is declared here.
+[96msrc/controllers/passkeyController.ts[0m:[93m40[0m:[93m42[0m - [91merror[0m[90m TS7006: [0mParameter 'cred' implicitly has an 'any' type.
+
+[7m40[0m     excludeCredentials: credentials.map((cred) => ({
+[7m  [0m [91m                                         ~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m66[0m:[93m15[0m - [91merror[0m[90m TS2339: [0mProperty 'currentChallenge' does not exist on type 'Session & Partial<SessionData>'.
+
+[7m66[0m   req.session.currentChallenge = options.challenge;
+[7m  [0m [91m              ~~~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m28[0m:[93m15[0m - [91merror[0m[90m TS2304: [0mCannot find name 'GenerateRegistrationOptionsOpts'.
+
+[7m28[0m   const opts: GenerateRegistrationOptionsOpts = {
+[7m  [0m [91m              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m31[0m:[93m15[0m - [91merror[0m[90m TS2304: [0mCannot find name 'username'.
+
+[7m31[0m     userName: username,
+[7m  [0m [91m              ~~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m40[0m:[93m25[0m - [91merror[0m[90m TS2552: [0mCannot find name 'credentials'. Did you mean 'Credential'?
+
+[7m40[0m     excludeCredentials: credentials.map((cred) => ({
+[7m  [0m [91m                        ~~~~~~~~~~~[0m
+
+  [96mnode_modules/typescript/lib/lib.dom.d.ts[0m:[93m6285[0m:[93m13[0m
+    [7m6285[0m declare var Credential: {
+    [7m    [0m [96m            ~~~~~~~~~~[0m
+    'Credential' is declared here.
+[96msrc/controllers/passkeyController.ts[0m:[93m40[0m:[93m42[0m - [91merror[0m[90m TS7006: [0mParameter 'cred' implicitly has an 'any' type.
+
+[7m40[0m     excludeCredentials: credentials.map((cred) => ({
+[7m  [0m [91m                                         ~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m66[0m:[93m15[0m - [91merror[0m[90m TS2339: [0mProperty 'currentChallenge' does not exist on type 'Session & Partial<SessionData>'.
+
+[7m66[0m   req.session.currentChallenge = options.challenge;
+[7m  [0m [91m              ~~~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-23T01:30:58.035Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m28[0m:[93m15[0m - [91merror[0m[90m TS2304: [0mCannot find name 'GenerateRegistrationOptionsOpts'.
+
+[7m28[0m   const opts: GenerateRegistrationOptionsOpts = {
+[7m  [0m [91m              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m31[0m:[93m15[0m - [91merror[0m[90m TS2304: [0mCannot find name 'username'.
+
+[7m31[0m     userName: username,
+[7m  [0m [91m              ~~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m40[0m:[93m25[0m - [91merror[0m[90m TS2552: [0mCannot find name 'credentials'. Did you mean 'Credential'?
+
+[7m40[0m     excludeCredentials: credentials.map((cred) => ({
+[7m  [0m [91m                        ~~~~~~~~~~~[0m
+
+  [96mnode_modules/typescript/lib/lib.dom.d.ts[0m:[93m6285[0m:[93m13[0m
+    [7m6285[0m declare var Credential: {
+    [7m    [0m [96m            ~~~~~~~~~~[0m
+    'Credential' is declared here.
+[96msrc/controllers/passkeyController.ts[0m:[93m40[0m:[93m42[0m - [91merror[0m[90m TS7006: [0mParameter 'cred' implicitly has an 'any' type.
+
+[7m40[0m     excludeCredentials: credentials.map((cred) => ({
+[7m  [0m [91m                                         ~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m28[0m:[93m15[0m - [91merror[0m[90m TS2304: [0mCannot find name 'GenerateRegistrationOptionsOpts'.
+
+[7m28[0m   const opts: GenerateRegistrationOptionsOpts = {
+[7m  [0m [91m              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m31[0m:[93m15[0m - [91merror[0m[90m TS2304: [0mCannot find name 'username'.
+
+[7m31[0m     userName: username,
+[7m  [0m [91m              ~~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m40[0m:[93m25[0m - [91merror[0m[90m TS2552: [0mCannot find name 'credentials'. Did you mean 'Credential'?
+
+[7m40[0m     excludeCredentials: credentials.map((cred) => ({
+[7m  [0m [91m                        ~~~~~~~~~~~[0m
+
+  [96mnode_modules/typescript/lib/lib.dom.d.ts[0m:[93m6285[0m:[93m13[0m
+    [7m6285[0m declare var Credential: {
+    [7m    [0m [96m            ~~~~~~~~~~[0m
+    'Credential' is declared here.
+[96msrc/controllers/passkeyController.ts[0m:[93m40[0m:[93m42[0m - [91merror[0m[90m TS7006: [0mParameter 'cred' implicitly has an 'any' type.
+
+[7m40[0m     excludeCredentials: credentials.map((cred) => ({
+[7m  [0m [91m                                         ~~~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-23T01:50:48.393Z [error]: unhandledRejection: Cannot read properties of undefined (reading 'verifyRegistrationResponse')
+TypeError: Cannot read properties of undefined (reading 'verifyRegistrationResponse')
+    at registerFinish (C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\passkeyController.ts:66:42)
+2025-01-23T02:13:54.845Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m87[0m:[93m10[0m - [91merror[0m[90m TS2304: [0mCannot find name 'res'.
+
+[7m87[0m   return res.status(400).send({ error: (error as Error).message });
+[7m  [0m [91m         ~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m89[0m:[93m40[0m - [91merror[0m[90m TS2304: [0mCannot find name 'verification'.
+
+[7m89[0m const { verified, registrationInfo } = verification;
+[7m  [0m [91m                                       ~~~~~~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m92[0m:[93m14[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'email'. Either declare one or provide an initializer.
+
+[7m92[0m     where: { email },
+[7m  [0m [91m             ~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m84[0m:[93m3[0m - [91merror[0m[90m TS1472: [0m'catch' or 'finally' expected.
+
+[7m84[0m   res.status(500).send(false);
+[7m  [0m [91m  ~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m85[0m:[93m3[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m85[0m } catch (error) {
+[7m  [0m [91m  ~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m87[0m:[93m10[0m - [91merror[0m[90m TS2304: [0mCannot find name 'res'.
+
+[7m87[0m   return res.status(400).send({ error: (error as Error).message });
+[7m  [0m [91m         ~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m89[0m:[93m40[0m - [91merror[0m[90m TS2304: [0mCannot find name 'verification'.
+
+[7m89[0m const { verified, registrationInfo } = verification;
+[7m  [0m [91m                                       ~~~~~~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m92[0m:[93m14[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'email'. Either declare one or provide an initializer.
+
+[7m92[0m     where: { email },
+[7m  [0m [91m             ~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m84[0m:[93m3[0m - [91merror[0m[90m TS1472: [0m'catch' or 'finally' expected.
+
+[7m84[0m   res.status(500).send(false);
+[7m  [0m [91m  ~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m85[0m:[93m3[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m85[0m } catch (error) {
+[7m  [0m [91m  ~~~~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-23T02:23:28.349Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m158[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m158[0m       },
+[7m   [0m [91m      ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m158[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m158[0m       },
+[7m   [0m [91m      ~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-23T02:23:35.781Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m157[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'transports' does not exist on type '{ id: string; firstName: string; lastName: string; email: string; password: string | null; photoUrl: string | null; googleId: string | null; passkeyID: string | null; publicKey: string | null; counter: number | null; challenge: string | null; createdAt: Date; updatedAt: Date; }'.
+
+[7m157[0m         transports: user.transports
+[7m   [0m [91m                         ~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m157[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'transports' does not exist on type '{ id: string; firstName: string; lastName: string; email: string; password: string | null; photoUrl: string | null; googleId: string | null; passkeyID: string | null; publicKey: string | null; counter: number | null; challenge: string | null; createdAt: Date; updatedAt: Date; }'.
+
+[7m157[0m         transports: user.transports
+[7m   [0m [91m                         ~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-23T02:23:47.903Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m158[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m158[0m       },
+[7m   [0m [91m      ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m158[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m158[0m       },
+[7m   [0m [91m      ~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-23T02:30:33.777Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m26[0m - [91merror[0m[90m TS2322: [0mType 'string' is not assignable to type 'PublicKeyCredentialDescriptor'.
+
+[7m30[0m     excludeCredentials: [""]
+[7m  [0m [91m                         ~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m31[0m:[93m5[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m31[0m     challenge: challenge as unknown as BufferSource,
+[7m  [0m [91m    ~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m26[0m - [91merror[0m[90m TS2322: [0mType 'string' is not assignable to type 'PublicKeyCredentialDescriptor'.
+
+[7m30[0m     excludeCredentials: [""]
+[7m  [0m [91m                         ~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m31[0m:[93m5[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m31[0m     challenge: challenge as unknown as BufferSource,
+[7m  [0m [91m    ~~~~~~~~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-23T02:31:58.190Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m26[0m - [91merror[0m[90m TS2741: [0mProperty 'id' is missing in type '{ transports: "internal"[]; type: "public-key"; }' but required in type 'PublicKeyCredentialDescriptor'.
+
+[7m30[0m     excludeCredentials: [{transports: ["internal"], type: 'public-key'}],
+[7m  [0m [91m                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  [96mnode_modules/typescript/lib/lib.dom.d.ts[0m:[93m1406[0m:[93m5[0m
+    [7m1406[0m     id: BufferSource;
+    [7m    [0m [96m    ~~[0m
+    'id' is declared here.
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m26[0m - [91merror[0m[90m TS2741: [0mProperty 'id' is missing in type '{ transports: "internal"[]; type: "public-key"; }' but required in type 'PublicKeyCredentialDescriptor'.
+
+[7m30[0m     excludeCredentials: [{transports: ["internal"], type: 'public-key'}],
+[7m  [0m [91m                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  [96mnode_modules/typescript/lib/lib.dom.d.ts[0m:[93m1406[0m:[93m5[0m
+    [7m1406[0m     id: BufferSource;
+    [7m    [0m [96m    ~~[0m
+    'id' is declared here.
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-23T02:32:18.763Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m73[0m - [91merror[0m[90m TS2322: [0mType 'string' is not assignable to type 'BufferSource'.
+
+[7m30[0m     excludeCredentials: [{transports: ["internal"], type: 'public-key', id: ''}],
+[7m  [0m [91m                                                                        ~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m30[0m:[93m73[0m - [91merror[0m[90m TS2322: [0mType 'string' is not assignable to type 'BufferSource'.
+
+[7m30[0m     excludeCredentials: [{transports: ["internal"], type: 'public-key', id: ''}],
+[7m  [0m [91m                                                                        ~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-23T17:45:48.045Z [error]: unhandledRejection: Cannot read properties of undefined (reading 'verifyRegistrationResponse')
+TypeError: Cannot read properties of undefined (reading 'verifyRegistrationResponse')
+    at registerFinish (C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\passkeyController.ts:71:47)
+2025-01-23T17:57:50.452Z [error]: uncaughtException: Cannot find module '../controllers/passkey'
+Require stack:
+- C:\Users\marvi\Documents\skillshare-hub\backend\src\routes\authRoutes.ts
+- C:\Users\marvi\Documents\skillshare-hub\backend\src\index.ts
+Error: Cannot find module '../controllers/passkey'
+Require stack:
+- C:\Users\marvi\Documents\skillshare-hub\backend\src\routes\authRoutes.ts
+- C:\Users\marvi\Documents\skillshare-hub\backend\src\index.ts
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1244:15)
+    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue [as _resolveFilename] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@cspotcode\source-map-support\source-map-support.js:811:30)
+    at Function._load (node:internal/modules/cjs/loader:1070:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:217:24)
+    at Module.require (node:internal/modules/cjs/loader:1335:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (C:\Users\marvi\Documents\skillshare-hub\backend\src\routes\authRoutes.ts:5:26)
+    at Module._compile (node:internal/modules/cjs/loader:1562:14)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1618:23)
+2025-01-23T18:11:03.163Z [error]: unhandledRejection: Cannot read properties of undefined (reading 'verifyRegistrationResponse')
+TypeError: Cannot read properties of undefined (reading 'verifyRegistrationResponse')
+    at registerFinish (C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\passkeyController.ts:71:47)
+2025-01-23T18:22:25.382Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m143[0m:[93m17[0m - [91merror[0m[90m TS2304: [0mCannot find name 'data'.
+
+[7m143[0m       response: data as AuthenticationResponseJSON,
+[7m   [0m [91m                ~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m143[0m:[93m17[0m - [91merror[0m[90m TS2304: [0mCannot find name 'data'.
+
+[7m143[0m       response: data as AuthenticationResponseJSON,
+[7m   [0m [91m                ~~~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-23T18:22:38.201Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m144[0m:[93m17[0m - [91merror[0m[90m TS2352: [0mConversion of type 'RegistrationResponseJSON' to type 'AuthenticationResponseJSON' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Types of property 'response' are incompatible.
+    Property 'signature' is missing in type 'AuthenticatorAttestationResponseJSON' but required in type 'AuthenticatorAssertionResponseJSON'.
+
+[7m144[0m       response: data as AuthenticationResponseJSON,
+[7m   [0m [91m                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  [96mnode_modules/@simplewebauthn/server/script/types/index.d.ts[0m:[93m125[0m:[93m5[0m
+    [7m125[0m     signature: Base64URLString;
+    [7m   [0m [96m    ~~~~~~~~~[0m
+    'signature' is declared here.
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m144[0m:[93m17[0m - [91merror[0m[90m TS2352: [0mConversion of type 'RegistrationResponseJSON' to type 'AuthenticationResponseJSON' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Types of property 'response' are incompatible.
+    Property 'signature' is missing in type 'AuthenticatorAttestationResponseJSON' but required in type 'AuthenticatorAssertionResponseJSON'.
+
+[7m144[0m       response: data as AuthenticationResponseJSON,
+[7m   [0m [91m                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  [96mnode_modules/@simplewebauthn/server/script/types/index.d.ts[0m:[93m125[0m:[93m5[0m
+    [7m125[0m     signature: Base64URLString;
+    [7m   [0m [96m    ~~~~~~~~~[0m
+    'signature' is declared here.
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)

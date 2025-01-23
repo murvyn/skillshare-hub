@@ -17,6 +17,35 @@ const corsOptions: CorsOptions = {
   credentials: true,
 }
 
+// const interests = [
+//   "Web Development",
+//   "Mobile Development",
+//   "Data Science",
+//   "Machine Learning",
+//   "UI/UX Design",
+//   "Digital Marketing",
+//   "Business",
+//   "Photography",
+//   "Music",
+//   "Language Learning",
+// ];
+
+// async function addInterests() {
+//   try {
+//     for (const name of interests) {
+//       await prisma.interest.create({
+//         data: { name },
+//       });
+//       console.log(`Added interest: ${name}`);
+//     }
+//     console.log('All interests added successfully!');
+//   } catch (error) {
+//     console.error('Error adding interests:', error);
+//   } finally {
+//     await prisma.$disconnect();
+//   }
+// }
+
 app.use(helmet());
 app.use(compression());
 app.use(cors(corsOptions))
@@ -32,9 +61,10 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use("/api/auth", auth);
+app.use("/api/auth", auth);``
 app.get("/api/interests", getInterest)
 app.get("/api/user", getUser)
+// app.get("/api/int", addInterests)
 
 const port = 5000;
 app.listen(port, () => {

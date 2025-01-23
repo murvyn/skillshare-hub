@@ -1,7 +1,8 @@
 import { Router } from "express";
 import passport from "passport";
 import { forgotPassword, login, registerUser } from "../controllers/authController";
-import { loginFinish, loginStart, registerFinish, registerStart } from "../controllers/passkeyController";
+import { loginFinish, loginStart, registerStart } from "../controllers/passkeyController";
+const {registerFinish} = require('../controllers/passkey.cjs')
 
 const router = Router()
 
