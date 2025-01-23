@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Dispatch, SetStateAction } from "react";
 import { Label } from "./ui/label";
 import { Input } from "./ui/input";
 import { Checkbox } from "./ui/checkbox";
@@ -28,7 +28,7 @@ const loginScheme = z.object({
   rememberMe: z.boolean().optional(),
 });
 
-const LoginWithPasswordForm = () => {
+const LoginWithPasswordForm = ({setLoginWIthPasskey}: {setLoginWIthPasskey: Dispatch<SetStateAction<boolean>>}) => {
   const dispatch = useDispatch();
   const {
     register,
@@ -113,7 +113,7 @@ const LoginWithPasswordForm = () => {
       <Button type="submit" className="w-full bg-[#1E90FF] hover:bg-blue-600">
         Log In
       </Button>
-      <Button type="submit" className="w-full">
+      <Button type="submit" onClick={() => setLoginWIthPasskey(true)} className="w-full">
         Use Passkey
       </Button>
     </form>

@@ -16,7 +16,7 @@ model User {
   photoUrl  String?        @db.VarChar(255)
   googleId  String?        @db.VarChar(255)
   passkeyID String?
-  publicKey String?
+ publicKey Bytes?
   counter   Int?
   challenge String?
   createdAt DateTime       @default(now()) @map("created_at")

@@ -2245,3 +2245,463 @@ TSError: ⨯ Unable to compile TypeScript:
     at Module.load (node:internal/modules/cjs/loader:1313:32)
     at Function._load (node:internal/modules/cjs/loader:1123:12)
     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-23T20:53:04.940Z [error]: uncaughtException: listen EADDRINUSE: address already in use :::5000
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (node:net:1937:16)
+    at listenInCluster (node:net:1994:12)
+    at Server.listen (node:net:2099:7)
+    at Function.listen (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\express\lib\application.js:635:24)
+    at Object.<anonymous> (C:\Users\marvi\Documents\skillshare-hub\backend\src\index.ts:70:5)
+    at Module._compile (node:internal/modules/cjs/loader:1562:14)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+2025-01-23T20:53:28.186Z [error]: uncaughtException: listen EADDRINUSE: address already in use :::5000
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (node:net:1937:16)
+    at listenInCluster (node:net:1994:12)
+    at Server.listen (node:net:2099:7)
+    at Function.listen (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\express\lib\application.js:635:24)
+    at Object.<anonymous> (C:\Users\marvi\Documents\skillshare-hub\backend\src\index.ts:70:5)
+    at Module._compile (node:internal/modules/cjs/loader:1562:14)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+2025-01-23T20:54:08.754Z [error]: unhandledRejection: Cannot destructure property 'id' of 'response' as it is undefined.
+TypeError: Cannot destructure property 'id' of 'response' as it is undefined.
+    at Object.verifyAuthenticationResponse (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\authentication\verifyAuthenticationResponse.js:28:13)
+    at exports.loginFinish (C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\passkey.cjs:122:42)
+2025-01-23T20:56:00.184Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m52[0m:[93m15[0m - [91merror[0m[90m TS2552: [0mCannot find name 'punKey'. Did you mean 'pubKey'?
+
+[7m52[0m   console.log(punKey)
+[7m  [0m [91m              ~~~~~~[0m
+
+  [96msrc/controllers/passkeyController.ts[0m:[93m51[0m:[93m18[0m
+    [7m51[0m   const { email, pubKey } = req.body;
+    [7m  [0m [96m                 ~~~~~~[0m
+    'pubKey' is declared here.
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m52[0m:[93m15[0m - [91merror[0m[90m TS2552: [0mCannot find name 'punKey'. Did you mean 'pubKey'?
+
+[7m52[0m   console.log(punKey)
+[7m  [0m [91m              ~~~~~~[0m
+
+  [96msrc/controllers/passkeyController.ts[0m:[93m51[0m:[93m18[0m
+    [7m51[0m   const { email, pubKey } = req.body;
+    [7m  [0m [96m                 ~~~~~~[0m
+    'pubKey' is declared here.
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-23T21:30:59.159Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m154[0m:[93m5[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'authenticator' does not exist in type '{ response: AuthenticationResponseJSON; expectedChallenge: string | ((challenge: string) => boolean | Promise<boolean>); expectedOrigin: string | string[]; ... 4 more ...; advancedFIDOConfig?: { ...; } | undefined; }'.
+
+[7m154[0m     authenticator: user
+[7m   [0m [91m    ~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m154[0m:[93m5[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'authenticator' does not exist in type '{ response: AuthenticationResponseJSON; expectedChallenge: string | ((challenge: string) => boolean | Promise<boolean>); expectedOrigin: string | string[]; ... 4 more ...; advancedFIDOConfig?: { ...; } | undefined; }'.
+
+[7m154[0m     authenticator: user
+[7m   [0m [91m    ~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-23T21:31:17.837Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m143[0m:[93m71[0m - [91merror[0m[90m TS2345: [0mArgument of type '{ response: any; expectedChallenge: string; expectedRPID: string; expectedOrigin: string; requireUserVerification: false; }' is not assignable to parameter of type '{ response: AuthenticationResponseJSON; expectedChallenge: string | ((challenge: string) => boolean | Promise<boolean>); expectedOrigin: string | string[]; ... 4 more ...; advancedFIDOConfig?: { ...; } | undefined; }'.
+  Property 'credential' is missing in type '{ response: any; expectedChallenge: string; expectedRPID: string; expectedOrigin: string; requireUserVerification: false; }' but required in type '{ response: AuthenticationResponseJSON; expectedChallenge: string | ((challenge: string) => boolean | Promise<boolean>); expectedOrigin: string | string[]; ... 4 more ...; advancedFIDOConfig?: { ...; } | undefined; }'.
+
+[7m143[0m   console.log(await SimpleWebAuthnServer.verifyAuthenticationResponse({
+[7m   [0m [91m                                                                      ~[0m
+[7m144[0m     response: pubKey,
+[7m   [0m [91m~~~~~~~~~~~~~~~~~~~~~[0m
+[7m...[0m 
+[7m153[0m     requireUserVerification: false,
+[7m   [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[7m154[0m   }))
+[7m   [0m [91m~~~[0m
+
+  [96mnode_modules/@simplewebauthn/server/script/authentication/verifyAuthenticationResponse.d.ts[0m:[93m27[0m:[93m5[0m
+    [7m27[0m     credential: WebAuthnCredential;
+    [7m  [0m [96m    ~~~~~~~~~~[0m
+    'credential' is declared here.
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m143[0m:[93m71[0m - [91merror[0m[90m TS2345: [0mArgument of type '{ response: any; expectedChallenge: string; expectedRPID: string; expectedOrigin: string; requireUserVerification: false; }' is not assignable to parameter of type '{ response: AuthenticationResponseJSON; expectedChallenge: string | ((challenge: string) => boolean | Promise<boolean>); expectedOrigin: string | string[]; ... 4 more ...; advancedFIDOConfig?: { ...; } | undefined; }'.
+  Property 'credential' is missing in type '{ response: any; expectedChallenge: string; expectedRPID: string; expectedOrigin: string; requireUserVerification: false; }' but required in type '{ response: AuthenticationResponseJSON; expectedChallenge: string | ((challenge: string) => boolean | Promise<boolean>); expectedOrigin: string | string[]; ... 4 more ...; advancedFIDOConfig?: { ...; } | undefined; }'.
+
+[7m143[0m   console.log(await SimpleWebAuthnServer.verifyAuthenticationResponse({
+[7m   [0m [91m                                                                      ~[0m
+[7m144[0m     response: pubKey,
+[7m   [0m [91m~~~~~~~~~~~~~~~~~~~~~[0m
+[7m...[0m 
+[7m153[0m     requireUserVerification: false,
+[7m   [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[7m154[0m   }))
+[7m   [0m [91m~~~[0m
+
+  [96mnode_modules/@simplewebauthn/server/script/authentication/verifyAuthenticationResponse.d.ts[0m:[93m27[0m:[93m5[0m
+    [7m27[0m     credential: WebAuthnCredential;
+    [7m  [0m [96m    ~~~~~~~~~~[0m
+    'credential' is declared here.
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-23T21:31:32.342Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m148[0m:[93m7[0m - [91merror[0m[90m TS2322: [0mType 'string' is not assignable to type 'Uint8Array<ArrayBufferLike>'.
+
+[7m148[0m       publicKey: user.publicKey,
+[7m   [0m [91m      ~~~~~~~~~[0m
+
+  [96mnode_modules/@simplewebauthn/server/script/types/index.d.ts[0m:[93m133[0m:[93m5[0m
+    [7m133[0m     publicKey: Uint8Array;
+    [7m   [0m [96m    ~~~~~~~~~[0m
+    The expected type comes from property 'publicKey' which is declared here on type 'WebAuthnCredential'
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m148[0m:[93m7[0m - [91merror[0m[90m TS2322: [0mType 'string' is not assignable to type 'Uint8Array<ArrayBufferLike>'.
+
+[7m148[0m       publicKey: user.publicKey,
+[7m   [0m [91m      ~~~~~~~~~[0m
+
+  [96mnode_modules/@simplewebauthn/server/script/types/index.d.ts[0m:[93m133[0m:[93m5[0m
+    [7m133[0m     publicKey: Uint8Array;
+    [7m   [0m [96m    ~~~~~~~~~[0m
+    The expected type comes from property 'publicKey' which is declared here on type 'WebAuthnCredential'
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-23T21:33:21.548Z [error]: unhandledRejection: Cannot read properties of undefined (reading 'verifyAuthenticationResponse')
+TypeError: Cannot read properties of undefined (reading 'verifyAuthenticationResponse')
+    at loginFinish (C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\passkeyController.ts:143:42)
+2025-01-23T21:34:20.695Z [error]: unhandledRejection: Unsupported or not well formed at 24
+Error: Unsupported or not well formed at 24
+    at decodeNext (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@levischuck\tiny-cbor\script\cbor\cbor.js:222:11)
+    at decodeMap (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@levischuck\tiny-cbor\script\cbor\cbor.js:124:40)
+    at decodeNext (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@levischuck\tiny-cbor\script\cbor\cbor.js:195:20)
+    at decodeTag (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@levischuck\tiny-cbor\script\cbor\cbor.js:168:33)
+    at decodeNext (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@levischuck\tiny-cbor\script\cbor\cbor.js:198:20)
+    at Object.decodePartialCBOR (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@levischuck\tiny-cbor\script\cbor\cbor.js:358:16)
+    at Object.decodeFirst (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\iso\isoCBOR.js:53:30)
+    at decodeCredentialPublicKey (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\decodeCredentialPublicKey.js:7:84)
+    at verifySignature (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\verifySignature.js:21:86)
+    at verifyAuthenticationResponse (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\authentication\verifyAuthenticationResponse.js:157:66)
+2025-01-23T21:35:16.996Z [error]: unhandledRejection: verifyAuthenticationResponse is not defined
+ReferenceError: verifyAuthenticationResponse is not defined
+    at exports.loginFinish (C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\passkey.cjs:122:11)
+2025-01-23T21:35:55.514Z [error]: unhandledRejection: Unsupported or not well formed at 24
+Error: Unsupported or not well formed at 24
+    at decodeNext (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@levischuck\tiny-cbor\script\cbor\cbor.js:222:11)
+    at decodeMap (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@levischuck\tiny-cbor\script\cbor\cbor.js:124:40)
+    at decodeNext (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@levischuck\tiny-cbor\script\cbor\cbor.js:195:20)
+    at decodeTag (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@levischuck\tiny-cbor\script\cbor\cbor.js:168:33)
+    at decodeNext (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@levischuck\tiny-cbor\script\cbor\cbor.js:198:20)
+    at Object.decodePartialCBOR (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@levischuck\tiny-cbor\script\cbor\cbor.js:358:16)
+    at Object.decodeFirst (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\iso\isoCBOR.js:53:30)
+    at decodeCredentialPublicKey (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\decodeCredentialPublicKey.js:7:84)
+    at verifySignature (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\verifySignature.js:21:86)
+    at Object.verifyAuthenticationResponse (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\authentication\verifyAuthenticationResponse.js:157:66)
+2025-01-23T21:37:25.948Z [error]: unhandledRejection: Unsupported or not well formed at 24
+Error: Unsupported or not well formed at 24
+    at decodeNext (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@levischuck\tiny-cbor\script\cbor\cbor.js:222:11)
+    at decodeMap (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@levischuck\tiny-cbor\script\cbor\cbor.js:124:40)
+    at decodeNext (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@levischuck\tiny-cbor\script\cbor\cbor.js:195:20)
+    at decodeTag (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@levischuck\tiny-cbor\script\cbor\cbor.js:168:33)
+    at decodeNext (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@levischuck\tiny-cbor\script\cbor\cbor.js:198:20)
+    at Object.decodePartialCBOR (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@levischuck\tiny-cbor\script\cbor\cbor.js:358:16)
+    at Object.decodeFirst (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\iso\isoCBOR.js:53:30)
+    at decodeCredentialPublicKey (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\decodeCredentialPublicKey.js:7:84)
+    at verifySignature (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\verifySignature.js:21:86)
+    at Object.verifyAuthenticationResponse (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\authentication\verifyAuthenticationResponse.js:157:66)
+2025-01-23T21:38:17.242Z [error]: unhandledRejection: No data
+Error: No data
+    at Object.decodePartialCBOR (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@levischuck\tiny-cbor\script\cbor\cbor.js:355:15)
+    at Object.decodeFirst (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\iso\isoCBOR.js:53:30)
+    at decodeCredentialPublicKey (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\decodeCredentialPublicKey.js:7:84)
+    at verifySignature (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\verifySignature.js:21:86)
+    at Object.verifyAuthenticationResponse (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\authentication\verifyAuthenticationResponse.js:157:66)
+    at async exports.loginFinish (C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\passkey.cjs:122:15)
+2025-01-23T21:39:52.516Z [error]: unhandledRejection: No data
+Error: No data
+    at Object.decodePartialCBOR (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@levischuck\tiny-cbor\script\cbor\cbor.js:355:15)
+    at Object.decodeFirst (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\iso\isoCBOR.js:53:30)
+    at decodeCredentialPublicKey (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\decodeCredentialPublicKey.js:7:84)
+    at verifySignature (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\verifySignature.js:21:86)
+    at Object.verifyAuthenticationResponse (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\authentication\verifyAuthenticationResponse.js:157:66)
+    at async exports.loginFinish (C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\passkey.cjs:122:15)
+2025-01-23T21:49:36.792Z [error]: unhandledRejection: Cannot destructure property 'id' of 'response' as it is undefined.
+TypeError: Cannot destructure property 'id' of 'response' as it is undefined.
+    at Object.verifyAuthenticationResponse (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\authentication\verifyAuthenticationResponse.js:28:13)
+    at exports.loginFinish (C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\passkey.cjs:122:42)
+2025-01-23T21:50:45.819Z [error]: unhandledRejection: Cannot destructure property 'id' of 'response' as it is undefined.
+TypeError: Cannot destructure property 'id' of 'response' as it is undefined.
+    at Object.verifyAuthenticationResponse (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\authentication\verifyAuthenticationResponse.js:28:13)
+    at exports.loginFinish (C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\passkey.cjs:124:42)
+2025-01-23T21:51:25.184Z [error]: unhandledRejection: Cannot destructure property 'id' of 'response' as it is undefined.
+TypeError: Cannot destructure property 'id' of 'response' as it is undefined.
+    at Object.verifyAuthenticationResponse (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\authentication\verifyAuthenticationResponse.js:28:13)
+    at exports.loginFinish (C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\passkey.cjs:124:42)
+2025-01-23T21:52:39.063Z [error]: unhandledRejection: No data
+Error: No data
+    at Object.decodePartialCBOR (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@levischuck\tiny-cbor\script\cbor\cbor.js:355:15)
+    at Object.decodeFirst (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\iso\isoCBOR.js:53:30)
+    at decodeCredentialPublicKey (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\decodeCredentialPublicKey.js:7:84)
+    at verifySignature (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\verifySignature.js:21:86)
+    at Object.verifyAuthenticationResponse (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\authentication\verifyAuthenticationResponse.js:157:66)
+    at async exports.loginFinish (C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\passkey.cjs:124:15)
+2025-01-23T21:54:20.464Z [error]: unhandledRejection: No data
+Error: No data
+    at Object.decodePartialCBOR (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@levischuck\tiny-cbor\script\cbor\cbor.js:355:15)
+    at Object.decodeFirst (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\iso\isoCBOR.js:53:30)
+    at decodeCredentialPublicKey (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\decodeCredentialPublicKey.js:7:84)
+    at verifySignature (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\verifySignature.js:21:86)
+    at Object.verifyAuthenticationResponse (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\authentication\verifyAuthenticationResponse.js:157:66)
+    at async exports.loginFinish (C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\passkey.cjs:124:15)
+2025-01-23T21:55:08.385Z [error]: unhandledRejection: No data
+Error: No data
+    at Object.decodePartialCBOR (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@levischuck\tiny-cbor\script\cbor\cbor.js:355:15)
+    at Object.decodeFirst (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\iso\isoCBOR.js:53:30)
+    at decodeCredentialPublicKey (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\decodeCredentialPublicKey.js:7:84)
+    at verifySignature (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\verifySignature.js:21:86)
+    at Object.verifyAuthenticationResponse (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\authentication\verifyAuthenticationResponse.js:157:66)
+    at async exports.loginFinish (C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\passkey.cjs:124:15)
+2025-01-23T22:01:08.061Z [error]: unhandledRejection: Missing credential ID
+Error: Missing credential ID
+    at Object.verifyAuthenticationResponse (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\authentication\verifyAuthenticationResponse.js:31:15)
+    at exports.loginFinish (C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\passkey.cjs:124:42)
+2025-01-23T22:01:34.255Z [error]: unhandledRejection: No data
+Error: No data
+    at Object.decodePartialCBOR (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@levischuck\tiny-cbor\script\cbor\cbor.js:355:15)
+    at Object.decodeFirst (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\iso\isoCBOR.js:53:30)
+    at decodeCredentialPublicKey (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\decodeCredentialPublicKey.js:7:84)
+    at verifySignature (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\verifySignature.js:21:86)
+    at Object.verifyAuthenticationResponse (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\authentication\verifyAuthenticationResponse.js:157:66)
+    at async exports.loginFinish (C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\passkey.cjs:124:15)
+2025-01-23T22:16:05.172Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m149[0m:[93m30[0m - [91merror[0m[90m TS2769: [0mNo overload matches this call.
+  Overload 1 of 4, '(arrayBuffer: WithImplicitCoercion<ArrayBufferLike>, byteOffset?: number | undefined, length?: number | undefined): Buffer<ArrayBufferLike>', gave the following error.
+    Argument of type 'Uint8Array<ArrayBufferLike>' is not assignable to parameter of type 'WithImplicitCoercion<ArrayBufferLike>'.
+      Type 'Uint8Array<ArrayBufferLike>' is missing the following properties from type 'ArrayBuffer': maxByteLength, resizable, resize, detached, and 2 more.
+  Overload 2 of 4, '(str: WithImplicitCoercion<string> | { [Symbol.toPrimitive](hint: "string"): string; }, encoding?: BufferEncoding | undefined): Buffer<...>', gave the following error.
+    Argument of type 'Uint8Array<ArrayBufferLike>' is not assignable to parameter of type 'WithImplicitCoercion<string> | { [Symbol.toPrimitive](hint: "string"): string; }'.
+      Type 'Uint8Array<ArrayBufferLike>' is not assignable to type '{ valueOf(): string; }'.
+        The types returned by 'valueOf()' are incompatible between these types.
+          Type 'Uint8Array<ArrayBufferLike>' is not assignable to type 'string'.
+
+[7m149[0m       publicKey: Buffer.from(user.publicKey, "base64"),
+[7m   [0m [91m                             ~~~~~~~~~~~~~~[0m
+
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m149[0m:[93m30[0m - [91merror[0m[90m TS2769: [0mNo overload matches this call.
+  Overload 1 of 4, '(arrayBuffer: WithImplicitCoercion<ArrayBufferLike>, byteOffset?: number | undefined, length?: number | undefined): Buffer<ArrayBufferLike>', gave the following error.
+    Argument of type 'Uint8Array<ArrayBufferLike>' is not assignable to parameter of type 'WithImplicitCoercion<ArrayBufferLike>'.
+      Type 'Uint8Array<ArrayBufferLike>' is missing the following properties from type 'ArrayBuffer': maxByteLength, resizable, resize, detached, and 2 more.
+  Overload 2 of 4, '(str: WithImplicitCoercion<string> | { [Symbol.toPrimitive](hint: "string"): string; }, encoding?: BufferEncoding | undefined): Buffer<...>', gave the following error.
+    Argument of type 'Uint8Array<ArrayBufferLike>' is not assignable to parameter of type 'WithImplicitCoercion<string> | { [Symbol.toPrimitive](hint: "string"): string; }'.
+      Type 'Uint8Array<ArrayBufferLike>' is not assignable to type '{ valueOf(): string; }'.
+        The types returned by 'valueOf()' are incompatible between these types.
+          Type 'Uint8Array<ArrayBufferLike>' is not assignable to type 'string'.
+
+[7m149[0m       publicKey: Buffer.from(user.publicKey, "base64"),
+[7m   [0m [91m                             ~~~~~~~~~~~~~~[0m
+
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-23T22:31:04.987Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m41[0m:[93m33[0m - [91merror[0m[90m TS7006: [0mParameter 'req' implicitly has an 'any' type.
+
+[7m41[0m exports.registerFinish = async (req, res) => {
+[7m  [0m [91m                                ~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m41[0m:[93m38[0m - [91merror[0m[90m TS7006: [0mParameter 'res' implicitly has an 'any' type.
+
+[7m41[0m exports.registerFinish = async (req, res) => {
+[7m  [0m [91m                                     ~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m65[0m:[93m26[0m - [91merror[0m[90m TS2304: [0mCannot find name 'convertChallenge'.
+
+[7m65[0m       expectedChallenge: convertChallenge(expectedChallenge),
+[7m  [0m [91m                         ~~~~~~~~~~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m66[0m:[93m7[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'expectedOrigin'. Either declare one or provide an initializer.
+
+[7m66[0m       expectedOrigin,
+[7m  [0m [91m      ~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m41[0m:[93m33[0m - [91merror[0m[90m TS7006: [0mParameter 'req' implicitly has an 'any' type.
+
+[7m41[0m exports.registerFinish = async (req, res) => {
+[7m  [0m [91m                                ~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m41[0m:[93m38[0m - [91merror[0m[90m TS7006: [0mParameter 'res' implicitly has an 'any' type.
+
+[7m41[0m exports.registerFinish = async (req, res) => {
+[7m  [0m [91m                                     ~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m65[0m:[93m26[0m - [91merror[0m[90m TS2304: [0mCannot find name 'convertChallenge'.
+
+[7m65[0m       expectedChallenge: convertChallenge(expectedChallenge),
+[7m  [0m [91m                         ~~~~~~~~~~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m66[0m:[93m7[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'expectedOrigin'. Either declare one or provide an initializer.
+
+[7m66[0m       expectedOrigin,
+[7m  [0m [91m      ~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-23T22:31:14.956Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m41[0m:[93m38[0m - [91merror[0m[90m TS7006: [0mParameter 'req' implicitly has an 'any' type.
+
+[7m41[0m export const registerFinish = async (req, res) => {
+[7m  [0m [91m                                     ~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m41[0m:[93m43[0m - [91merror[0m[90m TS7006: [0mParameter 'res' implicitly has an 'any' type.
+
+[7m41[0m export const registerFinish = async (req, res) => {
+[7m  [0m [91m                                          ~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m65[0m:[93m26[0m - [91merror[0m[90m TS2304: [0mCannot find name 'convertChallenge'.
+
+[7m65[0m       expectedChallenge: convertChallenge(expectedChallenge),
+[7m  [0m [91m                         ~~~~~~~~~~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m66[0m:[93m7[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'expectedOrigin'. Either declare one or provide an initializer.
+
+[7m66[0m       expectedOrigin,
+[7m  [0m [91m      ~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m41[0m:[93m38[0m - [91merror[0m[90m TS7006: [0mParameter 'req' implicitly has an 'any' type.
+
+[7m41[0m export const registerFinish = async (req, res) => {
+[7m  [0m [91m                                     ~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m41[0m:[93m43[0m - [91merror[0m[90m TS7006: [0mParameter 'res' implicitly has an 'any' type.
+
+[7m41[0m export const registerFinish = async (req, res) => {
+[7m  [0m [91m                                          ~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m65[0m:[93m26[0m - [91merror[0m[90m TS2304: [0mCannot find name 'convertChallenge'.
+
+[7m65[0m       expectedChallenge: convertChallenge(expectedChallenge),
+[7m  [0m [91m                         ~~~~~~~~~~~~~~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m66[0m:[93m7[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'expectedOrigin'. Either declare one or provide an initializer.
+
+[7m66[0m       expectedOrigin,
+[7m  [0m [91m      ~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-23T22:31:38.163Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m42[0m:[93m38[0m - [91merror[0m[90m TS7006: [0mParameter 'req' implicitly has an 'any' type.
+
+[7m42[0m export const registerFinish = async (req, res) => {
+[7m  [0m [91m                                     ~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m42[0m:[93m43[0m - [91merror[0m[90m TS7006: [0mParameter 'res' implicitly has an 'any' type.
+
+[7m42[0m export const registerFinish = async (req, res) => {
+[7m  [0m [91m                                          ~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m66[0m:[93m26[0m - [91merror[0m[90m TS2304: [0mCannot find name 'convertChallenge'.
+
+[7m66[0m       expectedChallenge: convertChallenge(expectedChallenge),
+[7m  [0m [91m                         ~~~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m42[0m:[93m38[0m - [91merror[0m[90m TS7006: [0mParameter 'req' implicitly has an 'any' type.
+
+[7m42[0m export const registerFinish = async (req, res) => {
+[7m  [0m [91m                                     ~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m42[0m:[93m43[0m - [91merror[0m[90m TS7006: [0mParameter 'res' implicitly has an 'any' type.
+
+[7m42[0m export const registerFinish = async (req, res) => {
+[7m  [0m [91m                                          ~~~[0m
+[96msrc/controllers/passkeyController.ts[0m:[93m66[0m:[93m26[0m - [91merror[0m[90m TS2304: [0mCannot find name 'convertChallenge'.
+
+[7m66[0m       expectedChallenge: convertChallenge(expectedChallenge),
+[7m  [0m [91m                         ~~~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-23T22:36:40.069Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m164[0m:[93m17[0m - [91merror[0m[90m TS2339: [0mProperty 'error' does not exist on type '{ (...data: any[]): void; (message?: any, ...optionalParams: any[]): void; }'.
+
+[7m164[0m     console.log.error("Login Finish Error:", error);
+[7m   [0m [91m                ~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m164[0m:[93m17[0m - [91merror[0m[90m TS2339: [0mProperty 'error' does not exist on type '{ (...data: any[]): void; (message?: any, ...optionalParams: any[]): void; }'.
+
+[7m164[0m     console.log.error("Login Finish Error:", error);
+[7m   [0m [91m                ~~~~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)

@@ -1,9 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import {
   Card,
   CardContent,
@@ -12,37 +9,12 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Checkbox } from "@/components/ui/checkbox";
-import { z } from "zod";
-import { SubmitHandler, useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useMutation } from "@tanstack/react-query";
-import client from "@/api/client";
-import { getCookie } from "@/helpers/helperFunctions";
-import { useDispatch } from "react-redux";
-import { setUser } from "@/lib/features/user/userSlice";
-import { jwtDecode } from "jwt-decode";
 import { useState } from "react";
 import LoginWithPasswordForm from "@/components/LoginWithPasswordForm";
 import LoginWithPasskeyForm from "@/components/LoginWithPasskeyForm";
 
-interface DataProps {
-  email: string;
-  password: string;
-  rememberMe?: boolean;
-}
-
-const loginScheme = z.object({
-  email: z.string().email(),
-  password: z
-    .string()
-    .min(8, { message: "Password must contain at least 8 character(s)" }),
-  rememberMe: z.boolean().optional(),
-});
-
 export default function Login() {
   const [loginWithPasskey, setLoginWIthPasskey] = useState(false);
-  const dispatch = useDispatch();
 
   return (
     <div className="min-h-screen bg-[#F5F5F5] flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
@@ -68,9 +40,9 @@ export default function Login() {
         </CardHeader>
         <CardContent>
           {!loginWithPasskey ? (
-            <LoginWithPasswordForm />
+            <LoginWithPasswordForm setLoginWIthPasskey={setLoginWIthPasskey}/>
           ) : (
-            <LoginWithPasskeyForm />
+            <LoginWithPasskeyForm setLoginWIthPasskey={setLoginWIthPasskey} />
           )}
         </CardContent>
         <CardFooter className="flex justify-center">

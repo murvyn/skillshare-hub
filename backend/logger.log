@@ -159,3 +159,135 @@ TypeError: Cannot read properties of undefined (reading 'verifyRegistrationRespo
 TypeError: Cannot read properties of undefined (reading 'verifyRegistrationResponse')
     at registerFinish (C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\passkeyController.ts:71:47)
 2025-01-23T18:11:03.171Z [error]: Unhandled Rejection: TypeError: Cannot read properties of undefined (reading 'verifyRegistrationResponse')
+2025-01-23T19:42:35.623Z [error]: Error in login: data and hash arguments required
+2025-01-23T19:44:22.866Z [error]: Error in login: data and hash arguments required
+2025-01-23T19:45:38.039Z [error]: Error in login: data and hash arguments required
+2025-01-23T19:46:14.652Z [error]: Error in login: data and hash arguments required
+2025-01-23T19:47:19.182Z [error]: Error in login: data and hash arguments required
+2025-01-23T19:47:21.350Z [error]: Error in login: data and hash arguments required
+2025-01-23T20:54:08.754Z [error]: unhandledRejection: Cannot destructure property 'id' of 'response' as it is undefined.
+TypeError: Cannot destructure property 'id' of 'response' as it is undefined.
+    at Object.verifyAuthenticationResponse (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\authentication\verifyAuthenticationResponse.js:28:13)
+    at exports.loginFinish (C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\passkey.cjs:122:42)
+2025-01-23T20:54:08.760Z [error]: Unhandled Rejection: TypeError: Cannot destructure property 'id' of 'response' as it is undefined.
+2025-01-23T21:33:21.548Z [error]: unhandledRejection: Cannot read properties of undefined (reading 'verifyAuthenticationResponse')
+TypeError: Cannot read properties of undefined (reading 'verifyAuthenticationResponse')
+    at loginFinish (C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\passkeyController.ts:143:42)
+2025-01-23T21:33:21.556Z [error]: Unhandled Rejection: TypeError: Cannot read properties of undefined (reading 'verifyAuthenticationResponse')
+2025-01-23T21:34:20.695Z [error]: unhandledRejection: Unsupported or not well formed at 24
+Error: Unsupported or not well formed at 24
+    at decodeNext (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@levischuck\tiny-cbor\script\cbor\cbor.js:222:11)
+    at decodeMap (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@levischuck\tiny-cbor\script\cbor\cbor.js:124:40)
+    at decodeNext (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@levischuck\tiny-cbor\script\cbor\cbor.js:195:20)
+    at decodeTag (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@levischuck\tiny-cbor\script\cbor\cbor.js:168:33)
+    at decodeNext (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@levischuck\tiny-cbor\script\cbor\cbor.js:198:20)
+    at Object.decodePartialCBOR (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@levischuck\tiny-cbor\script\cbor\cbor.js:358:16)
+    at Object.decodeFirst (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\iso\isoCBOR.js:53:30)
+    at decodeCredentialPublicKey (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\decodeCredentialPublicKey.js:7:84)
+    at verifySignature (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\verifySignature.js:21:86)
+    at verifyAuthenticationResponse (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\authentication\verifyAuthenticationResponse.js:157:66)
+2025-01-23T21:34:20.703Z [error]: Unhandled Rejection: Error: Unsupported or not well formed at 24
+2025-01-23T21:35:16.996Z [error]: unhandledRejection: verifyAuthenticationResponse is not defined
+ReferenceError: verifyAuthenticationResponse is not defined
+    at exports.loginFinish (C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\passkey.cjs:122:11)
+2025-01-23T21:35:17.002Z [error]: Unhandled Rejection: ReferenceError: verifyAuthenticationResponse is not defined
+2025-01-23T21:35:55.514Z [error]: unhandledRejection: Unsupported or not well formed at 24
+Error: Unsupported or not well formed at 24
+    at decodeNext (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@levischuck\tiny-cbor\script\cbor\cbor.js:222:11)
+    at decodeMap (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@levischuck\tiny-cbor\script\cbor\cbor.js:124:40)
+    at decodeNext (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@levischuck\tiny-cbor\script\cbor\cbor.js:195:20)
+    at decodeTag (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@levischuck\tiny-cbor\script\cbor\cbor.js:168:33)
+    at decodeNext (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@levischuck\tiny-cbor\script\cbor\cbor.js:198:20)
+    at Object.decodePartialCBOR (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@levischuck\tiny-cbor\script\cbor\cbor.js:358:16)
+    at Object.decodeFirst (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\iso\isoCBOR.js:53:30)
+    at decodeCredentialPublicKey (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\decodeCredentialPublicKey.js:7:84)
+    at verifySignature (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\verifySignature.js:21:86)
+    at Object.verifyAuthenticationResponse (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\authentication\verifyAuthenticationResponse.js:157:66)
+2025-01-23T21:35:55.519Z [error]: Unhandled Rejection: Error: Unsupported or not well formed at 24
+2025-01-23T21:37:25.948Z [error]: unhandledRejection: Unsupported or not well formed at 24
+Error: Unsupported or not well formed at 24
+    at decodeNext (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@levischuck\tiny-cbor\script\cbor\cbor.js:222:11)
+    at decodeMap (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@levischuck\tiny-cbor\script\cbor\cbor.js:124:40)
+    at decodeNext (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@levischuck\tiny-cbor\script\cbor\cbor.js:195:20)
+    at decodeTag (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@levischuck\tiny-cbor\script\cbor\cbor.js:168:33)
+    at decodeNext (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@levischuck\tiny-cbor\script\cbor\cbor.js:198:20)
+    at Object.decodePartialCBOR (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@levischuck\tiny-cbor\script\cbor\cbor.js:358:16)
+    at Object.decodeFirst (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\iso\isoCBOR.js:53:30)
+    at decodeCredentialPublicKey (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\decodeCredentialPublicKey.js:7:84)
+    at verifySignature (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\verifySignature.js:21:86)
+    at Object.verifyAuthenticationResponse (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\authentication\verifyAuthenticationResponse.js:157:66)
+2025-01-23T21:37:25.955Z [error]: Unhandled Rejection: Error: Unsupported or not well formed at 24
+2025-01-23T21:38:17.242Z [error]: unhandledRejection: No data
+Error: No data
+    at Object.decodePartialCBOR (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@levischuck\tiny-cbor\script\cbor\cbor.js:355:15)
+    at Object.decodeFirst (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\iso\isoCBOR.js:53:30)
+    at decodeCredentialPublicKey (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\decodeCredentialPublicKey.js:7:84)
+    at verifySignature (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\verifySignature.js:21:86)
+    at Object.verifyAuthenticationResponse (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\authentication\verifyAuthenticationResponse.js:157:66)
+    at async exports.loginFinish (C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\passkey.cjs:122:15)
+2025-01-23T21:38:17.248Z [error]: Unhandled Rejection: Error: No data
+2025-01-23T21:39:52.516Z [error]: unhandledRejection: No data
+Error: No data
+    at Object.decodePartialCBOR (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@levischuck\tiny-cbor\script\cbor\cbor.js:355:15)
+    at Object.decodeFirst (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\iso\isoCBOR.js:53:30)
+    at decodeCredentialPublicKey (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\decodeCredentialPublicKey.js:7:84)
+    at verifySignature (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\verifySignature.js:21:86)
+    at Object.verifyAuthenticationResponse (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\authentication\verifyAuthenticationResponse.js:157:66)
+    at async exports.loginFinish (C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\passkey.cjs:122:15)
+2025-01-23T21:39:52.520Z [error]: Unhandled Rejection: Error: No data
+2025-01-23T21:49:36.792Z [error]: unhandledRejection: Cannot destructure property 'id' of 'response' as it is undefined.
+TypeError: Cannot destructure property 'id' of 'response' as it is undefined.
+    at Object.verifyAuthenticationResponse (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\authentication\verifyAuthenticationResponse.js:28:13)
+    at exports.loginFinish (C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\passkey.cjs:122:42)
+2025-01-23T21:49:36.797Z [error]: Unhandled Rejection: TypeError: Cannot destructure property 'id' of 'response' as it is undefined.
+2025-01-23T21:50:45.819Z [error]: unhandledRejection: Cannot destructure property 'id' of 'response' as it is undefined.
+TypeError: Cannot destructure property 'id' of 'response' as it is undefined.
+    at Object.verifyAuthenticationResponse (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\authentication\verifyAuthenticationResponse.js:28:13)
+    at exports.loginFinish (C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\passkey.cjs:124:42)
+2025-01-23T21:50:45.825Z [error]: Unhandled Rejection: TypeError: Cannot destructure property 'id' of 'response' as it is undefined.
+2025-01-23T21:51:25.184Z [error]: unhandledRejection: Cannot destructure property 'id' of 'response' as it is undefined.
+TypeError: Cannot destructure property 'id' of 'response' as it is undefined.
+    at Object.verifyAuthenticationResponse (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\authentication\verifyAuthenticationResponse.js:28:13)
+    at exports.loginFinish (C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\passkey.cjs:124:42)
+2025-01-23T21:51:25.191Z [error]: Unhandled Rejection: TypeError: Cannot destructure property 'id' of 'response' as it is undefined.
+2025-01-23T21:52:39.063Z [error]: unhandledRejection: No data
+Error: No data
+    at Object.decodePartialCBOR (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@levischuck\tiny-cbor\script\cbor\cbor.js:355:15)
+    at Object.decodeFirst (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\iso\isoCBOR.js:53:30)
+    at decodeCredentialPublicKey (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\decodeCredentialPublicKey.js:7:84)
+    at verifySignature (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\verifySignature.js:21:86)
+    at Object.verifyAuthenticationResponse (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\authentication\verifyAuthenticationResponse.js:157:66)
+    at async exports.loginFinish (C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\passkey.cjs:124:15)
+2025-01-23T21:52:39.069Z [error]: Unhandled Rejection: Error: No data
+2025-01-23T21:54:20.464Z [error]: unhandledRejection: No data
+Error: No data
+    at Object.decodePartialCBOR (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@levischuck\tiny-cbor\script\cbor\cbor.js:355:15)
+    at Object.decodeFirst (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\iso\isoCBOR.js:53:30)
+    at decodeCredentialPublicKey (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\decodeCredentialPublicKey.js:7:84)
+    at verifySignature (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\verifySignature.js:21:86)
+    at Object.verifyAuthenticationResponse (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\authentication\verifyAuthenticationResponse.js:157:66)
+    at async exports.loginFinish (C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\passkey.cjs:124:15)
+2025-01-23T21:54:20.469Z [error]: Unhandled Rejection: Error: No data
+2025-01-23T21:55:08.385Z [error]: unhandledRejection: No data
+Error: No data
+    at Object.decodePartialCBOR (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@levischuck\tiny-cbor\script\cbor\cbor.js:355:15)
+    at Object.decodeFirst (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\iso\isoCBOR.js:53:30)
+    at decodeCredentialPublicKey (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\decodeCredentialPublicKey.js:7:84)
+    at verifySignature (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\verifySignature.js:21:86)
+    at Object.verifyAuthenticationResponse (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\authentication\verifyAuthenticationResponse.js:157:66)
+    at async exports.loginFinish (C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\passkey.cjs:124:15)
+2025-01-23T21:55:08.394Z [error]: Unhandled Rejection: Error: No data
+2025-01-23T22:01:08.061Z [error]: unhandledRejection: Missing credential ID
+Error: Missing credential ID
+    at Object.verifyAuthenticationResponse (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\authentication\verifyAuthenticationResponse.js:31:15)
+    at exports.loginFinish (C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\passkey.cjs:124:42)
+2025-01-23T22:01:08.069Z [error]: Unhandled Rejection: Error: Missing credential ID
+2025-01-23T22:01:34.255Z [error]: unhandledRejection: No data
+Error: No data
+    at Object.decodePartialCBOR (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@levischuck\tiny-cbor\script\cbor\cbor.js:355:15)
+    at Object.decodeFirst (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\iso\isoCBOR.js:53:30)
+    at decodeCredentialPublicKey (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\decodeCredentialPublicKey.js:7:84)
+    at verifySignature (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\helpers\verifySignature.js:21:86)
+    at Object.verifyAuthenticationResponse (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\authentication\verifyAuthenticationResponse.js:157:66)
+    at async exports.loginFinish (C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\passkey.cjs:124:15)
+2025-01-23T22:01:34.261Z [error]: Unhandled Rejection: Error: No data
