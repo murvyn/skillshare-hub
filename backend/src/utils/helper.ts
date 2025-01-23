@@ -8,11 +8,21 @@ export const generateAuthToken = (user: User) => {
   if (!jwtPrivateKey) {
     throw new Error("JWTPrivateKey environment variable not set");
   }
-  return jwt.sign(user, jwtPrivateKey);
+  return jwt.sign(
+    {
+      id: user.id,
+      firstName: user.firstName,
+      lastName: user.lastName,
+      email: user.email,
+      photoUrl: user.photoUrl,
+      googleId: user.googleId,
+    },
+    jwtPrivateKey
+  );
 };
 export const getNewChallenge = () => {
   return Math.random().toString(36).substring(2);
-}
+};
 export const convertChallenge = (challenge: string) => {
-  return btoa(challenge).replaceAll('=', '');
-}
+  return btoa(challenge).replaceAll("=", "");
+};

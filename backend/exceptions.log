@@ -2705,3 +2705,91 @@ TSError: ⨯ Unable to compile TypeScript:
     at Module.load (node:internal/modules/cjs/loader:1313:32)
     at Function._load (node:internal/modules/cjs/loader:1123:12)
     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-23T23:19:31.722Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m6[0m:[93m1[0m - [91merror[0m[90m TS2304: [0mCannot find name 'imp'.
+
+[7m6[0m imp
+[7m [0m [91m~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m6[0m:[93m1[0m - [91merror[0m[90m TS2304: [0mCannot find name 'imp'.
+
+[7m6[0m imp
+[7m [0m [91m~~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-23T23:26:54.531Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m35[0m:[93m9[0m - [91merror[0m[90m TS2322: [0mType 'string' is not assignable to type 'BufferSource'.
+
+[7m35[0m         id: Buffer.from(email, "utf-8").toString("base64"), // Use a base64-encoded string for user ID
+[7m  [0m [91m        ~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m35[0m:[93m9[0m - [91merror[0m[90m TS2322: [0mType 'string' is not assignable to type 'BufferSource'.
+
+[7m35[0m         id: Buffer.from(email, "utf-8").toString("base64"), // Use a base64-encoded string for user ID
+[7m  [0m [91m        ~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-23T23:27:12.560Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m35[0m:[93m9[0m - [91merror[0m[90m TS2322: [0mType 'string' is not assignable to type 'BufferSource'.
+
+[7m35[0m         id: Buffer.from(email, "utf-8").toString("base64"), // Use a base64-encoded string for user ID
+[7m  [0m [91m        ~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m35[0m:[93m9[0m - [91merror[0m[90m TS2322: [0mType 'string' is not assignable to type 'BufferSource'.
+
+[7m35[0m         id: Buffer.from(email, "utf-8").toString("base64"), // Use a base64-encoded string for user ID
+[7m  [0m [91m        ~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-23T23:31:24.887Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m32[0m:[93m7[0m - [91merror[0m[90m TS2322: [0mType 'string' is not assignable to type 'BufferSource'.
+
+[7m32[0m       challenge,
+[7m  [0m [91m      ~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/passkeyController.ts[0m:[93m32[0m:[93m7[0m - [91merror[0m[90m TS2322: [0mType 'string' is not assignable to type 'BufferSource'.
+
+[7m32[0m       challenge,
+[7m  [0m [91m      ~~~~~~~~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
