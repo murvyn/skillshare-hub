@@ -74,7 +74,6 @@ const SIgnUpCard = ({router}: {router: AppRouterInstance}) => {
   const {
     mutateAsync,
     isPending: signUpLoading,
-    isSuccess,
   } = useMutation({
     mutationFn: async () => {
       const response = await client.post(
@@ -142,7 +141,6 @@ const SIgnUpCard = ({router}: {router: AppRouterInstance}) => {
         "/auth/passkey-register/start",
         JSON.stringify({ email })
       );
-      console.log("passkey sart",response)
       return response.data;
     },
     onSuccess: async (data) => {
@@ -427,7 +425,6 @@ const SIgnUpCard = ({router}: {router: AppRouterInstance}) => {
           {currentStep === 4 && (
             <div className="flex flex-col items-center justify-center space-y-4">
               <AnimatePresence>
-                
                 <motion.div
                   className="w-24 h-24 rounded-full border-4 border-[#1E90FF] flex items-center justify-center"
                   animate={{

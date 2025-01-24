@@ -208,6 +208,11 @@ export const loginFinish = async (
     });
 
     const token = generateAuthToken(user)
+    res.cookie("auth-x-token", token, {
+      httpOnly: false,
+      secure: true,
+      sameSite: "none",
+    });
 
     return res.status(200).send({ success: true });
   } catch (error) {
