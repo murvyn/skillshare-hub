@@ -26,14 +26,11 @@ import { AlertCircle, KeyRound } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { AxiosError } from "axios";
-import {
-  fido2Create,
-  IWebAuthnRegisterRequest,
-} from "@ownid/webauthn";
+import { fido2Create, IWebAuthnRegisterRequest } from "@ownid/webauthn";
 import Link from "next/link";
 import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
 
-const SIgnUpCard = ({router}: {router: AppRouterInstance}) => {
+const SIgnUpCard = ({ router }: { router: AppRouterInstance }) => {
   const dispatch = useDispatch();
   const { interests } = useSelector((state: RootState) => state.interests);
   const [error, setError] = useState("");
@@ -71,10 +68,7 @@ const SIgnUpCard = ({router}: {router: AppRouterInstance}) => {
     interests: "",
   });
 
-  const {
-    mutateAsync,
-    isPending: signUpLoading,
-  } = useMutation({
+  const { mutateAsync, isPending: signUpLoading } = useMutation({
     mutationFn: async () => {
       const response = await client.post(
         "/auth/register",
@@ -104,36 +98,35 @@ const SIgnUpCard = ({router}: {router: AppRouterInstance}) => {
     },
   });
 
-  const { mutateAsync: passkeyFinish } =
-    useMutation({
-      mutationFn: async ({
-        email,
-        pubKey,
-      }: {
-        email: string;
-        pubKey: IWebAuthnRegisterRequest;
-      }) => {
-        const response = await client.post(
-          "/auth/passkey-register/finish",
-          JSON.stringify({ email, pubKey })
-        );
-        console.log(response)
-        return response.data;
-      },
-      onSuccess: () => {
-        setProgress(100);
-        setIsCreatingPasskey(false);
-        setPasskeyStatus("success");
-      },
-      onError: (e) => {
-        setProgress(0);
-        setIsCreatingPasskey(false);
-        setPasskeyStatus("error");
-        setErrorMessage(
-          (e as AxiosError).response?.data?.message || "Something went wrong."
-        );
-      },
-    });
+  const { mutateAsync: passkeyFinish } = useMutation({
+    mutationFn: async ({
+      email,
+      pubKey,
+    }: {
+      email: string;
+      pubKey: IWebAuthnRegisterRequest;
+    }) => {
+      const response = await client.post(
+        "/auth/passkey-register/finish",
+        JSON.stringify({ email, pubKey })
+      );
+      console.log(response);
+      return response.data;
+    },
+    onSuccess: () => {
+      setProgress(100);
+      setIsCreatingPasskey(false);
+      setPasskeyStatus("success");
+    },
+    onError: (e) => {
+      setProgress(0);
+      setIsCreatingPasskey(false);
+      setPasskeyStatus("error");
+      setErrorMessage(
+        (e as AxiosError).response?.data?.message || "Something went wrong."
+      );
+    },
+  });
 
   const { mutateAsync: passkeyStart } = useMutation({
     mutationFn: async (email: string) => {
@@ -144,11 +137,11 @@ const SIgnUpCard = ({router}: {router: AppRouterInstance}) => {
       return response.data;
     },
     onSuccess: async (data) => {
-      setProgress(33); 
+      setProgress(33);
       try {
         const fidoData = await fido2Create(data, formData.email);
-        console.log('fido',fidoData)
-        setProgress(66); 
+        console.log("fido", fidoData);
+        setProgress(66);
         await passkeyFinish({ email: formData.email, pubKey: fidoData });
       } catch (error) {
         setProgress(0);
@@ -159,7 +152,7 @@ const SIgnUpCard = ({router}: {router: AppRouterInstance}) => {
       }
     },
     onError: (e) => {
-      console.log(e)
+      console.log(e);
       setProgress(0);
       setIsCreatingPasskey(false);
       setPasskeyStatus("error");
@@ -188,8 +181,10 @@ const SIgnUpCard = ({router}: {router: AppRouterInstance}) => {
     onSuccess: (data) => {
       dispatch(setInterests(data));
     },
-    onError: (error) => {
-      setError(error.message);
+    onError: (e) => {
+      setError(
+        (e as AxiosError).response?.data?.message || "Something went wrong."
+      );
     },
   });
 
@@ -232,7 +227,6 @@ const SIgnUpCard = ({router}: {router: AppRouterInstance}) => {
     if (validateStep(currentStep, formData, setErrors)) {
       await mutateAsync();
     }
-
   };
   return (
     <Card className="w-full max-w-md">
@@ -488,16 +482,30 @@ const SIgnUpCard = ({router}: {router: AppRouterInstance}) => {
                 )}
               </Button>
             ) : (
-              <Button
-                type="submit"
-                className="ml-auto"
-                onClick={() => {
-                    router.push("/")
-                }}
-                disabled={isCreatingPasskey || progress < 100}
-              >
-                {progress < 100 ? "Creating Passkey..." : "Complete"}
-              </Button>
+              <>
+                {errorMessage ? (
+                  <Button
+                    type="submit"
+                    className="ml-auto"
+                    onClick={() => {
+                      router.push("/");
+                    }}
+                    disabled={isCreatingPasskey || progress < 100}
+                  >
+                    Try again later
+                  </Button>
+                ) : (
+                  <Button
+                    type="submit"
+                    className="ml-auto"
+                    onClick={() => {
+                      router.push("/");
+                    }}
+                  >
+                    {progress < 100 ? "Creating Passkey..." : "Complete"}
+                  </Button>
+                )}
+              </>
             )}
           </div>
         </form>

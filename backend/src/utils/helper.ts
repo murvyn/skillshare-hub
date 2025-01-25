@@ -8,6 +8,7 @@ export const generateAuthToken = (user: User) => {
   if (!jwtPrivateKey) {
     throw new Error("JWTPrivateKey environment variable not set");
   }
+  const expiresIn = "24h";
   return jwt.sign(
     {
       id: user.id,
@@ -17,7 +18,8 @@ export const generateAuthToken = (user: User) => {
       photoUrl: user.photoUrl,
       googleId: user.googleId,
     },
-    jwtPrivateKey
+    jwtPrivateKey,
+    { expiresIn }
   );
 };
 export const getNewChallenge = () => {

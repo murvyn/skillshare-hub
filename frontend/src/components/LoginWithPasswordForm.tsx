@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction } from "react";
+import React, { Dispatch, SetStateAction, useState } from "react";
 import { Label } from "./ui/label";
 import { Input } from "./ui/input";
 import { Checkbox } from "./ui/checkbox";
@@ -13,6 +13,10 @@ import { getCookie } from "@/helpers/helperFunctions";
 import { jwtDecode } from "jwt-decode";
 import { setUser } from "@/lib/features/user/userSlice";
 import { useDispatch } from "react-redux";
+import { Alert, AlertDescription, AlertTitle } from "./ui/alert";
+import { AlertCircle } from "lucide-react";
+import { AxiosError } from "axios";
+import { Spinner } from "./Spinner";
 
 interface DataProps {
   email: string;
@@ -28,7 +32,12 @@ const loginScheme = z.object({
   rememberMe: z.boolean().optional(),
 });
 
-const LoginWithPasswordForm = ({setLoginWIthPasskey}: {setLoginWIthPasskey: Dispatch<SetStateAction<boolean>>}) => {
+const LoginWithPasswordForm = ({
+  setLoginWIthPasskey,
+}: {
+  setLoginWIthPasskey: Dispatch<SetStateAction<boolean>>;
+}) => {
+  const [error, setError] = useState("");
   const dispatch = useDispatch();
   const {
     register,
@@ -43,28 +52,35 @@ const LoginWithPasswordForm = ({setLoginWIthPasskey}: {setLoginWIthPasskey: Disp
     },
   });
 
-  const { mutateAsync } = useMutation({
+  const { mutateAsync, isPending } = useMutation({
     mutationFn: async (data: DataProps) => {
       const response = await client.post("/auth/login", JSON.stringify(data));
       return response.data;
     },
-    onSuccess: (data) => {
-      console.log(data);
+    onSuccess: () => {
       const token = getCookie("auth-x-token");
       const decoded = jwtDecode(token as string);
       dispatch(setUser(decoded));
     },
+    onError: (e) => {
+      setError(
+        (e as AxiosError).response?.data?.message || "Something went wrong."
+      );
+    },
   });
 
   const submit: SubmitHandler<DataProps> = async (data) => {
-    try {
-      await mutateAsync(data);
-    } catch (error) {
-      console.log(error);
-    }
+    await mutateAsync(data);
   };
   return (
     <form onSubmit={handleSubmit(submit)} className="space-y-4">
+      {error && (
+        <Alert variant="destructive" className="mb-4">
+          <AlertCircle className="h-4 w-4" />
+          <AlertTitle>Error</AlertTitle>
+          <AlertDescription>{error}</AlertDescription>
+        </Alert>
+      )}
       <div className="space-y-2">
         <Label htmlFor="email">Email</Label>
         <Input
@@ -110,10 +126,22 @@ const LoginWithPasswordForm = ({setLoginWIthPasskey}: {setLoginWIthPasskey: Disp
           Forgot password?
         </Link>
       </div>
-      <Button type="submit" className="w-full bg-[#1E90FF] hover:bg-blue-600">
-        Log In
+      <Button
+        type="submit"
+        disabled={isPending}
+        className="w-full bg-[#1E90FF] hover:bg-blue-600"
+      >
+        {isPending ? (
+          <Spinner size={"medium"} className="text-white" />
+        ) : (
+          " Log In"
+        )}
       </Button>
-      <Button type="submit" onClick={() => setLoginWIthPasskey(true)} className="w-full">
+      <Button
+        type="submit"
+        onClick={() => setLoginWIthPasskey(true)}
+        className="w-full"
+      >
         Use Passkey
       </Button>
     </form>

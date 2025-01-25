@@ -85,3 +85,4 @@ export const getCookie = (name: string) => {
     return parts.pop()?.split(";").shift();
   }
 }
+

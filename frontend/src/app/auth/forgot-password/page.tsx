@@ -21,6 +21,7 @@ import * as z from "zod";
 import { useMutation } from "@tanstack/react-query";
 import client from "@/api/client";
 import { AxiosError } from "axios";
+import { Spinner } from "@/components/Spinner";
 
 interface DataProps {
   email: string;
@@ -42,25 +43,28 @@ export default function ForgotPassword() {
     defaultValues: { email: "" },
   });
 
-  const {mutateAsync} = useMutation({
+  const { mutateAsync, isPending } = useMutation({
     mutationKey: ["forgot-password"],
     mutationFn: async (data: DataProps) => {
-      const response = await client.post("/auth/forgot-password", JSON.stringify(data));
+      const response = await client.post(
+        "/auth/forgot-password",
+        JSON.stringify(data)
+      );
       return response.data;
     },
     onSuccess: () => {
       setSuccess(true);
     },
     onError: (e) => {
-      const error = e as AxiosError
+      const error = e as AxiosError;
       console.error(error);
       setError(error.response.data.message);
-    }
+    },
   });
 
   const submit: SubmitHandler<DataProps> = async (data) => {
     setSuccess(false);
-      await mutateAsync(data);
+    await mutateAsync(data);
   };
 
   return (
@@ -117,10 +121,15 @@ export default function ForgotPassword() {
                 )}
               </div>
               <Button
+                disabled={isPending}
                 type="submit"
                 className="w-full bg-[#1E90FF] hover:bg-blue-600"
               >
-                Reset Password
+                {isPending ? (
+                  <Spinner size={"medium"} className="text-white" />
+                ) : (
+                  "Reset Password"
+                )}
               </Button>
             </form>
           </CardContent>

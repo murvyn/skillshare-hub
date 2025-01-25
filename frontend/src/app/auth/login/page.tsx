@@ -40,7 +40,7 @@ export default function Login() {
         </CardHeader>
         <CardContent>
           {!loginWithPasskey ? (
-            <LoginWithPasswordForm setLoginWIthPasskey={setLoginWIthPasskey}/>
+            <LoginWithPasswordForm setLoginWIthPasskey={setLoginWIthPasskey} />
           ) : (
             <LoginWithPasskeyForm setLoginWIthPasskey={setLoginWIthPasskey} />
           )}

@@ -15,7 +15,7 @@ export const login = async (req: Request, res: Response): Promise<any> => {
       include: { interests: { include: { interest: true } } },
     });
     if (!user) {
-      return res.status(404).json({ message: "User not found" });
+      return res.status(404).json({ message: "User not found. Would you like to create an account?" });
     }
 
     if (!user.password) {
@@ -25,9 +25,8 @@ export const login = async (req: Request, res: Response): Promise<any> => {
     }
     const isValidPassword = await bcrypt.compare(password, user.password);
     if (!isValidPassword) {
-      return res.status(401).json({ message: "Invalid credentials" });
+      return res.status(401).json({ message: "Invalid email or password" });
     }
-    console.log(user);
     const token = generateAuthToken(user);
     res.cookie("auth-x-token", token, {
       httpOnly: false,
@@ -65,7 +64,7 @@ export const registerUser = async (
     const { firstName, lastName, email, password, interests, role } = req.body;
     const user = await prisma.user.findUnique({ where: { email } });
     if (user) {
-      return res.status(409).json({ message: "Email already in use" });
+      return res.status(409).json({ message: "User already exists" });
     }
     const hashedPassword = await bcrypt.hash(password, 10);
 
@@ -104,7 +103,7 @@ export const forgotPassword = async (req: Request, res: Response): Promise<any> 
     const { email } = req.body;
     const user = await prisma.user.findUnique({ where: { email } });
     if (!user) {
-      return res.status(404).json({ message: "User not found" });
+      return res.status(404).json({ message: "User not found. Would you like to create an account?" });
     }
 
     const secret = process.env.JWTPrivateKey! + user.password;

@@ -1,6 +1,5 @@
 import React, { Dispatch, SetStateAction, useState } from "react";
 import { Button } from "./ui/button";
-import Link from "next/link";
 import { Label } from "./ui/label";
 import { Input } from "./ui/input";
 import { z } from "zod";
@@ -51,7 +50,7 @@ const LoginWithPasskeyForm = ({
     },
   });
 
-  const { mutateAsync: passkeyFinish } = useMutation({
+  const { mutateAsync: passkeyLoginFinish } = useMutation({
     mutationFn: async ({
       email,
       pubKey,
@@ -87,14 +86,12 @@ const LoginWithPasskeyForm = ({
     },
   });
 
-  const { mutateAsync: passkeyStart } = useMutation({
+  const { mutateAsync: passkeyLoginStart } = useMutation({
     mutationFn: async (data: DataProps) => {
-      const response = await client.post<
-      { data: PublicKeyCredentialRequestOptions; email: string }
-    >(
-        "/auth/passkey-login/start",
-        JSON.stringify(data)
-      );
+      const response = await client.post<{
+        data: PublicKeyCredentialRequestOptions;
+        email: string;
+      }>("/auth/passkey-login/start", JSON.stringify(data));
       return response.data;
     },
     onSuccess: async ({
@@ -110,7 +107,10 @@ const LoginWithPasskeyForm = ({
       const assertion = await fido2Get(data, email);
       setProgress(50);
 
-      await passkeyFinish({ pubKey: assertion, email: assertion.username });
+      await passkeyLoginFinish({
+        pubKey: assertion,
+        email: assertion.username,
+      });
       setProgress(75);
     },
     onError: (e) => {
@@ -126,7 +126,7 @@ const LoginWithPasskeyForm = ({
   const submit: SubmitHandler<DataProps> = async (data) => {
     setIsVerifyingPasskey(true);
     setErrorMessage("");
-    await passkeyStart(data);
+    await passkeyLoginStart(data);
   };
   return (
     <>
