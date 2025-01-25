@@ -14,14 +14,14 @@ import { useEffect, useState } from "react";
 import { useMutation } from "@tanstack/react-query";
 import client from "@/api/client";
 import { useDispatch } from "react-redux";
-import { setInterests } from "@/lib/features/interest/interestSlice";
+import { setInterests } from "@/store/interestSlice";
 import { useSelector } from "react-redux";
 import { Checkbox } from "@/components/ui/checkbox";
-import { getCookie, validateStep } from "@/helpers/helperFunctions";
+import { validateStep } from "@/helpers/helperFunctions";
 import { RootState } from "@/store/store";
 import { Spinner } from "@/components/Spinner";
 import { jwtDecode } from "jwt-decode";
-import { setUser } from "@/lib/features/user/userSlice";
+import { setUser } from "@/store/userSlice";
 import { AlertCircle, KeyRound } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
@@ -29,6 +29,7 @@ import { AxiosError } from "axios";
 import { fido2Create, IWebAuthnRegisterRequest } from "@ownid/webauthn";
 import Link from "next/link";
 import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
+import Cookies from "js-cookie";
 
 const SIgnUpCard = ({ router }: { router: AppRouterInstance }) => {
   const dispatch = useDispatch();
@@ -77,7 +78,7 @@ const SIgnUpCard = ({ router }: { router: AppRouterInstance }) => {
       return response.data;
     },
     onSuccess: async () => {
-      const token = getCookie("auth-x-token");
+      const token = Cookies.get("auth-x-token");
       if (token) {
         const decoded = jwtDecode(token);
         dispatch(setUser(decoded));
@@ -485,19 +486,17 @@ const SIgnUpCard = ({ router }: { router: AppRouterInstance }) => {
               <>
                 {errorMessage ? (
                   <Button
-                    type="submit"
                     className="ml-auto"
                     onClick={() => {
                       router.push("/");
                     }}
-                    disabled={isCreatingPasskey || progress < 100}
                   >
                     Try again later
                   </Button>
                 ) : (
                   <Button
-                    type="submit"
                     className="ml-auto"
+                    disabled={isCreatingPasskey || progress < 100}
                     onClick={() => {
                       router.push("/");
                     }}

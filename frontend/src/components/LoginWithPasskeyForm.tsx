@@ -3,9 +3,8 @@ import { Button } from "./ui/button";
 import { Label } from "./ui/label";
 import { Input } from "./ui/input";
 import { z } from "zod";
-import { setUser } from "@/lib/features/user/userSlice";
+import { setUser } from "@/store/userSlice";
 import { jwtDecode } from "jwt-decode";
-import { getCookie } from "@/helpers/helperFunctions";
 import { SubmitHandler, useForm } from "react-hook-form";
 import client from "@/api/client";
 import { useMutation } from "@tanstack/react-query";
@@ -17,6 +16,7 @@ import { AlertCircle, KeyRound } from "lucide-react";
 import { AxiosError } from "axios";
 import { useRouter } from "next/navigation";
 import { Alert, AlertDescription, AlertTitle } from "./ui/alert";
+import Cookies from "js-cookie";
 
 interface DataProps {
   email: string;
@@ -69,12 +69,14 @@ const LoginWithPasskeyForm = ({
       setProgress(100);
       setPasskeyStatus("success");
 
-      const token = getCookie("auth-x-token");
-      const decoded = jwtDecode(token as string);
-      dispatch(setUser(decoded));
-
-      router.push("/");
-      setIsVerifyingPasskey(false);
+      const token = Cookies.get("auth-x-token");
+      if (token) {
+        const decoded = jwtDecode(token as string);
+        dispatch(setUser(decoded));
+        router.push("/");
+        setIsVerifyingPasskey(false);
+      }
+      
     },
     onError: (e) => {
       setPasskeyStatus("error");

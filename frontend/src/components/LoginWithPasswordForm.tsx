@@ -9,14 +9,15 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
 import { z } from "zod";
 import client from "@/api/client";
-import { getCookie } from "@/helpers/helperFunctions";
 import { jwtDecode } from "jwt-decode";
-import { setUser } from "@/lib/features/user/userSlice";
+import { setUser } from "@/store/userSlice";
 import { useDispatch } from "react-redux";
 import { Alert, AlertDescription, AlertTitle } from "./ui/alert";
 import { AlertCircle } from "lucide-react";
 import { AxiosError } from "axios";
 import { Spinner } from "./Spinner";
+import Cookies from "js-cookie";
+import { useRouter } from "next/navigation";
 
 interface DataProps {
   email: string;
@@ -39,6 +40,7 @@ const LoginWithPasswordForm = ({
 }) => {
   const [error, setError] = useState("");
   const dispatch = useDispatch();
+  const router = useRouter()
   const {
     register,
     handleSubmit,
@@ -58,9 +60,12 @@ const LoginWithPasswordForm = ({
       return response.data;
     },
     onSuccess: () => {
-      const token = getCookie("auth-x-token");
-      const decoded = jwtDecode(token as string);
-      dispatch(setUser(decoded));
+      const token = Cookies.get("auth-x-token");
+      if(token) {
+        const decoded = jwtDecode(token as string);
+        dispatch(setUser(decoded));
+        router.push("/")
+      }
     },
     onError: (e) => {
       setError(
