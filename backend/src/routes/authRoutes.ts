@@ -22,7 +22,7 @@ router.post("/passkey-login/start", loginStart);
 router.post("/passkey-login/finish", loginFinish);
 router.post("/passkey-register/start", registerStart);
 router.post("/passkey-register/finish", registerFinish);
-router.post("/reset-password/:id/:token", resetPasswordGet);
+router.get("/reset-password/:id/:token", resetPasswordGet);
 router.post("/reset-password/:id/:token", resetPasswordPost);
 
 export default router;
