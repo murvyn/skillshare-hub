@@ -291,3 +291,13 @@ Error: No data
     at Object.verifyAuthenticationResponse (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\@simplewebauthn\server\script\authentication\verifyAuthenticationResponse.js:157:66)
     at async exports.loginFinish (C:\Users\marvi\Documents\skillshare-hub\backend\src\controllers\passkey.cjs:124:15)
 2025-01-23T22:01:34.261Z [error]: Unhandled Rejection: Error: No data
+2025-01-27T21:15:13.917Z [error]: Error in reset password: jwt expired
+2025-01-27T21:15:14.045Z [error]: Error in reset password: jwt expired
+2025-01-27T21:22:11.054Z [error]: Error in reset password: jwt expired
+2025-01-27T21:22:11.084Z [error]: Error in reset password: jwt expired
+2025-01-27T21:24:09.696Z [error]: Error in reset password: jwt expired
+2025-01-27T21:24:09.803Z [error]: Error in reset password: jwt expired
+2025-01-27T21:25:36.016Z [error]: Error in reset password: jwt expired
+2025-01-27T21:25:36.116Z [error]: Error in reset password: jwt expired
+2025-01-27T21:32:53.253Z [error]: Error in reset password: jwt expired
+2025-01-27T21:32:53.316Z [error]: Error in reset password: jwt expired
