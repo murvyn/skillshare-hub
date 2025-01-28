@@ -1,19 +1,126 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Search, Star, Users } from "lucide-react";
 
+import { Search } from "lucide-react";
+import WhatUsersSaidSlider from "@/components/WhatUsersSaidSlider";
+import ImageCarousel from "@/components/ImageCarousel";
+import { Merriweather } from "next/font/google";
+
+import LessonsCarousel from "@/components/LessonsCarousel";
+
+const lessons = [
+  {
+    id: 1,
+    title: "Introduction to JavaScript",
+    author: "John Doe",
+    rating: 4.5,
+    numberOfStudents: 1200,
+    price: 29.99,
+  },
+  {
+    id: 2,
+    title: "Advanced React Techniques",
+    author: "Jane Smith",
+    rating: 4.8,
+    numberOfStudents: 850,
+    price: 49.99,
+  },
+  {
+    id: 3,
+    title: "Mastering Node.js",
+    author: "Alice Johnson",
+    rating: 4.7,
+    numberOfStudents: 950,
+    price: 39.99,
+  },
+  {
+    id: 4,
+    title: "Python for Beginners",
+    author: "Bob Brown",
+    rating: 4.6,
+    numberOfStudents: 2000,
+    price: 19.99,
+  },
+  {
+    id: 5,
+    title: "Data Structures and Algorithms For Beginners And Others",
+    author: "Charlie Davis",
+    rating: 4.9,
+    numberOfStudents: 1500,
+    price: 59.99,
+  },
+  {
+    id: 6,
+    title: "Full-Stack Web Development",
+    author: "Eva Green",
+    rating: 4.7,
+    numberOfStudents: 1300,
+    price: 79.99,
+  },
+  {
+    id: 7,
+    title: "Machine Learning Basics",
+    author: "Frank Harris",
+    rating: 4.4,
+    numberOfStudents: 1100,
+    price: 69.99,
+  },
+  {
+    id: 8,
+    title: "CSS and Tailwind CSS Mastery",
+    author: "Grace Lee",
+    rating: 4.8,
+    numberOfStudents: 900,
+    price: 34.99,
+  },
+  {
+    id: 9,
+    title: "DevOps Fundamentals",
+    author: "Henry Wilson",
+    rating: 4.5,
+    numberOfStudents: 750,
+    price: 44.99,
+  },
+  {
+    id: 10,
+    title: "Mobile App Development with Flutter",
+    author: "Ivy Taylor",
+    rating: 4.6,
+    numberOfStudents: 600,
+    price: 54.99,
+  },
+  {
+    id: 11,
+    title: "Cybersecurity Essentials",
+    author: "Jack White",
+    rating: 4.7,
+    numberOfStudents: 500,
+    price: 64.99,
+  },
+  {
+    id: 12,
+    title: "UI/UX Design Principles",
+    author: "Karen Clark",
+    rating: 4.8,
+    numberOfStudents: 800,
+    price: 39.99,
+  },
+];
+
+
+const merriweather = Merriweather({
+  subsets: ["latin"],
+  weight: ["700"],
+});
 export default function Home() {
   return (
     <div className="min-h-screen bg-white mb-0 pb-0">
@@ -37,7 +144,7 @@ export default function Home() {
                 Teach a Skill
               </Button>
             </div>
-            <div className="max-w-2xl mx-auto relative">
+            <div className="max-w-2xl mb-10 mx-auto relative">
               <Input
                 type="text"
                 placeholder="Search for courses or skills"
@@ -46,45 +153,16 @@ export default function Home() {
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
             </div>
           </div>
+          <ImageCarousel />
         </section>
 
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-8 text-center">
-              Featured Courses
+            <h2 className={`text-4xl font-bold mb-7 ${merriweather.className}`}>
+              What to learn
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[1, 2, 3].map((course) => (
-                <Card key={course}>
-                  <CardHeader>
-                    <Image
-                      src={`/placeholder.svg?height=200&width=400`}
-                      alt="Course thumbnail"
-                      width={400}
-                      height={200}
-                      className="rounded-t-lg"
-                    />
-                  </CardHeader>
-                  <CardContent>
-                    <CardTitle>Introduction to Digital Marketing</CardTitle>
-                    <CardDescription>
-                      Learn the fundamentals of digital marketing and boost your
-                      online presence.
-                    </CardDescription>
-                  </CardContent>
-                  <CardFooter className="flex justify-between">
-                    <div className="flex items-center">
-                      <Star className="text-yellow-400 mr-1" />
-                      <span>4.8</span>
-                    </div>
-                    <div className="flex items-center">
-                      <Users className="text-gray-400 mr-1" />
-                      <span>1.2k students</span>
-                    </div>
-                  </CardFooter>
-                </Card>
-              ))}
-            </div>
+            <LessonsCarousel title="Learners are viewing" lessons={lessons} />
+            <LessonsCarousel title="Top Javascript Courses" lessons={lessons} />
             <div className="text-center mt-8">
               <Link href="/courses" className="text-[#1E90FF] hover:underline">
                 View all courses
@@ -93,7 +171,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="mb-16">
+        <section className="mb-16 container mx-auto">
           <h2 className="text-3xl font-bold mb-8 text-center">
             Why Choose SkillShare Hub?
           </h2>
@@ -133,7 +211,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-gray-100 py-16 px-4 -mb-10 rounded-lg">
+        <section className="bg-gray-100 py-16 px-4 rounded-lg">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">
               Ready to Start Learning?
@@ -149,6 +227,7 @@ export default function Home() {
           </div>
         </section>
       </main>
+      <WhatUsersSaidSlider />
     </div>
   );
 }
