@@ -4,6 +4,7 @@ import "./globals.css";
 import { StoreProvider } from "@/store/StoreProvider";
 import { QueryProvider } from "@/lib/QueryProvider";
 import DynamicFooterAndNavBar from "@/components/DynamicFooterAndNavBar";
+import { Toaster } from "@/components/ui/toaster";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,7 +33,11 @@ export default function RootLayout({
       >
         <QueryProvider>
           <StoreProvider>
-            <DynamicFooterAndNavBar>{children}</DynamicFooterAndNavBar>
+            <Toaster />
+            <DynamicFooterAndNavBar>
+              {children}
+              <Toaster />
+            </DynamicFooterAndNavBar>
           </StoreProvider>
         </QueryProvider>
       </body>

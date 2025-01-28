@@ -160,7 +160,6 @@ export const forgotPassword = async (
 
 export const resetPasswordGet = async (req: Request, res: Response): Promise<any> => {
   const { id, token } = req.params;
-  console.log(id, token)
   if (!id || !token) {
     return res.status(400).json({ message: "Invalid id or token" });
   }
@@ -189,7 +188,7 @@ export const resetPasswordPost = async (req: Request, res: Response): Promise<an
   if (!password) {
     return res.status(400).json({ message: "Password is required" });
   }
-  const { error } = validatePassword(password);
+  const { error } = validatePassword(req.body);
   if (error) {
     return res.status(400).json({ message: error.details[0].message });
   }

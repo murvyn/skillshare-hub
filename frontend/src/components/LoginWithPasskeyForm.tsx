@@ -13,10 +13,10 @@ import { useDispatch } from "react-redux";
 import { fido2Get, IWebAuthnLoginRequest } from "@ownid/webauthn";
 import { AnimatePresence, motion } from "framer-motion";
 import { AlertCircle, KeyRound } from "lucide-react";
-import { AxiosError } from "axios";
 import { useRouter } from "next/navigation";
 import { Alert, AlertDescription, AlertTitle } from "./ui/alert";
 import Cookies from "js-cookie";
+import { AxiosError } from "@/lib/types";
 
 interface DataProps {
   email: string;
@@ -83,7 +83,7 @@ const LoginWithPasskeyForm = ({
       setIsVerifyingPasskey(false);
       setProgress(0);
       setErrorMessage(
-        (e as AxiosError).response?.data?.message || "Something went wrong."
+        (e as unknown as AxiosError).response?.data?.message || "Something went wrong."
       );
     },
   });
@@ -120,7 +120,7 @@ const LoginWithPasskeyForm = ({
       setIsVerifyingPasskey(false);
       setProgress(0);
       setErrorMessage(
-        (e as AxiosError).response?.data?.message || "Something went wrong."
+        (e as unknown as AxiosError).response?.data?.message || "Something went wrong."
       );
     },
   });

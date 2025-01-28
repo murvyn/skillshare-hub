@@ -25,11 +25,11 @@ import { setUser } from "@/store/userSlice";
 import { AlertCircle, KeyRound } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { AxiosError } from "axios";
 import { fido2Create, IWebAuthnRegisterRequest } from "@ownid/webauthn";
 import Link from "next/link";
 import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
 import Cookies from "js-cookie";
+import { AxiosError } from "@/lib/types";
 
 const SIgnUpCard = ({ router }: { router: AppRouterInstance }) => {
   const dispatch = useDispatch();
@@ -93,7 +93,7 @@ const SIgnUpCard = ({ router }: { router: AppRouterInstance }) => {
       await passkeyStart(formData.email);
     },
     onError: (e) => {
-      const error = e as AxiosError;
+      const error = e as unknown as AxiosError;
       console.error(error);
       setError(error.response?.data?.message || "Something went wrong.");
     },
@@ -124,7 +124,7 @@ const SIgnUpCard = ({ router }: { router: AppRouterInstance }) => {
       setIsCreatingPasskey(false);
       setPasskeyStatus("error");
       setErrorMessage(
-        (e as AxiosError).response?.data?.message || "Something went wrong."
+        (e as unknown as AxiosError).response?.data?.message || "Something went wrong."
       );
     },
   });
@@ -158,7 +158,7 @@ const SIgnUpCard = ({ router }: { router: AppRouterInstance }) => {
       setIsCreatingPasskey(false);
       setPasskeyStatus("error");
       setErrorMessage(
-        (e as AxiosError).response?.data?.message || "Something went wrong."
+        (e as unknown as AxiosError).response?.data?.message || "Something went wrong."
       );
     },
   });
@@ -184,7 +184,7 @@ const SIgnUpCard = ({ router }: { router: AppRouterInstance }) => {
     },
     onError: (e) => {
       setError(
-        (e as AxiosError).response?.data?.message || "Something went wrong."
+        (e as unknown as AxiosError).response?.data?.message || "Something went wrong."
       );
     },
   });

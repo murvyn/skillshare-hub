@@ -14,10 +14,10 @@ import { setUser } from "@/store/userSlice";
 import { useDispatch } from "react-redux";
 import { Alert, AlertDescription, AlertTitle } from "./ui/alert";
 import { AlertCircle } from "lucide-react";
-import { AxiosError } from "axios";
 import { Spinner } from "./Spinner";
 import Cookies from "js-cookie";
 import { useRouter } from "next/navigation";
+import { AxiosError } from "@/lib/types";
 
 interface DataProps {
   email: string;
@@ -69,7 +69,7 @@ const LoginWithPasswordForm = ({
     },
     onError: (e) => {
       setError(
-        (e as AxiosError).response?.data?.message || "Something went wrong."
+        (e as unknown as AxiosError).response?.data?.message || "Something went wrong."
       );
     },
   });

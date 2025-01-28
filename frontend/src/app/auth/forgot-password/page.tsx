@@ -20,8 +20,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { useMutation } from "@tanstack/react-query";
 import client from "@/api/client";
-import { AxiosError } from "axios";
 import { Spinner } from "@/components/Spinner";
+import { AxiosError } from "@/lib/types";
 
 interface DataProps {
   email: string;
@@ -56,9 +56,8 @@ export default function ForgotPassword() {
       setSuccess(true);
     },
     onError: (e) => {
-      const error = e as AxiosError;
-      console.error(error);
-      setError(error.response.data.message);
+      const error = e as unknown as AxiosError;
+      setError(error.response?.data.message as string);
     },
   });
 
