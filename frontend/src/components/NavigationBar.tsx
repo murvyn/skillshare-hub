@@ -25,7 +25,7 @@ export function NavigationBar() {
   return (
     <header className="bg-white shadow-sm">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <Link href="/" className="text-2xl font-bold text-[#1E90FF]">SkillShare Hub</Link>
+        <Link href="/" className="text-2xl max-sm:text-xl font-bold text-[#1E90FF]">SkillShare Hub</Link>
         <nav>
           <ul className="flex space-x-6 items-center">
             <li><Link href="/courses" className="text-gray-600 hover:text-[#1E90FF]">Courses</Link></li>

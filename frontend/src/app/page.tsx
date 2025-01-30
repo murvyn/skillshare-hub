@@ -125,7 +125,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white mb-0 pb-0">
       <main>
-        <section className="bg-[#F5F5F5] py-20">
+        <section className="bg-[#F5F5F5] py-20 flex flex-col items-center justify-center">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Unlock Your Potential with SkillShare Hub
@@ -153,7 +153,10 @@ export default function Home() {
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
             </div>
           </div>
+          <div className="h-auto 2xl:h-[40rem] md:w-[70rem] 2xl:w-full px-20">
           <ImageCarousel />
+
+          </div>
         </section>
 
         <section className="py-16">

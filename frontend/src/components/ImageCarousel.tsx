@@ -28,17 +28,15 @@ const ImageCarousel = () => {
     <div className="container mx-auto">
       <Carousel
         plugins={[plugin.current]}
-        className="w-full "
+        className=" "
         onMouseEnter={plugin.current.stop}
         onMouseLeave={plugin.current.reset}
       >
-        <CarouselContent>
+        <CarouselContent className="">
           {posters.map((poster) => (
-            <CarouselItem key={poster.id}>
-              <div className="p-1">
-                  <div className="flex h-[40rem] items-center justify-center ">
-                    <Image className="w-full h-full object-cover" src={poster.image} width={40000} height={2000} alt="posters" />
-                  </div>
+            <CarouselItem className="" key={poster.id}>
+              <div className="p-1 w-full h-[10rem] md:h-[25rem] 2xl:h-[40rem] ">
+                <Image className="object-cover" src={poster.image} alt="posters" />
               </div>
             </CarouselItem>
           ))}
