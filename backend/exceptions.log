@@ -2793,3 +2793,895 @@ TSError: ⨯ Unable to compile TypeScript:
     at Module.load (node:internal/modules/cjs/loader:1313:32)
     at Function._load (node:internal/modules/cjs/loader:1123:12)
     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-02-03T18:57:09.864Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/utils/googleAuth.ts[0m:[93m50[0m:[93m19[0m - [91merror[0m[90m TS2339: [0mProperty 'id' does not exist on type 'User'.
+
+[7m50[0m   done(null, user.id);
+[7m  [0m [91m                  ~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/utils/googleAuth.ts[0m:[93m50[0m:[93m19[0m - [91merror[0m[90m TS2339: [0mProperty 'id' does not exist on type 'User'.
+
+[7m50[0m   done(null, user.id);
+[7m  [0m [91m                  ~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-02-03T18:58:11.862Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/utils/googleAuth.ts[0m:[93m56[0m:[93m16[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'id'. Either declare one or provide an initializer.
+
+[7m56[0m       where: { id },
+[7m  [0m [91m               ~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/utils/googleAuth.ts[0m:[93m56[0m:[93m16[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'id'. Either declare one or provide an initializer.
+
+[7m56[0m       where: { id },
+[7m  [0m [91m               ~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-02-03T18:58:28.270Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/utils/googleAuth.ts[0m:[93m55[0m:[93m11[0m - [91merror[0m[90m TS7022: [0m'user' implicitly has type 'any' because it does not have a type annotation and is referenced directly or indirectly in its own initializer.
+
+[7m55[0m     const user = await prisma.user.findUnique({
+[7m  [0m [91m          ~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m56[0m:[93m20[0m - [91merror[0m[90m TS2448: [0mBlock-scoped variable 'user' used before its declaration.
+
+[7m56[0m       where: { id: user.id },
+[7m  [0m [91m                   ~~~~[0m
+
+  [96msrc/utils/googleAuth.ts[0m:[93m55[0m:[93m11[0m
+    [7m55[0m     const user = await prisma.user.findUnique({
+    [7m  [0m [96m          ~~~~[0m
+    'user' is declared here.
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/utils/googleAuth.ts[0m:[93m55[0m:[93m11[0m - [91merror[0m[90m TS7022: [0m'user' implicitly has type 'any' because it does not have a type annotation and is referenced directly or indirectly in its own initializer.
+
+[7m55[0m     const user = await prisma.user.findUnique({
+[7m  [0m [91m          ~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m56[0m:[93m20[0m - [91merror[0m[90m TS2448: [0mBlock-scoped variable 'user' used before its declaration.
+
+[7m56[0m       where: { id: user.id },
+[7m  [0m [91m                   ~~~~[0m
+
+  [96msrc/utils/googleAuth.ts[0m:[93m55[0m:[93m11[0m
+    [7m55[0m     const user = await prisma.user.findUnique({
+    [7m  [0m [96m          ~~~~[0m
+    'user' is declared here.
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-02-03T18:58:50.579Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/utils/googleAuth.ts[0m:[93m56[0m:[93m20[0m - [91merror[0m[90m TS18046: [0m'user' is of type 'unknown'.
+
+[7m56[0m       where: { id: user.id },
+[7m  [0m [91m                   ~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m58[0m:[93m16[0m - [91merror[0m[90m TS2345: [0mArgument of type 'unknown' is not assignable to parameter of type 'false | User | null | undefined'.
+
+[7m58[0m     done(null, user);
+[7m  [0m [91m               ~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/utils/googleAuth.ts[0m:[93m56[0m:[93m20[0m - [91merror[0m[90m TS18046: [0m'user' is of type 'unknown'.
+
+[7m56[0m       where: { id: user.id },
+[7m  [0m [91m                   ~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m58[0m:[93m16[0m - [91merror[0m[90m TS2345: [0mArgument of type 'unknown' is not assignable to parameter of type 'false | User | null | undefined'.
+
+[7m58[0m     done(null, user);
+[7m  [0m [91m               ~~~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-02-03T18:58:58.192Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/utils/googleAuth.ts[0m:[93m56[0m:[93m20[0m - [91merror[0m[90m TS18046: [0m'user' is of type 'unknown'.
+
+[7m56[0m       where: { id: user.id },
+[7m  [0m [91m                   ~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/utils/googleAuth.ts[0m:[93m56[0m:[93m20[0m - [91merror[0m[90m TS18046: [0m'user' is of type 'unknown'.
+
+[7m56[0m       where: { id: user.id },
+[7m  [0m [91m                   ~~~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-02-03T19:37:07.337Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/utils/googleAuth.ts[0m:[93m37[0m:[93m22[0m - [91merror[0m[90m TS18048: [0m'profile.emails' is possibly 'undefined'.
+
+[7m37[0m               email: profile.emails[0].value,
+[7m  [0m [91m                     ~~~~~~~~~~~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m38[0m:[93m42[0m - [91merror[0m[90m TS18048: [0m'profile.photos' is possibly 'undefined'.
+
+[7m38[0m               photoUrl: profile.photos ? profile.photos[0].value : null,
+[7m  [0m [91m                                         ~~~~~~~~~~~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m43[0m:[93m27[0m - [91merror[0m[90m TS2345: [0mArgument of type '{ email: string; id: string; firstName: string; lastName: string; password: string | null; photoUrl: string | null; googleId: string | null; passkeyID: string | null; publicKey: Uint8Array<ArrayBufferLike> | null; counter: number | null; challenge: string | null; createdAt: Date; updatedAt: Date; } | null' is not assignable to parameter of type 'false | User | undefined'.
+  Type 'null' is not assignable to type 'false | User | undefined'.
+
+[7m43[0m         return done(null, user);
+[7m  [0m [91m                          ~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m29[0m:[93m12[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m29[0m         if()
+[7m  [0m [91m           ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/utils/googleAuth.ts[0m:[93m37[0m:[93m22[0m - [91merror[0m[90m TS18048: [0m'profile.emails' is possibly 'undefined'.
+
+[7m37[0m               email: profile.emails[0].value,
+[7m  [0m [91m                     ~~~~~~~~~~~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m38[0m:[93m42[0m - [91merror[0m[90m TS18048: [0m'profile.photos' is possibly 'undefined'.
+
+[7m38[0m               photoUrl: profile.photos ? profile.photos[0].value : null,
+[7m  [0m [91m                                         ~~~~~~~~~~~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m43[0m:[93m27[0m - [91merror[0m[90m TS2345: [0mArgument of type '{ email: string; id: string; firstName: string; lastName: string; password: string | null; photoUrl: string | null; googleId: string | null; passkeyID: string | null; publicKey: Uint8Array<ArrayBufferLike> | null; counter: number | null; challenge: string | null; createdAt: Date; updatedAt: Date; } | null' is not assignable to parameter of type 'false | User | undefined'.
+  Type 'null' is not assignable to type 'false | User | undefined'.
+
+[7m43[0m         return done(null, user);
+[7m  [0m [91m                          ~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m29[0m:[93m12[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m29[0m         if()
+[7m  [0m [91m           ~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-02-03T19:37:18.567Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/utils/googleAuth.ts[0m:[93m37[0m:[93m22[0m - [91merror[0m[90m TS18048: [0m'profile.emails' is possibly 'undefined'.
+
+[7m37[0m               email: profile.emails[0].value,
+[7m  [0m [91m                     ~~~~~~~~~~~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m38[0m:[93m42[0m - [91merror[0m[90m TS18048: [0m'profile.photos' is possibly 'undefined'.
+
+[7m38[0m               photoUrl: profile.photos ? profile.photos[0].value : null,
+[7m  [0m [91m                                         ~~~~~~~~~~~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m43[0m:[93m27[0m - [91merror[0m[90m TS2345: [0mArgument of type '{ email: string; id: string; firstName: string; lastName: string; password: string | null; photoUrl: string | null; googleId: string | null; passkeyID: string | null; publicKey: Uint8Array<ArrayBufferLike> | null; counter: number | null; challenge: string | null; createdAt: Date; updatedAt: Date; } | null' is not assignable to parameter of type 'false | User | undefined'.
+  Type 'null' is not assignable to type 'false | User | undefined'.
+
+[7m43[0m         return done(null, user);
+[7m  [0m [91m                          ~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/utils/googleAuth.ts[0m:[93m37[0m:[93m22[0m - [91merror[0m[90m TS18048: [0m'profile.emails' is possibly 'undefined'.
+
+[7m37[0m               email: profile.emails[0].value,
+[7m  [0m [91m                     ~~~~~~~~~~~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m38[0m:[93m42[0m - [91merror[0m[90m TS18048: [0m'profile.photos' is possibly 'undefined'.
+
+[7m38[0m               photoUrl: profile.photos ? profile.photos[0].value : null,
+[7m  [0m [91m                                         ~~~~~~~~~~~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m43[0m:[93m27[0m - [91merror[0m[90m TS2345: [0mArgument of type '{ email: string; id: string; firstName: string; lastName: string; password: string | null; photoUrl: string | null; googleId: string | null; passkeyID: string | null; publicKey: Uint8Array<ArrayBufferLike> | null; counter: number | null; challenge: string | null; createdAt: Date; updatedAt: Date; } | null' is not assignable to parameter of type 'false | User | undefined'.
+  Type 'null' is not assignable to type 'false | User | undefined'.
+
+[7m43[0m         return done(null, user);
+[7m  [0m [91m                          ~~~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-02-03T19:38:04.863Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/utils/googleAuth.ts[0m:[93m29[0m:[93m39[0m - [91merror[0m[90m TS2339: [0mProperty 'googleId' does not exist on type 'Profile'.
+
+[7m29[0m         if(user?.googleId === profile.googleId){
+[7m  [0m [91m                                      ~~~~~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m30[0m:[93m29[0m - [91merror[0m[90m TS2345: [0mArgument of type '{ email: string; id: string; firstName: string; lastName: string; password: string | null; photoUrl: string | null; googleId: string | null; passkeyID: string | null; publicKey: Uint8Array<ArrayBufferLike> | null; counter: number | null; challenge: string | null; createdAt: Date; updatedAt: Date; } | null' is not assignable to parameter of type 'false | User | undefined'.
+  Type 'null' is not assignable to type 'false | User | undefined'.
+
+[7m30[0m           return done(null, user);
+[7m  [0m [91m                            ~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m39[0m:[93m22[0m - [91merror[0m[90m TS18048: [0m'profile.emails' is possibly 'undefined'.
+
+[7m39[0m               email: profile.emails[0].value,
+[7m  [0m [91m                     ~~~~~~~~~~~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m40[0m:[93m42[0m - [91merror[0m[90m TS18048: [0m'profile.photos' is possibly 'undefined'.
+
+[7m40[0m               photoUrl: profile.photos ? profile.photos[0].value : null,
+[7m  [0m [91m                                         ~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/utils/googleAuth.ts[0m:[93m29[0m:[93m39[0m - [91merror[0m[90m TS2339: [0mProperty 'googleId' does not exist on type 'Profile'.
+
+[7m29[0m         if(user?.googleId === profile.googleId){
+[7m  [0m [91m                                      ~~~~~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m30[0m:[93m29[0m - [91merror[0m[90m TS2345: [0mArgument of type '{ email: string; id: string; firstName: string; lastName: string; password: string | null; photoUrl: string | null; googleId: string | null; passkeyID: string | null; publicKey: Uint8Array<ArrayBufferLike> | null; counter: number | null; challenge: string | null; createdAt: Date; updatedAt: Date; } | null' is not assignable to parameter of type 'false | User | undefined'.
+  Type 'null' is not assignable to type 'false | User | undefined'.
+
+[7m30[0m           return done(null, user);
+[7m  [0m [91m                            ~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m39[0m:[93m22[0m - [91merror[0m[90m TS18048: [0m'profile.emails' is possibly 'undefined'.
+
+[7m39[0m               email: profile.emails[0].value,
+[7m  [0m [91m                     ~~~~~~~~~~~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m40[0m:[93m42[0m - [91merror[0m[90m TS18048: [0m'profile.photos' is possibly 'undefined'.
+
+[7m40[0m               photoUrl: profile.photos ? profile.photos[0].value : null,
+[7m  [0m [91m                                         ~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-02-03T19:38:15.132Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/utils/googleAuth.ts[0m:[93m39[0m:[93m22[0m - [91merror[0m[90m TS18048: [0m'profile.emails' is possibly 'undefined'.
+
+[7m39[0m               email: profile.emails[0].value,
+[7m  [0m [91m                     ~~~~~~~~~~~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m40[0m:[93m42[0m - [91merror[0m[90m TS18048: [0m'profile.photos' is possibly 'undefined'.
+
+[7m40[0m               photoUrl: profile.photos ? profile.photos[0].value : null,
+[7m  [0m [91m                                         ~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/utils/googleAuth.ts[0m:[93m39[0m:[93m22[0m - [91merror[0m[90m TS18048: [0m'profile.emails' is possibly 'undefined'.
+
+[7m39[0m               email: profile.emails[0].value,
+[7m  [0m [91m                     ~~~~~~~~~~~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m40[0m:[93m42[0m - [91merror[0m[90m TS18048: [0m'profile.photos' is possibly 'undefined'.
+
+[7m40[0m               photoUrl: profile.photos ? profile.photos[0].value : null,
+[7m  [0m [91m                                         ~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-02-03T19:39:36.600Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/utils/googleAuth.ts[0m:[93m41[0m:[93m22[0m - [91merror[0m[90m TS18048: [0m'profile.emails' is possibly 'undefined'.
+
+[7m41[0m               email: profile.emails[0].value,
+[7m  [0m [91m                     ~~~~~~~~~~~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m42[0m:[93m42[0m - [91merror[0m[90m TS18048: [0m'profile.photos' is possibly 'undefined'.
+
+[7m42[0m               photoUrl: profile.photos ? profile.photos[0].value : null,
+[7m  [0m [91m                                         ~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/utils/googleAuth.ts[0m:[93m41[0m:[93m22[0m - [91merror[0m[90m TS18048: [0m'profile.emails' is possibly 'undefined'.
+
+[7m41[0m               email: profile.emails[0].value,
+[7m  [0m [91m                     ~~~~~~~~~~~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m42[0m:[93m42[0m - [91merror[0m[90m TS18048: [0m'profile.photos' is possibly 'undefined'.
+
+[7m42[0m               photoUrl: profile.photos ? profile.photos[0].value : null,
+[7m  [0m [91m                                         ~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-02-03T19:40:12.981Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/utils/googleAuth.ts[0m:[93m41[0m:[93m22[0m - [91merror[0m[90m TS18048: [0m'profile.emails' is possibly 'undefined'.
+
+[7m41[0m               email: profile.emails[0].value,
+[7m  [0m [91m                     ~~~~~~~~~~~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m42[0m:[93m42[0m - [91merror[0m[90m TS18048: [0m'profile.photos' is possibly 'undefined'.
+
+[7m42[0m               photoUrl: profile.photos ? profile.photos[0].value : null,
+[7m  [0m [91m                                         ~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/utils/googleAuth.ts[0m:[93m41[0m:[93m22[0m - [91merror[0m[90m TS18048: [0m'profile.emails' is possibly 'undefined'.
+
+[7m41[0m               email: profile.emails[0].value,
+[7m  [0m [91m                     ~~~~~~~~~~~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m42[0m:[93m42[0m - [91merror[0m[90m TS18048: [0m'profile.photos' is possibly 'undefined'.
+
+[7m42[0m               photoUrl: profile.photos ? profile.photos[0].value : null,
+[7m  [0m [91m                                         ~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-02-03T19:40:30.649Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/utils/googleAuth.ts[0m:[93m41[0m:[93m22[0m - [91merror[0m[90m TS18048: [0m'profile.emails' is possibly 'undefined'.
+
+[7m41[0m               email: profile.emails[0].value,
+[7m  [0m [91m                     ~~~~~~~~~~~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m42[0m:[93m42[0m - [91merror[0m[90m TS18048: [0m'profile.photos' is possibly 'undefined'.
+
+[7m42[0m               photoUrl: profile.photos ? profile.photos[0].value : null,
+[7m  [0m [91m                                         ~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/utils/googleAuth.ts[0m:[93m41[0m:[93m22[0m - [91merror[0m[90m TS18048: [0m'profile.emails' is possibly 'undefined'.
+
+[7m41[0m               email: profile.emails[0].value,
+[7m  [0m [91m                     ~~~~~~~~~~~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m42[0m:[93m42[0m - [91merror[0m[90m TS18048: [0m'profile.photos' is possibly 'undefined'.
+
+[7m42[0m               photoUrl: profile.photos ? profile.photos[0].value : null,
+[7m  [0m [91m                                         ~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-02-03T19:40:43.185Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/utils/googleAuth.ts[0m:[93m41[0m:[93m22[0m - [91merror[0m[90m TS18048: [0m'profile.emails' is possibly 'undefined'.
+
+[7m41[0m               email: profile.emails[0].value,
+[7m  [0m [91m                     ~~~~~~~~~~~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m42[0m:[93m42[0m - [91merror[0m[90m TS18048: [0m'profile.photos' is possibly 'undefined'.
+
+[7m42[0m               photoUrl: profile.photos ? profile.photos[0].value : null,
+[7m  [0m [91m                                         ~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/utils/googleAuth.ts[0m:[93m41[0m:[93m22[0m - [91merror[0m[90m TS18048: [0m'profile.emails' is possibly 'undefined'.
+
+[7m41[0m               email: profile.emails[0].value,
+[7m  [0m [91m                     ~~~~~~~~~~~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m42[0m:[93m42[0m - [91merror[0m[90m TS18048: [0m'profile.photos' is possibly 'undefined'.
+
+[7m42[0m               photoUrl: profile.photos ? profile.photos[0].value : null,
+[7m  [0m [91m                                         ~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-02-03T19:41:22.447Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/utils/googleAuth.ts[0m:[93m45[0m:[93m22[0m - [91merror[0m[90m TS18048: [0m'profile.emails' is possibly 'undefined'.
+
+[7m45[0m               email: profile.emails[0].value,
+[7m  [0m [91m                     ~~~~~~~~~~~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m46[0m:[93m42[0m - [91merror[0m[90m TS18048: [0m'profile.photos' is possibly 'undefined'.
+
+[7m46[0m               photoUrl: profile.photos ? profile.photos[0].value : null,
+[7m  [0m [91m                                         ~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/utils/googleAuth.ts[0m:[93m45[0m:[93m22[0m - [91merror[0m[90m TS18048: [0m'profile.emails' is possibly 'undefined'.
+
+[7m45[0m               email: profile.emails[0].value,
+[7m  [0m [91m                     ~~~~~~~~~~~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m46[0m:[93m42[0m - [91merror[0m[90m TS18048: [0m'profile.photos' is possibly 'undefined'.
+
+[7m46[0m               photoUrl: profile.photos ? profile.photos[0].value : null,
+[7m  [0m [91m                                         ~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-02-03T19:41:29.183Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/utils/googleAuth.ts[0m:[93m45[0m:[93m22[0m - [91merror[0m[90m TS18048: [0m'profile.emails' is possibly 'undefined'.
+
+[7m45[0m               email: profile.emails[0].value,
+[7m  [0m [91m                     ~~~~~~~~~~~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m46[0m:[93m42[0m - [91merror[0m[90m TS18048: [0m'profile.photos' is possibly 'undefined'.
+
+[7m46[0m               photoUrl: profile.photos ? profile.photos[0].value : null,
+[7m  [0m [91m                                         ~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/utils/googleAuth.ts[0m:[93m45[0m:[93m22[0m - [91merror[0m[90m TS18048: [0m'profile.emails' is possibly 'undefined'.
+
+[7m45[0m               email: profile.emails[0].value,
+[7m  [0m [91m                     ~~~~~~~~~~~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m46[0m:[93m42[0m - [91merror[0m[90m TS18048: [0m'profile.photos' is possibly 'undefined'.
+
+[7m46[0m               photoUrl: profile.photos ? profile.photos[0].value : null,
+[7m  [0m [91m                                         ~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-02-03T20:27:43.585Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/utils/googleAuth.ts[0m:[93m39[0m:[93m20[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'email'. Either declare one or provide an initializer.
+
+[7m39[0m           where: { email },
+[7m  [0m [91m                   ~~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m41[0m:[93m24[0m - [91merror[0m[90m TS18047: [0m'user' is possibly 'null'.
+
+[7m41[0m             firstName: user.firstName ?? (profile.name?.givenName as string),
+[7m  [0m [91m                       ~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m42[0m:[93m23[0m - [91merror[0m[90m TS18047: [0m'user' is possibly 'null'.
+
+[7m42[0m             lastName: user.lastName ?? (profile.name?.familyName as string),
+[7m  [0m [91m                      ~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m43[0m:[93m23[0m - [91merror[0m[90m TS18047: [0m'user' is possibly 'null'.
+
+[7m43[0m             photoUrl: user.photoUrl ?? (profile.photos ? profile.photos[0].value : null),
+[7m  [0m [91m                      ~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m44[0m:[93m23[0m - [91merror[0m[90m TS18047: [0m'user' is possibly 'null'.
+
+[7m44[0m             googleId: user.googleId ?? profile.id, // Set Google ID if it's missing
+[7m  [0m [91m                      ~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m48[0m:[93m27[0m - [91merror[0m[90m TS2345: [0mArgument of type '{ email: string; id: string; firstName: string; lastName: string; password: string | null; photoUrl: string | null; googleId: string | null; passkeyID: string | null; publicKey: Uint8Array<ArrayBufferLike> | null; counter: number | null; challenge: string | null; createdAt: Date; updatedAt: Date; } | null' is not assignable to parameter of type 'false | User | undefined'.
+  Type 'null' is not assignable to type 'false | User | undefined'.
+
+[7m48[0m         return done(null, user);
+[7m  [0m [91m                          ~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/utils/googleAuth.ts[0m:[93m39[0m:[93m20[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'email'. Either declare one or provide an initializer.
+
+[7m39[0m           where: { email },
+[7m  [0m [91m                   ~~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m41[0m:[93m24[0m - [91merror[0m[90m TS18047: [0m'user' is possibly 'null'.
+
+[7m41[0m             firstName: user.firstName ?? (profile.name?.givenName as string),
+[7m  [0m [91m                       ~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m42[0m:[93m23[0m - [91merror[0m[90m TS18047: [0m'user' is possibly 'null'.
+
+[7m42[0m             lastName: user.lastName ?? (profile.name?.familyName as string),
+[7m  [0m [91m                      ~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m43[0m:[93m23[0m - [91merror[0m[90m TS18047: [0m'user' is possibly 'null'.
+
+[7m43[0m             photoUrl: user.photoUrl ?? (profile.photos ? profile.photos[0].value : null),
+[7m  [0m [91m                      ~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m44[0m:[93m23[0m - [91merror[0m[90m TS18047: [0m'user' is possibly 'null'.
+
+[7m44[0m             googleId: user.googleId ?? profile.id, // Set Google ID if it's missing
+[7m  [0m [91m                      ~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m48[0m:[93m27[0m - [91merror[0m[90m TS2345: [0mArgument of type '{ email: string; id: string; firstName: string; lastName: string; password: string | null; photoUrl: string | null; googleId: string | null; passkeyID: string | null; publicKey: Uint8Array<ArrayBufferLike> | null; counter: number | null; challenge: string | null; createdAt: Date; updatedAt: Date; } | null' is not assignable to parameter of type 'false | User | undefined'.
+  Type 'null' is not assignable to type 'false | User | undefined'.
+
+[7m48[0m         return done(null, user);
+[7m  [0m [91m                          ~~~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-02-03T20:27:58.917Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/utils/googleAuth.ts[0m:[93m39[0m:[93m20[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'email'. Either declare one or provide an initializer.
+
+[7m39[0m           where: { email },
+[7m  [0m [91m                   ~~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m41[0m:[93m24[0m - [91merror[0m[90m TS18047: [0m'user' is possibly 'null'.
+
+[7m41[0m             firstName: user.firstName ?? (profile.name?.givenName as string),
+[7m  [0m [91m                       ~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m42[0m:[93m23[0m - [91merror[0m[90m TS18047: [0m'user' is possibly 'null'.
+
+[7m42[0m             lastName: user.lastName ?? (profile.name?.familyName as string),
+[7m  [0m [91m                      ~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m43[0m:[93m23[0m - [91merror[0m[90m TS18047: [0m'user' is possibly 'null'.
+
+[7m43[0m             photoUrl: user.photoUrl ?? (profile.photos ? profile.photos[0].value : null),
+[7m  [0m [91m                      ~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m44[0m:[93m23[0m - [91merror[0m[90m TS18047: [0m'user' is possibly 'null'.
+
+[7m44[0m             googleId: user.googleId ?? profile.id, // Set Google ID if it's missing
+[7m  [0m [91m                      ~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m48[0m:[93m27[0m - [91merror[0m[90m TS2345: [0mArgument of type '{ email: string; id: string; firstName: string; lastName: string; password: string | null; photoUrl: string | null; googleId: string | null; passkeyID: string | null; publicKey: Uint8Array<ArrayBufferLike> | null; counter: number | null; challenge: string | null; createdAt: Date; updatedAt: Date; } | null' is not assignable to parameter of type 'false | User | undefined'.
+  Type 'null' is not assignable to type 'false | User | undefined'.
+
+[7m48[0m         return done(null, user);
+[7m  [0m [91m                          ~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/utils/googleAuth.ts[0m:[93m39[0m:[93m20[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'email'. Either declare one or provide an initializer.
+
+[7m39[0m           where: { email },
+[7m  [0m [91m                   ~~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m41[0m:[93m24[0m - [91merror[0m[90m TS18047: [0m'user' is possibly 'null'.
+
+[7m41[0m             firstName: user.firstName ?? (profile.name?.givenName as string),
+[7m  [0m [91m                       ~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m42[0m:[93m23[0m - [91merror[0m[90m TS18047: [0m'user' is possibly 'null'.
+
+[7m42[0m             lastName: user.lastName ?? (profile.name?.familyName as string),
+[7m  [0m [91m                      ~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m43[0m:[93m23[0m - [91merror[0m[90m TS18047: [0m'user' is possibly 'null'.
+
+[7m43[0m             photoUrl: user.photoUrl ?? (profile.photos ? profile.photos[0].value : null),
+[7m  [0m [91m                      ~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m44[0m:[93m23[0m - [91merror[0m[90m TS18047: [0m'user' is possibly 'null'.
+
+[7m44[0m             googleId: user.googleId ?? profile.id, // Set Google ID if it's missing
+[7m  [0m [91m                      ~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m48[0m:[93m27[0m - [91merror[0m[90m TS2345: [0mArgument of type '{ email: string; id: string; firstName: string; lastName: string; password: string | null; photoUrl: string | null; googleId: string | null; passkeyID: string | null; publicKey: Uint8Array<ArrayBufferLike> | null; counter: number | null; challenge: string | null; createdAt: Date; updatedAt: Date; } | null' is not assignable to parameter of type 'false | User | undefined'.
+  Type 'null' is not assignable to type 'false | User | undefined'.
+
+[7m48[0m         return done(null, user);
+[7m  [0m [91m                          ~~~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-02-03T20:28:05.587Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/utils/googleAuth.ts[0m:[93m39[0m:[93m27[0m - [91merror[0m[90m TS18047: [0m'user' is possibly 'null'.
+
+[7m39[0m           where: { email: user.email },
+[7m  [0m [91m                          ~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m41[0m:[93m24[0m - [91merror[0m[90m TS18047: [0m'user' is possibly 'null'.
+
+[7m41[0m             firstName: user.firstName ?? (profile.name?.givenName as string),
+[7m  [0m [91m                       ~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m42[0m:[93m23[0m - [91merror[0m[90m TS18047: [0m'user' is possibly 'null'.
+
+[7m42[0m             lastName: user.lastName ?? (profile.name?.familyName as string),
+[7m  [0m [91m                      ~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m43[0m:[93m23[0m - [91merror[0m[90m TS18047: [0m'user' is possibly 'null'.
+
+[7m43[0m             photoUrl: user.photoUrl ?? (profile.photos ? profile.photos[0].value : null),
+[7m  [0m [91m                      ~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m44[0m:[93m23[0m - [91merror[0m[90m TS18047: [0m'user' is possibly 'null'.
+
+[7m44[0m             googleId: user.googleId ?? profile.id, // Set Google ID if it's missing
+[7m  [0m [91m                      ~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m48[0m:[93m27[0m - [91merror[0m[90m TS2345: [0mArgument of type '{ email: string; id: string; firstName: string; lastName: string; password: string | null; photoUrl: string | null; googleId: string | null; passkeyID: string | null; publicKey: Uint8Array<ArrayBufferLike> | null; counter: number | null; challenge: string | null; createdAt: Date; updatedAt: Date; } | null' is not assignable to parameter of type 'false | User | undefined'.
+  Type 'null' is not assignable to type 'false | User | undefined'.
+
+[7m48[0m         return done(null, user);
+[7m  [0m [91m                          ~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/utils/googleAuth.ts[0m:[93m39[0m:[93m27[0m - [91merror[0m[90m TS18047: [0m'user' is possibly 'null'.
+
+[7m39[0m           where: { email: user.email },
+[7m  [0m [91m                          ~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m41[0m:[93m24[0m - [91merror[0m[90m TS18047: [0m'user' is possibly 'null'.
+
+[7m41[0m             firstName: user.firstName ?? (profile.name?.givenName as string),
+[7m  [0m [91m                       ~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m42[0m:[93m23[0m - [91merror[0m[90m TS18047: [0m'user' is possibly 'null'.
+
+[7m42[0m             lastName: user.lastName ?? (profile.name?.familyName as string),
+[7m  [0m [91m                      ~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m43[0m:[93m23[0m - [91merror[0m[90m TS18047: [0m'user' is possibly 'null'.
+
+[7m43[0m             photoUrl: user.photoUrl ?? (profile.photos ? profile.photos[0].value : null),
+[7m  [0m [91m                      ~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m44[0m:[93m23[0m - [91merror[0m[90m TS18047: [0m'user' is possibly 'null'.
+
+[7m44[0m             googleId: user.googleId ?? profile.id, // Set Google ID if it's missing
+[7m  [0m [91m                      ~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m48[0m:[93m27[0m - [91merror[0m[90m TS2345: [0mArgument of type '{ email: string; id: string; firstName: string; lastName: string; password: string | null; photoUrl: string | null; googleId: string | null; passkeyID: string | null; publicKey: Uint8Array<ArrayBufferLike> | null; counter: number | null; challenge: string | null; createdAt: Date; updatedAt: Date; } | null' is not assignable to parameter of type 'false | User | undefined'.
+  Type 'null' is not assignable to type 'false | User | undefined'.
+
+[7m48[0m         return done(null, user);
+[7m  [0m [91m                          ~~~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-02-03T20:28:30.337Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/utils/googleAuth.ts[0m:[93m43[0m:[93m27[0m - [91merror[0m[90m TS18047: [0m'user' is possibly 'null'.
+
+[7m43[0m           where: { email: user.email },
+[7m  [0m [91m                          ~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m45[0m:[93m24[0m - [91merror[0m[90m TS18047: [0m'user' is possibly 'null'.
+
+[7m45[0m             firstName: user.firstName ?? (profile.name?.givenName as string),
+[7m  [0m [91m                       ~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m46[0m:[93m23[0m - [91merror[0m[90m TS18047: [0m'user' is possibly 'null'.
+
+[7m46[0m             lastName: user.lastName ?? (profile.name?.familyName as string),
+[7m  [0m [91m                      ~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m47[0m:[93m23[0m - [91merror[0m[90m TS18047: [0m'user' is possibly 'null'.
+
+[7m47[0m             photoUrl: user.photoUrl ?? (profile.photos ? profile.photos[0].value : null),
+[7m  [0m [91m                      ~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m48[0m:[93m23[0m - [91merror[0m[90m TS18047: [0m'user' is possibly 'null'.
+
+[7m48[0m             googleId: user.googleId ?? profile.id, // Set Google ID if it's missing
+[7m  [0m [91m                      ~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m52[0m:[93m27[0m - [91merror[0m[90m TS2345: [0mArgument of type '{ email: string; id: string; firstName: string; lastName: string; password: string | null; photoUrl: string | null; googleId: string | null; passkeyID: string | null; publicKey: Uint8Array<ArrayBufferLike> | null; counter: number | null; challenge: string | null; createdAt: Date; updatedAt: Date; } | null' is not assignable to parameter of type 'false | User | undefined'.
+  Type 'null' is not assignable to type 'false | User | undefined'.
+
+[7m52[0m         return done(null, user);
+[7m  [0m [91m                          ~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/utils/googleAuth.ts[0m:[93m43[0m:[93m27[0m - [91merror[0m[90m TS18047: [0m'user' is possibly 'null'.
+
+[7m43[0m           where: { email: user.email },
+[7m  [0m [91m                          ~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m45[0m:[93m24[0m - [91merror[0m[90m TS18047: [0m'user' is possibly 'null'.
+
+[7m45[0m             firstName: user.firstName ?? (profile.name?.givenName as string),
+[7m  [0m [91m                       ~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m46[0m:[93m23[0m - [91merror[0m[90m TS18047: [0m'user' is possibly 'null'.
+
+[7m46[0m             lastName: user.lastName ?? (profile.name?.familyName as string),
+[7m  [0m [91m                      ~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m47[0m:[93m23[0m - [91merror[0m[90m TS18047: [0m'user' is possibly 'null'.
+
+[7m47[0m             photoUrl: user.photoUrl ?? (profile.photos ? profile.photos[0].value : null),
+[7m  [0m [91m                      ~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m48[0m:[93m23[0m - [91merror[0m[90m TS18047: [0m'user' is possibly 'null'.
+
+[7m48[0m             googleId: user.googleId ?? profile.id, // Set Google ID if it's missing
+[7m  [0m [91m                      ~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m52[0m:[93m27[0m - [91merror[0m[90m TS2345: [0mArgument of type '{ email: string; id: string; firstName: string; lastName: string; password: string | null; photoUrl: string | null; googleId: string | null; passkeyID: string | null; publicKey: Uint8Array<ArrayBufferLike> | null; counter: number | null; challenge: string | null; createdAt: Date; updatedAt: Date; } | null' is not assignable to parameter of type 'false | User | undefined'.
+  Type 'null' is not assignable to type 'false | User | undefined'.
+
+[7m52[0m         return done(null, user);
+[7m  [0m [91m                          ~~~~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-02-03T21:05:35.583Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/utils/googleAuth.ts[0m:[93m26[0m:[93m20[0m - [91merror[0m[90m TS2304: [0mCannot find name 'profile'.
+
+[7m26[0m             email: profile.emails[0].value,
+[7m  [0m [91m                   ~~~~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m30[0m:[93m25[0m - [91merror[0m[90m TS2552: [0mCannot find name 'request'. Did you mean 'Request'?
+
+[7m30[0m         const isLogin = request.query?.state === "true";
+[7m  [0m [91m                        ~~~~~~~[0m
+
+  [96mnode_modules/typescript/lib/lib.dom.d.ts[0m:[93m19352[0m:[93m13[0m
+    [7m19352[0m declare var Request: {
+    [7m     [0m [96m            ~~~~~~~[0m
+    'Request' is declared here.
+[96msrc/utils/googleAuth.ts[0m:[93m31[0m:[93m21[0m - [91merror[0m[90m TS2552: [0mCannot find name 'request'. Did you mean 'Request'?
+
+[7m31[0m         console.dir(request.query)
+[7m  [0m [91m                    ~~~~~~~[0m
+
+  [96mnode_modules/typescript/lib/lib.dom.d.ts[0m:[93m19352[0m:[93m13[0m
+    [7m19352[0m declare var Request: {
+    [7m     [0m [96m            ~~~~~~~[0m
+    'Request' is declared here.
+[96msrc/utils/googleAuth.ts[0m:[93m37[0m:[93m50[0m - [91merror[0m[90m TS2304: [0mCannot find name 'profile'.
+
+[7m37[0m           if (user.googleId && user.googleId !== profile.id) {
+[7m  [0m [91m                                                 ~~~~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m51[0m:[93m16[0m - [91merror[0m[90m TS2304: [0mCannot find name 'profile'.
+
+[7m51[0m               (profile.photos ? profile.photos[0].value : null),
+[7m  [0m [91m               ~~~~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m51[0m:[93m33[0m - [91merror[0m[90m TS2304: [0mCannot find name 'profile'.
+
+[7m51[0m               (profile.photos ? profile.photos[0].value : null),
+[7m  [0m [91m                                ~~~~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m52[0m:[93m24[0m - [91merror[0m[90m TS2304: [0mCannot find name 'profile'.
+
+[7m52[0m             googleId:  profile.id,
+[7m  [0m [91m                       ~~~~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m22[0m:[93m11[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m22[0m           );
+[7m  [0m [91m          ~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m22[0m:[93m12[0m - [91merror[0m[90m TS1005: [0m')' expected.
+
+[7m22[0m           );
+[7m  [0m [91m           ~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m23[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m23[0m         }
+[7m  [0m [91m        ~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m57[0m:[93m7[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m57[0m       } catch (error) {
+[7m  [0m [91m      ~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m57[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m'try' expected.
+
+[7m57[0m       } catch (error) {
+[7m  [0m [91m        ~~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m61[0m:[93m5[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m61[0m     }
+[7m  [0m [91m    ~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m62[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m62[0m   )
+[7m  [0m [91m  ~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m63[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m63[0m );
+[7m  [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/utils/googleAuth.ts[0m:[93m26[0m:[93m20[0m - [91merror[0m[90m TS2304: [0mCannot find name 'profile'.
+
+[7m26[0m             email: profile.emails[0].value,
+[7m  [0m [91m                   ~~~~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m30[0m:[93m25[0m - [91merror[0m[90m TS2552: [0mCannot find name 'request'. Did you mean 'Request'?
+
+[7m30[0m         const isLogin = request.query?.state === "true";
+[7m  [0m [91m                        ~~~~~~~[0m
+
+  [96mnode_modules/typescript/lib/lib.dom.d.ts[0m:[93m19352[0m:[93m13[0m
+    [7m19352[0m declare var Request: {
+    [7m     [0m [96m            ~~~~~~~[0m
+    'Request' is declared here.
+[96msrc/utils/googleAuth.ts[0m:[93m31[0m:[93m21[0m - [91merror[0m[90m TS2552: [0mCannot find name 'request'. Did you mean 'Request'?
+
+[7m31[0m         console.dir(request.query)
+[7m  [0m [91m                    ~~~~~~~[0m
+
+  [96mnode_modules/typescript/lib/lib.dom.d.ts[0m:[93m19352[0m:[93m13[0m
+    [7m19352[0m declare var Request: {
+    [7m     [0m [96m            ~~~~~~~[0m
+    'Request' is declared here.
+[96msrc/utils/googleAuth.ts[0m:[93m37[0m:[93m50[0m - [91merror[0m[90m TS2304: [0mCannot find name 'profile'.
+
+[7m37[0m           if (user.googleId && user.googleId !== profile.id) {
+[7m  [0m [91m                                                 ~~~~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m51[0m:[93m16[0m - [91merror[0m[90m TS2304: [0mCannot find name 'profile'.
+
+[7m51[0m               (profile.photos ? profile.photos[0].value : null),
+[7m  [0m [91m               ~~~~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m51[0m:[93m33[0m - [91merror[0m[90m TS2304: [0mCannot find name 'profile'.
+
+[7m51[0m               (profile.photos ? profile.photos[0].value : null),
+[7m  [0m [91m                                ~~~~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m52[0m:[93m24[0m - [91merror[0m[90m TS2304: [0mCannot find name 'profile'.
+
+[7m52[0m             googleId:  profile.id,
+[7m  [0m [91m                       ~~~~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m22[0m:[93m11[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m22[0m           );
+[7m  [0m [91m          ~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m22[0m:[93m12[0m - [91merror[0m[90m TS1005: [0m')' expected.
+
+[7m22[0m           );
+[7m  [0m [91m           ~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m23[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m23[0m         }
+[7m  [0m [91m        ~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m57[0m:[93m7[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m57[0m       } catch (error) {
+[7m  [0m [91m      ~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m57[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m'try' expected.
+
+[7m57[0m       } catch (error) {
+[7m  [0m [91m        ~~~~~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m61[0m:[93m5[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m61[0m     }
+[7m  [0m [91m    ~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m62[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m62[0m   )
+[7m  [0m [91m  ~[0m
+[96msrc/utils/googleAuth.ts[0m:[93m63[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m63[0m );
+[7m  [0m [91m~[0m
+
+    at createTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1699:10
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\marvi\Documents\skillshare-hub\backend\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)

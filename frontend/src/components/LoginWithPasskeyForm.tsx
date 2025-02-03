@@ -17,6 +17,7 @@ import { useRouter } from "next/navigation";
 import { Alert, AlertDescription, AlertTitle } from "./ui/alert";
 import Cookies from "js-cookie";
 import { AxiosError } from "@/lib/types";
+import { FcGoogle } from "react-icons/fc";
 
 interface DataProps {
   email: string;
@@ -76,14 +77,14 @@ const LoginWithPasskeyForm = ({
         router.push("/");
         setIsVerifyingPasskey(false);
       }
-      
     },
     onError: (e) => {
       setPasskeyStatus("error");
       setIsVerifyingPasskey(false);
       setProgress(0);
       setErrorMessage(
-        (e as unknown as AxiosError).response?.data?.message || "Something went wrong."
+        (e as unknown as AxiosError).response?.data?.message ||
+          "Something went wrong."
       );
     },
   });
@@ -120,7 +121,8 @@ const LoginWithPasskeyForm = ({
       setIsVerifyingPasskey(false);
       setProgress(0);
       setErrorMessage(
-        (e as unknown as AxiosError).response?.data?.message || "Something went wrong."
+        (e as unknown as AxiosError).response?.data?.message ||
+          "Something went wrong."
       );
     },
   });
@@ -198,13 +200,26 @@ const LoginWithPasskeyForm = ({
           >
             Log In
           </Button>
-          <Button
-            type="submit"
-            onClick={() => setLoginWIthPasskey(false)}
-            className="w-full"
-          >
-            Use Password
-          </Button>
+
+          <div className="mt-4 space-y-2">
+            <Button
+              onClick={() => setLoginWIthPasskey(false)}
+              type="button"
+              variant="outline"
+              className="w-full flex items-center justify-center"
+            >
+              <KeyRound className="mr-2 h-4 w-4" />
+              Log in with Password
+            </Button>
+            <Button
+              type="button"
+              variant="outline"
+              className="w-full flex items-center justify-center"
+            >
+              <FcGoogle className="mr-2" />
+              Log in with Google
+            </Button>
+          </div>
         </form>
       )}
     </>

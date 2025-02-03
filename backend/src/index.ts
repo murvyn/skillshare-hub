@@ -9,6 +9,8 @@ import { PrismaClient } from "@prisma/client";
 import { getInterest } from "./controllers/interestsController";
 import cors, {CorsOptions} from "cors"
 import { getUser } from "./controllers/authController";
+import { logger } from "./utils/logger";
+import './utils/googleAuth'
 const prisma = new PrismaClient();
 
 const app = express();
@@ -61,12 +63,12 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use("/api/auth", auth);``
+app.use("/api/auth", auth);
 app.get("/api/interests", getInterest)
 app.get("/api/user", getUser)
 // app.get("/api/int", addInterests)
 
 const port = 5000;
 app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+  logger.info(`Server is running on port ${port}`);
 });

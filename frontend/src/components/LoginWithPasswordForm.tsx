@@ -13,11 +13,12 @@ import { jwtDecode } from "jwt-decode";
 import { setUser } from "@/store/userSlice";
 import { useDispatch } from "react-redux";
 import { Alert, AlertDescription, AlertTitle } from "./ui/alert";
-import { AlertCircle } from "lucide-react";
+import { AlertCircle, KeyRound } from "lucide-react";
 import { Spinner } from "./Spinner";
 import Cookies from "js-cookie";
 import { useRouter } from "next/navigation";
 import { AxiosError } from "@/lib/types";
+import { FcGoogle } from "react-icons/fc";
 
 interface DataProps {
   email: string;
@@ -40,7 +41,7 @@ const LoginWithPasswordForm = ({
 }) => {
   const [error, setError] = useState("");
   const dispatch = useDispatch();
-  const router = useRouter()
+  const router = useRouter();
   const {
     register,
     handleSubmit,
@@ -54,6 +55,13 @@ const LoginWithPasswordForm = ({
     },
   });
 
+  const handleGoogleLogin = () => {
+    const baseUrl = "http://localhost:5000/api/auth/google";
+    const authUrl = `${baseUrl}?isLogin=${true}`;
+    window.location.href = authUrl;
+  
+  };
+
   const { mutateAsync, isPending } = useMutation({
     mutationFn: async (data: DataProps) => {
       const response = await client.post("/auth/login", JSON.stringify(data));
@@ -61,15 +69,16 @@ const LoginWithPasswordForm = ({
     },
     onSuccess: () => {
       const token = Cookies.get("auth-x-token");
-      if(token) {
+      if (token) {
         const decoded = jwtDecode(token as string);
         dispatch(setUser(decoded));
-        router.push("/")
+        router.push("/");
       }
     },
     onError: (e) => {
       setError(
-        (e as unknown as AxiosError).response?.data?.message || "Something went wrong."
+        (e as unknown as AxiosError).response?.data?.message ||
+          "Something went wrong."
       );
     },
   });
@@ -142,13 +151,26 @@ const LoginWithPasswordForm = ({
           " Log In"
         )}
       </Button>
-      <Button
-        type="submit"
-        onClick={() => setLoginWIthPasskey(true)}
-        className="w-full"
-      >
-        Use Passkey
-      </Button>
+      <div className="mt-4 space-y-2">
+        <Button
+          onClick={() => setLoginWIthPasskey(true)}
+          type="button"
+          variant="outline"
+          className="w-full flex items-center justify-center"
+        >
+          <KeyRound className="mr-2 h-4 w-4" />
+          Log in with Passkey
+        </Button>
+        <Button
+          type="button"
+          variant="outline"
+          className="w-full flex items-center justify-center"
+          onClick={handleGoogleLogin}
+        >
+          <FcGoogle className="mr-2"  />
+          Log in with Google
+        </Button>
+      </div>
     </form>
   );
 };

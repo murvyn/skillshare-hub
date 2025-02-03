@@ -7,13 +7,52 @@ import {
   resetPasswordGet,
   resetPasswordPost,
 } from "../controllers/authController";
-import { loginStart, registerStart, registerFinish, loginFinish } from "../controllers/passkeyController";
+import {
+  loginStart,
+  registerStart,
+  registerFinish,
+  loginFinish,
+} from "../controllers/passkeyController";
+import { generateAuthToken } from "../utils/helper";
+import { User } from "@prisma/client";
 
 const router = Router();
 
 router.get(
   "/google",
-  passport.authenticate("google", { failureRedirect: "/login" })
+  (req, res, next) => {
+    const isLogin = req.query.isLogin === "true" ? "true" : "false";
+
+    passport.authenticate("google", {
+      scope: ["profile", "email"],
+      state: isLogin, 
+    })(req, res, next);
+  }
+);
+router.get(
+  "/google/callback",
+  (req, res, next) => {
+    passport.authenticate("google", (err: string, user: User, info: {message: string}) => {
+      if (err || !user) {
+        return res.redirect(
+          `${process.env.FRONTEND_URL}/auth/login?error=${encodeURIComponent(
+            info?.message || "Google authentication failed"
+          )}`
+        );
+      }
+      req.logIn(user, (loginErr) => {
+        if (loginErr) {
+          return res.redirect(
+            `${process.env.FRONTEND_URL}/auth/login?error=${encodeURIComponent(
+              "Login failed. Please try again."
+            )}`
+          );
+        }
+        const token = generateAuthToken(user as User);
+        res.redirect(`${process.env.FRONTEND_URL}/?token=${token}`);
+      });
+    })(req, res, next);
+  }
 );
 router.post("/login", login);
 router.post("/register", registerUser);

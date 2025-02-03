@@ -125,7 +125,7 @@ export function NavigationBar() {
             )}
           </ul>
         </nav>
-        <nav>
+        <nav className="md:hidden">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Menu />
