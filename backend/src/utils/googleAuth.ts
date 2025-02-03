@@ -18,7 +18,9 @@ passport.use(
     async (request, accessToken, refreshToken, profile, done) => {
       try {
         if (!profile.emails || profile.emails.length === 0) {
-          return done(null, false, {message :"Email is not available in the Google profile."})
+          return done(null, false, {
+            message: "Email is not available in the Google profile.",
+          });
         }
         const user = await prisma.user.findUnique({
           where: {
@@ -27,20 +29,30 @@ passport.use(
         });
 
         const isLogin = request.query?.state === "true";
-        console.dir(request.query)
-        
+
         if (isLogin) {
           if (!user) {
-            return done(null, false, {message :"User not found. Please sign up."});
+            return done(null, false, {
+              message: "User not found. Please sign up.",
+            });
+          }
+          if (!user.googleId) {
+            return done(null, false, {
+              message: "User not found. Please sign up.",
+            });
           }
           if (user.googleId && user.googleId !== profile.id) {
-            return done(null, false, {message :"Google account does not match. Please sign up."});
+            return done(null, false, {
+              message: "Google account does not match. Please sign up.",
+            });
           }
           return done(null, user);
         }
-        
+
         if (!user) {
-          return done(null, false, {message :"User not found. Please sign up."});
+          return done(null, false, {
+            message: "User not found. Please sign up.",
+          });
         }
         const updatedUser = await prisma.user.update({
           where: { email: user.email },
@@ -48,7 +60,7 @@ passport.use(
             photoUrl:
               user.photoUrl ??
               (profile.photos ? profile.photos[0].value : null),
-            googleId:  profile.id,
+            googleId: profile.id,
           },
         });
 

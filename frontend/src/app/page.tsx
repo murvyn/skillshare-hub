@@ -3,12 +3,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 import { Search } from "lucide-react";
 import WhatUsersSaidSlider from "@/components/WhatUsersSaidSlider";
@@ -16,6 +11,11 @@ import ImageCarousel from "@/components/ImageCarousel";
 import { Merriweather } from "next/font/google";
 
 import LessonsCarousel from "@/components/LessonsCarousel";
+import { useEffect } from "react";
+import Cookies from "js-cookie";
+import { jwtDecode } from "jwt-decode";
+import { useDispatch } from "react-redux";
+import { setUser } from "@/store/userSlice";
 
 const lessons = [
   {
@@ -116,12 +116,19 @@ const lessons = [
   },
 ];
 
-
 const merriweather = Merriweather({
   subsets: ["latin"],
   weight: ["700"],
 });
 export default function Home() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    const token = Cookies.get("auth-x-token");
+    if (token) {
+      const decoded = jwtDecode(token);
+      dispatch(setUser(decoded));
+    }
+  }, []);
   return (
     <div className="min-h-screen bg-white mb-0 pb-0">
       <main>
@@ -154,8 +161,7 @@ export default function Home() {
             </div>
           </div>
           <div className="h-auto 2xl:h-[40rem] md:w-[70rem] 2xl:w-full px-20">
-          <ImageCarousel />
-
+            <ImageCarousel />
           </div>
         </section>
 

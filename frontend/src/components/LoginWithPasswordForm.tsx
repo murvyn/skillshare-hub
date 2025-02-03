@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction, useState } from "react";
+import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { Label } from "./ui/label";
 import { Input } from "./ui/input";
 import { Checkbox } from "./ui/checkbox";
@@ -16,7 +16,7 @@ import { Alert, AlertDescription, AlertTitle } from "./ui/alert";
 import { AlertCircle, KeyRound } from "lucide-react";
 import { Spinner } from "./Spinner";
 import Cookies from "js-cookie";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { AxiosError } from "@/lib/types";
 import { FcGoogle } from "react-icons/fc";
 
@@ -40,6 +40,7 @@ const LoginWithPasswordForm = ({
   setLoginWIthPasskey: Dispatch<SetStateAction<boolean>>;
 }) => {
   const [error, setError] = useState("");
+  const searchParams = useSearchParams();
   const dispatch = useDispatch();
   const router = useRouter();
   const {
@@ -55,11 +56,17 @@ const LoginWithPasswordForm = ({
     },
   });
 
+  useEffect(() => {
+    const errorMsg = searchParams.get("error");
+    if (errorMsg) {
+      setError(decodeURIComponent(errorMsg));
+    }
+  }, [searchParams]);
+
   const handleGoogleLogin = () => {
     const baseUrl = "http://localhost:5000/api/auth/google";
     const authUrl = `${baseUrl}?isLogin=${true}`;
     window.location.href = authUrl;
-  
   };
 
   const { mutateAsync, isPending } = useMutation({
@@ -167,7 +174,7 @@ const LoginWithPasswordForm = ({
           className="w-full flex items-center justify-center"
           onClick={handleGoogleLogin}
         >
-          <FcGoogle className="mr-2"  />
+          <FcGoogle className="mr-2" />
           Log in with Google
         </Button>
       </div>

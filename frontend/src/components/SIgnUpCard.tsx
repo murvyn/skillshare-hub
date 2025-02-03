@@ -124,7 +124,8 @@ const SIgnUpCard = ({ router }: { router: AppRouterInstance }) => {
       setIsCreatingPasskey(false);
       setPasskeyStatus("error");
       setErrorMessage(
-        (e as unknown as AxiosError).response?.data?.message || "Something went wrong."
+        (e as unknown as AxiosError).response?.data?.message ||
+          "Something went wrong."
       );
     },
   });
@@ -158,7 +159,8 @@ const SIgnUpCard = ({ router }: { router: AppRouterInstance }) => {
       setIsCreatingPasskey(false);
       setPasskeyStatus("error");
       setErrorMessage(
-        (e as unknown as AxiosError).response?.data?.message || "Something went wrong."
+        (e as unknown as AxiosError).response?.data?.message ||
+          "Something went wrong."
       );
     },
   });
@@ -184,7 +186,8 @@ const SIgnUpCard = ({ router }: { router: AppRouterInstance }) => {
     },
     onError: (e) => {
       setError(
-        (e as unknown as AxiosError).response?.data?.message || "Something went wrong."
+        (e as unknown as AxiosError).response?.data?.message ||
+          "Something went wrong."
       );
     },
   });

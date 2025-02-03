@@ -51,6 +51,12 @@ const LoginWithPasskeyForm = ({
     },
   });
 
+  const handleGoogleLogin = () => {
+    const baseUrl = "http://localhost:5000/api/auth/google";
+    const authUrl = `${baseUrl}?isLogin=${true}`;
+    window.location.href = authUrl;
+  };
+
   const { mutateAsync: passkeyLoginFinish } = useMutation({
     mutationFn: async ({
       email,
@@ -215,6 +221,7 @@ const LoginWithPasskeyForm = ({
               type="button"
               variant="outline"
               className="w-full flex items-center justify-center"
+              onClick={handleGoogleLogin}
             >
               <FcGoogle className="mr-2" />
               Log in with Google

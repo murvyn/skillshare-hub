@@ -18,21 +18,18 @@ import { User } from "@prisma/client";
 
 const router = Router();
 
-router.get(
-  "/google",
-  (req, res, next) => {
-    const isLogin = req.query.isLogin === "true" ? "true" : "false";
+router.get("/google", (req, res, next) => {
+  const isLogin = req.query.isLogin === "true" ? "true" : "false";
 
-    passport.authenticate("google", {
-      scope: ["profile", "email"],
-      state: isLogin, 
-    })(req, res, next);
-  }
-);
-router.get(
-  "/google/callback",
-  (req, res, next) => {
-    passport.authenticate("google", (err: string, user: User, info: {message: string}) => {
+  passport.authenticate("google", {
+    scope: ["profile", "email"],
+    state: isLogin,
+  })(req, res, next);
+});
+router.get("/google/callback", (req, res, next) => {
+  passport.authenticate(
+    "google",
+    (err: string, user: User, info: { message: string }) => {
       if (err || !user) {
         return res.redirect(
           `${process.env.FRONTEND_URL}/auth/login?error=${encodeURIComponent(
@@ -49,11 +46,17 @@ router.get(
           );
         }
         const token = generateAuthToken(user as User);
-        res.redirect(`${process.env.FRONTEND_URL}/?token=${token}`);
+        res
+          .cookie("auth-x-token", token, {
+            httpOnly: false,
+            secure: true,
+            sameSite: "none",
+          })
+          .redirect(`${process.env.FRONTEND_URL}`);
       });
-    })(req, res, next);
-  }
-);
+    }
+  )(req, res, next);
+});
 router.post("/login", login);
 router.post("/register", registerUser);
 router.post("/forgot-password", forgotPassword);
